@@ -17,7 +17,7 @@ function Header() {
      border-b-1 sticky w-full inset-0 p-2'>
         <div className=' p-4 flex items-center justify-between w-[100%] md:hidden'>
             <div  >
-                <p className='text-md font-bold font-400'>Li Rema engineering & Costruction</p>
+                <p className='text-sm font-bold font-400'>Li Rema engineering & Costruction</p>
             </div>
             <p onClick={handleVisibility}><FaBars size={20}/></p>
             {isVisible? '': 
