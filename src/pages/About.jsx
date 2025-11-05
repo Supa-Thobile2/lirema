@@ -20,10 +20,10 @@ function About() {
         </div>
         <div className=' w-full mx-auto  flex items-center justify-center  gap-2'>
           <div className=''>
-            <button className='p-4 border text-xl font-bold w-full'>Our story</button>
+            <button className='p-4 border text-sm font-bold w-full'>Our story</button>
           </div>
            <div className=''>
-            <button className='p-4 border text-xl font-bold w-full'>Learn More</button>
+            <button className='p-4 border text-sm font-bold w-full'>Learn More</button>
           </div>
 
         </div>
