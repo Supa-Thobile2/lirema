@@ -18,12 +18,12 @@ function About() {
           <div><img src={img} alt='' className='w-10'/></div>
 
         </div>
-        <div className='block w-full mx-auto space-y-2 md:space-y-0 md:flex items-center  md:gap-2'>
+        <div className=' w-full mx-auto space-y-2 md:space-y-0 flex items-center  gap-2'>
           <div className=''>
-            <button className='p-4 border text-xl font-bold '>Our story</button>
+            <button className='p-4 border text-xl font-bold w-full'>Our story</button>
           </div>
            <div className=''>
-            <button className='p-4 border text-xl font-bold'>Learn More</button>
+            <button className='p-4 border text-xl font-bold w-full'>Learn More</button>
           </div>
 
         </div>
