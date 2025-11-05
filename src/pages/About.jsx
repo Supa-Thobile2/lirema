@@ -5,8 +5,8 @@ import img from '../assets/keyGuy.png'
 function About() {
   return (
 
-    <div className='w-full block mx-auto md:flex items-center'>
-    <div className='border p-4 w-full md:w-3/4  flex flex-col space-y-12 md:space-y-8  md:p-16  mx-auto'>
+    <div className='block mx-auto md:flex items-center'>
+    <div className='border w-full  md:w-3/4  flex flex-col space-y-12 md:space-y-8  md:p-16  mx-auto'>
         <h6 className='text-xl font-bold text-left'>About </h6>
         <h1 className='text-4xl font-bold'>Transforming engineering challenges into innovative solutions </h1>
         <p className='text-xl font-sm font-400'>LiRema Engineering and Construction delivers comprehensive technical services with unmatched precision. We combine technical expertise with strategic innovation to solve complex engineering challenges. </p>
