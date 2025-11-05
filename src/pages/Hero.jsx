@@ -11,7 +11,7 @@ function Hero() {
   return (
 
     <div className='w-full mx-auto block md:flex items-center border'>
-    <div className='md:w-3/4 space-y-2 p-8 md:p-24 md:space-y-16 lg:p-18 lg:space-y-18 text-center border flex items-center justify-center flex-col  mx-auto'>
+    <div className='mx-auto md:w-3/4 space-y-2 p-8 md:p-24 md:space-y-16 lg:p-18 lg:space-y-18 text-center border flex items-center justify-center flex-col  mx-auto'>
         
         <h1 className='text-2xl
          md:text-3xl font-bold font-300'>Engineering Solutions that build tommorrow</h1>
@@ -29,7 +29,7 @@ function Hero() {
        
     </div>
 
-    <div className='md:w-1/4'>
+    <div className='md:w-1/4 mx-auto'>
       <img src={img} alt='' className='object-fit '/>
 
 
