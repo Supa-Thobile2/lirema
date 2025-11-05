@@ -18,7 +18,7 @@ function About() {
           <div><img src={img} alt='' className='w-10'/></div>
 
         </div>
-        <div className=' w-full mx-auto space-y-2 md:space-y-0 flex items-center  gap-2'>
+        <div className=' w-full mx-auto  flex items-center justify-center  gap-2'>
           <div className=''>
             <button className='p-4 border text-xl font-bold w-full'>Our story</button>
           </div>
