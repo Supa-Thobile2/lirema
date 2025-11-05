@@ -3,9 +3,9 @@ import img from '../assets/keyGuy.png'
 
 function ServicesCard(props) {
   return (
-    <div className='border-2 space-y-2 '>
+    <div className='border-2 space-y-2  '>
       <img src={img} alt='' className='object-fit w-full h-full'/>
-        <div className='space-y-4 p-8'>
+        <div className='space-y-1 p-2 md:pace-y-4 md:p-8'>
             <h6 className='text-sm font-bold font-400'>{props.heading}</h6>
             <h1 className='text-lg font-bold font-400'>{props.subtext}</h1>
             <p className='text-md font-medium font-200'>{props.description}</p>
