@@ -13,7 +13,7 @@ function Hero() {
     <div className='p-2'>
     <div className='w-full mx-auto space-y-1 md:w-3/4  p-6 md:p-24 md:space-y-16 lg:p-18 lg:space-y-18 text-center  flex items-center justify-center flex-col  mx-auto'>
         
-        <h1 className='text-2xl
+        <h1 className='text-3xl
          md:text-3xl font-bold font-300'>Engineering Solutions that build tommorrow</h1>
         <p className=' text-[.9rem] text-tracking-wider md:text-center text-sm font- font-400'><strong>Li Rema construction </strong> 
         delivers comprehensive engineering and construction services with precision and expertise. We transform complex challenges into seamless technical solutions.</p>
