@@ -13,7 +13,7 @@ function Services() {
         <h1 className='text-4xl font-bold font-800'>Comprehensive technical solutions</h1>
        
        
-        <p className='text-md font-medium font-500'>Integrated engineering services for complex industrial and residential projects</p>
+        <p className='text-[8px] font-medium font-500'>Integrated engineering services for complex industrial and residential projects</p>
         
        <div className='block md:flex items-center gap-4'>
         {servicesData.map((item, index)=>{
