@@ -6,7 +6,7 @@ function About() {
   return (
 
     <div className='block w-full  p-8 md:flex items-center justify-center'>
-    <div className='border w-full  md:w-3/4  flex flex-col space-y-12 md:space-y-8  md:p-16  mx-auto'>
+    <div className='border w-full  md:w-3/4  flex flex-col space-y-2 md:space-y-8  md:p-16  mx-auto'>
         <h6 className='text-md font-bold text-left'>About </h6>
         <h1 className='text-xl font-bold'>Transforming engineering challenges into innovative solutions </h1>
         <p className='text-xl font-sm font-400'>LiRema Engineering and Construction delivers comprehensive technical services with unmatched precision. We combine technical expertise with strategic innovation to solve complex engineering challenges. </p>
