@@ -10,7 +10,7 @@ function Hero() {
   }
   return (
 
-    <div className='p-2'>
+    <div className='p-1'>
     <div className='w-full mx-auto space-y-1 md:w-3/4  p-6 md:p-24 md:space-y-16 lg:p-18 lg:space-y-18 text-center  flex items-center justify-center flex-col  mx-auto'>
         
         <h1 className='text-3xl
