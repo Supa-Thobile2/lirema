@@ -30,3 +30,15 @@ export const servicesData =[
 
     },
 ]
+
+
+export const employeeData =[
+    {
+        name: 'Litaba Letsatsi',
+        position: 'CEO'
+    },
+     {
+        name: 'LiTab Letsatsi',
+        position: 'CEO'
+    },
+]
