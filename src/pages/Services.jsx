@@ -15,7 +15,7 @@ function Services() {
        
         <p className='text-[8px] font-medium font-500'>Integrated engineering services for complex industrial and residential projects</p>
         
-       <div className='block md:flex items-center gap-4'>
+       <div className='block space-y-2 md:flex items-center gap-4'>
         {servicesData.map((item, index)=>{
             return <ServicesCard
             heading ={item.heading}
