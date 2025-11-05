@@ -15,7 +15,7 @@ function Header() {
     
     <div className='
      border-b-1 sticky w-full inset-0 '>
-        <div className='p-4'>
+        <div className='p-2'>
         <div className=' p-4 flex items-center justify-between w-[100%] md:hidden'>
             <div  >
                 <p className='text-sm font-bold font-400'>Li Rema engineering & Costruction</p>
