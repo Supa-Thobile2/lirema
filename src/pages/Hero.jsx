@@ -19,10 +19,10 @@ function Hero() {
         delivers comprehensive engineering and construction services with precision and expertise. We transform complex challenges into seamless technical solutions.</p>
         <div className='w-full flex items-center gap-8'>
           <div>
-           <button onClick={handleButton} className='px-6 py-2 border my-2 rounded-xl w-full mx-auto text-[16px] font-bold'>Explore Our Services</button>
+           <button onClick={handleButton} className='px-6 py-2 border my-2 rounded-xl w-full mx-auto text-sm font-bold'>Explore Our Services</button>
            </div>
            <div>
-            <button onClick={handleButton} className='px-6 py-2 border my-2 rounded-xl w-full mx-auto text-[16px] font-bold'>Contact Us</button>
+            <button onClick={handleButton} className='px-6 py-2 border my-2 rounded-xl w-full mx-auto text-sm font-bold'>Contact Us</button>
             </div>
 
         </div>
