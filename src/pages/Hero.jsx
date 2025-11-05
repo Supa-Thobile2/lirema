@@ -30,7 +30,7 @@ function Hero() {
     </div>
 
     <div className='md:w-1/4'>
-      <img src={img} alt='' className='object-fit w-full h-full'/>
+      <img src={img} alt='' className='object-fit '/>
 
 
     </div>
