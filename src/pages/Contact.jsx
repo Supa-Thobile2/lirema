@@ -23,7 +23,20 @@ function Contact() {
                 </div>
             </div>
             <div className='w-1/2'>
-            <img src={img} alt=''/>
+                <form>
+                    <div>
+                        <input type="email" name="" id="" />
+                    </div>
+                    <div>
+                        <input type="email" name="" id="" />
+                    </div>
+                    <div>
+                        <input type="email" name="" id="" />
+                    </div>
+                    <div>
+                        <button>Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
 

@@ -15,10 +15,10 @@ import Contact from './Contact'
 function Home() {
   return (
     <div>
-        <header>
+        
             <Header/>
-        </header>
-        <main className='space-y-4'>
+   
+       
 
             <Hero/>
             <Services/>
@@ -29,11 +29,11 @@ function Home() {
             <Subscribe/>
             <Contact/>
             
-        </main>
+      
 
-        <footer>
+        
             <Footer/>
-        </footer>
+        
     </div>
   )
 }

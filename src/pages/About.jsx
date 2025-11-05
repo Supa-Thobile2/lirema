@@ -5,7 +5,7 @@ import img from '../assets/keyGuy.png'
 function About() {
   return (
 
-    <div className='block mx-auto md:flex items-center'>
+    <div className='block w-full  p-8 md:flex items-center justify-center'>
     <div className='border w-full  md:w-3/4  flex flex-col space-y-12 md:space-y-8  md:p-16  mx-auto'>
         <h6 className='text-xl font-bold text-left'>About </h6>
         <h1 className='text-4xl font-bold'>Transforming engineering challenges into innovative solutions </h1>
