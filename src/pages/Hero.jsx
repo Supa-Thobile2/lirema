@@ -10,7 +10,7 @@ function Hero() {
   }
   return (
 
-    <div className='w-full block md:flex items-center border'>
+    <div className='w-full mx-auto block md:flex items-center border'>
     <div className='md:w-3/4 space-y-2 p-8 md:p-24 md:space-y-16 lg:p-18 lg:space-y-18 text-center border flex items-center justify-center flex-col  mx-auto'>
         
         <h1 className='text-2xl
