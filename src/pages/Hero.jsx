@@ -29,7 +29,7 @@ function Hero() {
        
     </div>
 
-    <div className='w-full mx-auto md:w-1/4 p-4'>
+    <div className='w-90 mx-auto md:w-1/4 p-4'>
       <img src={img} alt='' className='object-fit '/>
 
 
