@@ -1,0 +1,215 @@
+ 
+ //Sales Anaanlysis section
+ 
+ <div className='w-[95%] mx-auto md:w-5/6 border-4 min-h-[100vh] space-y-6  p-2'>
+    {/* navbar section */}
+      <div className="sticky inset-0 top-0 w-full mx-auto z-500 p-4">
+       <div className='flex items-center justify-between'>
+
+       
+       
+        <div>
+          <h3 className='text-[1.6rem] font-bold '>Overview</h3>
+          <p className="text-[.9rem] font-regular">Detailed Information about your store</p>
+        </div>
+        <div className='hidden md:flex items-center justify-between gap-4 space-x-4'>
+          <div className="border flex items-center  p-[.5rem] rounded-[0.9rem]">
+            <FaSearch/>
+            <input type="text" name="search" id="search" className="w-full outline-none"/>
+
+          </div>
+          <div className='flex items-center justify-between gap-2'>
+            <div>
+              <FaBell/>
+            </div>
+            <div className='w-10 h-10 rounded-full border flex item-center justify-center'>
+              Image
+            </div>
+            <div>
+              <FaArrowDownZA/>
+            </div>
+          </div>
+        </div>
+        <div className="md:hidden">
+          <FaBars/>
+        </div>
+        </div>
+
+      </div>
+
+      {/* Analytics Data Section*/}
+      <div className="block  p-2 space-y-2  md:flex items-center ">
+      {overViewData.map((item, index)=>{
+       return <SalesCard
+       key={index}
+        icon={item.icon}
+        heading={item.heading}
+        subText={item.subText}
+        subPer={item.subPer}
+        />
+      })}
+      
+      </div>
+
+
+      {/* product section */}
+      <div className="block space-y-2 md:flex items-center p-2  gap-2">
+
+    
+
+      <div className='w-full md:w-1/2 p-4 border space-y-4'>
+
+        <div className='flex justify-between items-center'>
+          <h3>Product</h3>
+          <p className='flex items-center justify-center gap-2'>Dec 21 - Dec 31 <FaRegCalendar/> </p>
+
+        </div>
+
+        <div>
+          {/* {productsData.map((item, index)=>{
+            return( 
+           <table>
+            <thead>
+              <tr>
+                <th>{item.heading}</th>
+              </tr>
+              <tbody>
+                <tr>$</tr>
+                <tr>4343</tr>
+                <tr>43</tr>
+              </tbody>
+            </thead>
+           </table>
+
+            )
+
+          })}  */}
+          <table class="table-auto">
+  <thead>
+    <tr>
+      <th>Song</th>
+      <th>Artist</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody className='space-y-4'>
+    <tr>
+      <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+      <td>Malcolm Lockyer</td>
+      <td>1961</td>
+    </tr>
+    <tr className='py-4'>
+      <td>Witchy Woman</td>
+      <td>The Eagles</td>
+      <td>1972</td>
+    </tr>
+    <tr className='py-4'>
+      <td>Shining Star</td>
+      <td>Earth, Wind, and Fire</td>
+      <td>1975</td>
+    </tr>
+  </tbody>
+</table>
+
+        </div>
+
+      </div>
+
+      <div className="w-full md:w-1/2 p-4 border">
+      <div className='flex justify-between items-center'>
+          <h3>Transaction History</h3>
+          <p className=''> <FaEllipsis/> </p>
+
+        </div>
+        <div className=" space-y-8">
+        {transactionHistoryData.map((item, index)=>{
+           return <TransactionCard
+            key={index}
+            icon={item.icon}
+            heading={item.heading}
+            subText={item.subText}
+            subText2={item.subText2}
+            subPer={item.subPer}
+            className='space-y-4'
+            
+            />
+
+        })}
+        
+        </div>
+
+      </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    theme
+
+    
+@theme {
+
+/* 
+  h1: 24px;
+  h2: 
+  h3
+  h4
+  h5
+  h6 */
+  /* font-family */
+  /* --font-inter: Inter, sans-serif; */
+
+  /* background color */
+
+  /* --bg-primary-600: blue; */
+
+  /* background-color */
+/* --border: 1px;
+--border-color: grey; */
+
+
+/* Text-color */
+
+  /* --color-white: #fff; */
+
+  /* handling different screen sizes */
+
+  /* --breakpoint-sm: 30rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-xl: 64rem; */
+/* 
+
+  Text-size */
+/* 
+  --text-xs: 8px;
+  --text-sm: 10px;
+  --text-base: 12px;
+  --text-lg: 14px;
+  --text-xl: 16px; */
+  
+/* flex layout */
+/* 
+.md-grid{
+  @apply grid grid-cols-2 gap-2 
+
+} */
+/* 
+.flex-center{
+  @apply flex justify-center items gap-2
+} */
+/* .flex-center-col{
+  @apply flex justify-center items flex-col gap-2
+} */
+
+
+/* .flex-between{
+  @apply flex items-center justify-between
+} */
+
+/* .flex-between-col{
+  @apply flex items-center justify-between */
+}
