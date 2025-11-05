@@ -10,8 +10,8 @@ function Hero() {
   }
   return (
 
-    <div className='p-1 mt-8'>
-    <div className='w-full mx-auto space-y-4 md:w-3/4  p-4 md:p-24 md:space-y-16 lg:p-18 lg:space-y-18 text-center  flex items-center justify-center flex-col  mx-auto'>
+    <div className='block md:flex p-1 mt-8 md:mt-14'>
+    <div className='w-full mx-auto space-y-4 md:w-1/2  p-4 md:p-16 md:space-y-16 lg:p-18 lg:space-y-18 text-center  flex items-center justify-center flex-col  mx-auto'>
         
         <h1 className='text-3xl
          md:text-3xl font-bold font-300'>Engineering Solutions that build tommorrow</h1>
@@ -29,8 +29,8 @@ function Hero() {
        
     </div>
 
-    <div className='w-90 mx-auto md:w-1/4 p-4'>
-      <img src={img} alt='' className='object-fit '/>
+    <div className=' flex items-center justify-center flex-col md:w-1/2 '>
+      <img src={img} alt='' className='object-fit block  md:h-full'/>
 
 
     </div>

@@ -2,14 +2,14 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='w-full p-4'>
+    <div className='w-full p-4 md:p-12'>
     
 
 
         <div className=' space-y-4 w-full'>
           <h1>logo</h1>
           <div >
-            <ul className='block space-y-2 md:flex items-center justify-between gap-8'>
+            <ul className='block space-y-2 md:flex items-center justify-evenly '>
               <li className='p-2 text-sm font-regular font-400'>Home</li>
               <li className='p-2 text-sm font-regular font-400'>Services</li>
               <li className='p-2 text-sm font-regular font-400'>About</li>
