@@ -9,7 +9,7 @@ function About() {
     <div className='border w-full p-4 md:w-3/4  flex flex-col space-y-2 md:space-y-8  md:p-16  mx-auto'>
         <h6 className='text-md font-bold text-left'>About </h6>
         <h1 className='text-xl font-bold'>Transforming engineering challenges into innovative solutions </h1>
-        <p className='text-xl font-sm font-400'>LiRema Engineering and Construction delivers comprehensive technical services with unmatched precision. We combine technical expertise with strategic innovation to solve complex engineering challenges. </p>
+        <p className='text-sm font-light font-400'>LiRema Engineering and Construction delivers comprehensive technical services with unmatched precision. We combine technical expertise with strategic innovation to solve complex engineering challenges. </p>
         <div className='flex items-centre justify-evenly'>
           <div><img src={img} alt='' className='w-10'/></div>
 
