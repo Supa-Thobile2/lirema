@@ -14,6 +14,10 @@ export { default as Footer } from './Footer'
 
 export { default as AboutPage } from './AboutPage'
  export { default as ServicesPage } from './ServicesPage'
+ export { default as HvacPage } from './HvacPage'
+ export { default as Specialized } from './Specialized'
+ export { default as IctSolutions } from './IctSolutions'
+ export { default as ConstructionPage } from './ConstructionPage'
 
 
 

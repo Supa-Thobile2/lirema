@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import {  Home, AboutPage, ServicesPage } from '../src/pages'
+import {  Home, AboutPage, ServicesPage, HvacPage, Specialized, IctSolutions, ConstructionPage } from '../src/pages'
+import Civil from './pages/Civil'
 
 
 
@@ -17,10 +18,13 @@ function App() {
  <div> 
 
 <Home/>
-  {/* <AboutPage/> */}
+   {/* <AboutPage/> */}
   {/* <ServicesPage/> */}
-
-
+{/* <HvacPage/> */}
+{/* <Civil/> */}
+{/* <Specialized/> */}
+{/* <IctSolutions/> */}
+{/* <ConstructionPage/> */}
 </div>
 
 

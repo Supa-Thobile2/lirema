@@ -3,10 +3,10 @@ import img from '../assets/keyGuy.png'
 
 function Contact() {
   return (
-    <div className='w-full flex items-center justify-center flex-col p-18 space-y-2 md:space-y-6'>
+    <div className='w-full flex items-center justify-center flex-col p-8 space-y-2 md:space-y-6'>
         <h6 className='text-4xl font-bond font-700'>Contact</h6>
         <p className='text-sm font-light font-200'> We're ready to discuss your engineering construction needs</p>
-        <div className='block md:flex items-center justify-between'>
+        <div className='block w-full  md:flex items-center justify-between'>
             <div className=' p-2 w-full mx-auto '>
                 
                 <div className='space-y-2'>
