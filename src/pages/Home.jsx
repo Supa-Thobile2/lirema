@@ -14,12 +14,12 @@ import Contact from './Contact'
 
 function Home() {
   return (
-    <div>
+    <div className='space-y-2'>
         
             <Header/>
    
        
-
+<div className='p-4 space-y-4'>
             <Hero/>
             <Services/>
             <About/>
@@ -28,6 +28,7 @@ function Home() {
             <Quote/>
             <Subscribe/>
             <Contact/>
+          </div>
             
       
 

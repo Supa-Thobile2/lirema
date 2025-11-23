@@ -16,10 +16,11 @@ export { default as AboutPage } from './AboutPage'
  export { default as ServicesPage } from './ServicesPage'
  export { default as HvacPage } from './HvacPage'
  export { default as Specialized } from './Specialized'
- export { default as IctSolutions } from './IctSolutions'
+ export { default as ElectricalSolutions } from './ElectricalSolutions'
  export { default as ConstructionPage } from './ConstructionPage'
+ export { default as ContactPage } from './ContactPage'
 
-
+ export { default as Civil } from './Civil'
 
 
 

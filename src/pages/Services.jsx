@@ -8,14 +8,14 @@ import { ServicesCard } from '../components'
 
 function Services() {
   return (
-    <div className='p-6 md:p-2  space-y-4 md:space-y-2 block w-full mx-auto md:flex items-center justify-center  flex-col space-y-1 p-1 md:p-18 space-y-0 md:space-y-4 xl:p-6 '>
+    <div className='   p-2 space-y-4 block w-full md:flex items-center justify-center  flex-col md:p-16 md:space-y-8 xl:p-16 ' id='services'>
         <h6 className='text-sm font-semibold font-300 '>Services</h6>
-        <h1 className='text-4xl font-bold font-800'>Comprehensive technical solutions</h1>
+        <h1 className='text-2xl font-bold font-800'>Comprehensive technical solutions</h1>
        
        
         <p className='text-md font-medium font-500'>Integrated engineering services for complex industrial and residential projects</p>
         
-       <div className='block space-y-4 md:space-y-0 md:flex items-center justify-center gap-4 md:gap-8'>
+       <div className='block  shadow-xl space-y-4  md:flex items-center justify-center gap-4 md:gap-8'>
         {servicesData.map((item, index)=>{
             return <ServicesCard
             heading ={item.heading}
