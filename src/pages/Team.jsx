@@ -20,25 +20,23 @@ function Team() {
                 <p className='text-[.6rem] font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
             </div>
             </div>
-              <div className=' border  p-4 flex items-center justify-center flex-col'>
+             <div className=' border   flex items-center justify-center flex-col'>
                 <img src={img} alt='' className='object-fit w-15 h-15 rounded-full'/>
-                <h4 className='text-lg font-bold '>Litaba Letsatsi</h4>
-                <p className='text-sm font-semibold font-200'>Chief Technician</p>
-                <p className='text-sm font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
+                <div className='space-y-2 p-4 text-center'>
+                <h4 className='text-[1rem] font-bold '>Litaba Letsatsi</h4>
+                <p className='text-[.6re] font-semibold font-200'>Chief Technician</p>
+                <p className='text-[.6rem] font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
             </div>
-              <div className=' border  p-4 flex items-center justify-center flex-col'>
+            </div>
+             <div className=' border   flex items-center justify-center flex-col'>
                 <img src={img} alt='' className='object-fit w-15 h-15 rounded-full'/>
-                <h4 className='text-lg font-bold '>Litaba Letsatsi</h4>
-                <p className='text-sm font-semibold font-200'>Chief Technician</p>
-                <p className='text-sm font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
+                <div className='space-y-2 p-4 text-center'>
+                <h4 className='text-[1rem] font-bold '>Litaba Letsatsi</h4>
+                <p className='text-[.6re] font-semibold font-200'>Chief Technician</p>
+                <p className='text-[.6rem] font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
             </div>
-              <div className=' border  p-4 flex items-center justify-center flex-col'>
-                <img src={img} alt='' className='object-fit w-15 h-15 rounded-full'/>
-                <h4 className='text-lg font-bold '>Litaba Letsatsi</h4>
-                <p className='text-sm font-semibold font-200'>Chief Technician</p>
-                <p className='text-sm font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
             </div>
-            
+         
           
 
         </div>
