@@ -10,8 +10,8 @@ function About() {
     <div className=' w-full  space-y-4 md:w-1/2  flex flex-col space-y-2 md:space-y-8  md:p-16  mx-auto'>
         <p className='text-[.8rem] font-semibold font-700 text-left'>About </p>
         <div className='space-y-2'>
-        <h1 className='text-[1.6rem]  font-bold font-600'>Transforming engineering challenges into innovative solutions </h1>
-        <p className='text-sm font-light font-400'>LiRema Engineering and Construction delivers comprehensive technical services with unmatched precision. We combine technical expertise with strategic innovation to solve complex engineering challenges. </p>
+        <h1 className='text-[1rem]  font-bold font-600'>Transforming engineering challenges into innovative solutions </h1>
+        <p className='text-[.6rem] font-light font-400'>Li Rema Engineering and Construction delivers comprehensive technical services with unmatched precision. We combine technical expertise with strategic innovation to solve complex engineering challenges. </p>
         </div>
         <div className='flex items-centre justify-between '>
           <div><img src={img} alt='' className='w-10'/></div>
