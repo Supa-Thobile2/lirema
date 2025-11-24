@@ -7,8 +7,10 @@ import { Button } from '../components'
 function Contact() {
   return (
     <div className='w-full flex items-center justify-center flex-col p-8 md:p-16 space-y-8 md:space-y-6' id='contact'>
+        <div className='space-y-2'>
         <h6 className='text-[1.5rem] font-bond font-700'>Contact</h6>
         <p className='text-[.6rem] font-light font-200'> We're ready to discuss your engineering construction needs</p>
+        </div>
         <div className='block w-full  md:flex items-center justify-between space-y-4'>
             <div className='space-y-4 w-full mx-auto '>
                 
