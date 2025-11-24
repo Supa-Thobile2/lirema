@@ -12,9 +12,9 @@ function Team() {
         </div>
         
         <div className='block md:flex items-center space-y-2 gap-4 md:gap-8 md:space-y-0'>
-            <div className=' border  p-4 flex items-center justify-center flex-col'>
+            <div className=' border   flex items-center justify-center flex-col'>
                 <img src={img} alt='' className='object-fit w-15 h-15 rounded-full'/>
-                <div className='space-y-2'>
+                <div className='space-y-2 p-4'>
                 <h4 className='text-lg font-bold '>Litaba Letsatsi</h4>
                 <p className='text-sm font-semibold font-200'>Chief Technician</p>
                 <p className='text-sm font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
