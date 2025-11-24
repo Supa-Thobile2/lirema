@@ -8,10 +8,12 @@ function About() {
 
     <div className='block  w-full p-4 space-y-4  md:flex' id='about'>
     <div className=' w-full  space-y-2 md:w-1/2  flex flex-col space-y-2 md:space-y-8  md:p-16  mx-auto'>
-        <h6 className='text-md font-semibold text-left'>About </h6>
+        <p className='text-[.8rem] font-semibold font-700 text-left'>About </p>
+        <div className='space-y-2'>
         <h1 className='text-lg md:text-xl font-bold'>Transforming engineering challenges into innovative solutions </h1>
         <p className='text-sm font-light font-400'>LiRema Engineering and Construction delivers comprehensive technical services with unmatched precision. We combine technical expertise with strategic innovation to solve complex engineering challenges. </p>
-        <div className='flex items-centre justify-between p-4'>
+        </div>
+        <div className='flex items-centre justify-between '>
           <div><img src={img} alt='' className='w-10'/></div>
 
           <div><img src={img} alt='' className='w-10'/></div>
@@ -40,4 +42,4 @@ function About() {
   )
 }
 
-export default About
+export default About              
