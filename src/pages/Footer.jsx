@@ -10,11 +10,11 @@ function Footer() {
           <h1 className='text-[1.5rem] font-bold font-700'>Li Rema Engineering & Construction</h1>
           <div className='space-y-2'>
             <ul className='block space-y-2 md:flex items-center justify-evenly '>
-              <li className='p-2 text-[.9rem] font-regular font-400'>Home</li>
-              <li className='p-2 text-[.9rem] font-regular font-400'>Services</li>
-              <li className='p-2 text-[.9rem] font-regular font-400'>About</li>
-              <li className='p-2 text-[.9rem] font-regular font-400'>Contact</li>
-              <li className='p-2 text-[.9rem] font-regular font-400'>Projects</li>
+              <li className=' text-[.9rem] font-regular font-400'>Home</li>
+              <li className=' text-[.9rem] font-regular font-400'>Services</li>
+              <li className=' text-[.9rem] font-regular font-400'>About</li>
+              <li className=' text-[.9rem] font-regular font-400'>Contact</li>
+              <li className=' text-[.9rem] font-regular font-400'>Projects</li>
             </ul>
 
           </div>
