@@ -8,8 +8,8 @@ function Subscribe() {
     <h1 className='text-[1.5rem] font-bold font-700'>Stay Informed Engineering insights</h1>
     <p className='text-[.6rem] font-regular font-200'> Receive the latest update, technical innovations and industry trends directly to your inbox.</p>
   </div>  
-    <div className='flex items-center justify-between w-full border rounded-full md:w-[40%] mx-auto '>
-        <input type="email" name="email" id="email" className='w-full outline-none ' />
+    <div className='flex items-center justify-between w-full  md:w-[40%] mx-auto '>
+        <input type="email" name="email" id="email" className='w-full outline-none border rounded-full' />
         
              <Button text='Subscribe Now'/>
 
