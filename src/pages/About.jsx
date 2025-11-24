@@ -6,8 +6,8 @@ import { Button } from '../components'
 function About() {
   return (
 
-    <div className='block  w-full p-2 space-y-4  md:flex' id='about'>
-    <div className=' w-full  space-y-4 md:w-1/2  flex flex-col space-y-2 md:space-y-8  md:p-16  mx-auto'>
+    <div className='block  w-full p-2  md:flex' id='about'>
+    <div className=' w-full  space-y-8 md:w-1/2  flex flex-col space-y-2 md:space-y-8  md:p-16  mx-auto'>
         <p className='text-[.8rem] font-semibold font-700 text-left'>About </p>
         <div className='space-y-2'>
         <h1 className='text-[1rem]  font-bold font-600'>Transforming engineering challenges into innovative solutions </h1>
