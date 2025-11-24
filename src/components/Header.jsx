@@ -17,7 +17,7 @@ function Header() {
     <div className='
      border-b-1 fixed w-full inset-0  '>
         <div className=''>
-        <div className='   flex items-center justify-between w-[100%] md:hidden'>
+        <div className=' p-4  flex items-center justify-between w-[100%] md:hidden'>
             <div  >
                 <p className='text-[1rem] font-bold font-400'>Li Rema engineering & Costruction</p>
             </div>
@@ -27,9 +27,9 @@ function Header() {
                     
                
                 
-                <div  className='border absolute top-0 right-0 h-[100vh] w-[100vw] bg-white text-[#000]  flex items-center justify-between flex-col'>
+                <div  className='border absolute top-0 right-0  bg-white text-[#000]  flex items-center justify-between flex-col'>
                     <p onClick={handleVisibility} className=' border border-white  rounded-full inline-flex items-center justify-center h-20 w-20 text-2xl'>X</p>
-                      <ul className=' p-2 w-full mx-auto flex items-center justify-center flex-col  space-y-2'>
+                      <ul className=' w-full mx-auto flex items-center justify-center flex-col  space-y-2'>
                    <Link to='#'> <li className='text-[1rem] rounded-[12px]'>Home</li></Link>
                    
                                       <Link to='#services'> <li className='text-[1rem] rounded-[12px]'>Services</li></Link>
