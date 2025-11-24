@@ -8,7 +8,7 @@ import { ServicesCard } from '../components'
 
 function Services() {
   return (
-    <div className='   p-4 space-y-4 block w-full md:flex items-center justify-center  flex-col md:p-16 md:space-y-8 xl:p-16 ' id='services'>
+    <div className='   p-4 space-y-8 block w-full md:flex items-center justify-center  flex-col md:p-16 md:space-y-8 xl:p-16 ' id='services'>
         <p className='text-[.7rem] font-semibold font-300 '>Services</p>
         <div className='space-y-2'>
         <h1 className='text-[1.4rem] font-bold font-700'>Comprehensive technical solutions</h1>
