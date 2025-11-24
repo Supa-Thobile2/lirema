@@ -30,13 +30,13 @@ function Contact() {
             <div className='w-full mx-auto '>
                 <form className='w-full  space-y-2  mx-auto'>
                     <div className='border '>
-                        <input type="email" name="email" id="" placeholder='enter email here' className='p-2'/>
+                        <input type="email" name="email" id="" placeholder='enter email here' className='p-2 rounded-2xl border-[lightgray]'/>
                     </div>
                     <div className='border '>
-                        <input type="text" name="name" id="" placeholder='enter email here' className='p-2'/>
+                        <input type="text" name="name" id="" placeholder='enter email here' className='p-2 rounded-2xl border-[lightgray]'/>
                     </div>
                     <div className='border '>
-                        <input type="text" name="message" id="" placeholder='enter email here' className='p-2'/>
+                        <input type="text" name="message" id="" placeholder='enter email here' className='p-2 rounded-2xl border-[lightgray]'/>
                     </div>
                     
                         <Button text='Submit'/>
