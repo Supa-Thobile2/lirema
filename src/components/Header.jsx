@@ -27,7 +27,7 @@ function Header() {
                     
                
                 
-                <div  className='border space-y-4 absolute top-0 right-0 w-full bg-white p-16 text-[#000]  flex items-center justify-between flex-col'>
+                <div  className='border space-y-8 absolute top-0 right-0 w-full bg-white p-16 text-[#000]  flex items-center justify-between flex-col'>
                     <p onClick={handleVisibility} className=' border border-white  rounded-full inline-flex items-center justify-center h-20 w-20 text-2xl'>X</p>
                       <ul className='space-y-4 w-full mx-auto flex items-center justify-center flex-col  space-y-2'>
                    <Link to='#'> <li className='text-[1rem] rounded-[12px]'>Home</li></Link>
