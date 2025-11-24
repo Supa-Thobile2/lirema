@@ -16,7 +16,7 @@ function Subscribe() {
         
        
     </div>
-    <p>By subscribing you agree to our terms and conditions of service</p>
+    <p className='text-[0.6rem] font-semibold font-200'>By subscribing you agree to our terms and conditions of service</p>
 
     </div>
   )
