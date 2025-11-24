@@ -19,7 +19,7 @@ function Header() {
         <div className=''>
         <div className=' p-4  flex items-center justify-between w-[100%] md:hidden'>
             <div  >
-                <p className='text-sm font-bold font-400'>Li Rema engineering & Costruction</p>
+                <p className='text-[1rem] font-bold font-400'>Li Rema engineering & Costruction</p>
             </div>
             <p onClick={handleVisibility}><FaBars size={20}/></p>
             {isVisible? '': 
@@ -29,14 +29,14 @@ function Header() {
                 
                 <div  className='border absolute top-0 right-0 h-[100vh] w-[100vw] p-8 bg-black text-white space-y-4 flex items-center justify-between flex-col'>
                     <p onClick={handleVisibility} className=' border border-white p-6 rounded-full inline-flex items-center justify-center h-20 w-20 text-2xl'>X</p>
-                      <ul className=' p-10 w-full mx-auto flex items-center justify-center flex-col  space-y-10'>
-                   <Link to='#'> <li className='text-md uppercase border-2 border-[#fff] py-2 px-4 rounded-[12px]'>Home</li></Link>
+                      <ul className=' p-2 w-full mx-auto flex items-center justify-center flex-col  space-y-2'>
+                   <Link to='#'> <li className='text-[1rem] rounded-[12px]'>Home</li></Link>
                    
-                                      <Link to='#services'> <li className='text-md uppercase border-2 border-[#fff] py-2 px-4 rounded-[12px]'>Services</li></Link>
-                                                         <Link to='#about'> <li className='text-md uppercase border-2 border-[#fff] py-2 px-4 rounded-[12px]'>About</li></Link>
-                                                                            <Link to='#contact'> <li className='text-md uppercase border-2 border-[#fff] py-2 px-4 rounded-[12px]'>Contact Us</li></Link>
-                                                                                               <Link to='#team'> <li className='text-md uppercase border-2 border-[#fff] py-2 px-4 rounded-[12px]'>Our Team</li></Link>
-                    <button onClick={handleLogin} className='px-4 py-2 border rounded-full w-[100%] text-[4.8vw]'>
+                                      <Link to='#services'> <li className='text-[1rem] rounded-[12px]'>Services</li></Link>
+                                                         <Link to='#about'> <li className='text-[1rem] rounded-[12px]'>About</li></Link>
+                                                                            <Link to='#contact'> <li className='text-[1rem] rounded-[12px]'>Contact Us</li></Link>
+                                                                                               <Link to='#team'> <li className='text-[1rem] rounded-[12px]'>Our Team</li></Link>
+                    <button onClick={handleLogin} className='px-4 py-2 border rounded-full w-[100%] text-[1rem]'>
                         
                         Log In</button>
                 </ul>
