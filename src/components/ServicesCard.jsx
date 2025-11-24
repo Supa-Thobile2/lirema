@@ -5,7 +5,7 @@ import Button from './Button'
 
 function ServicesCard(props) {
   return (
-    <div className=' border  '>
+    <div className=' border border-[lightgray] '>
       <img src={img} alt='' className='object-fit block h-full'/>
         <div className='space-y-2 p-4'>
             <h6 className='text-[1rem] font-bold font-400'>{props.heading}</h6>
