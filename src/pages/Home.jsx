@@ -24,9 +24,9 @@ function Home() {
             <Services/>
             <About/>
             <Choose/>
-            <Team/>
             <Quote/>
             <Subscribe/>
+            <Team/>
             <Contact/>
           </div>
             
