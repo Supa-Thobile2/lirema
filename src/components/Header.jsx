@@ -23,12 +23,12 @@ function Header() {
             </div>
             <p onClick={handleVisibility}><FaBars size={20}/></p>
             {isVisible? '': 
-             <div className='p-8 w-full'>
+             <div className=' w-full'>
                     
                
                 
-                <div  className='border absolute top-0 right-0 h-[100vh] w-[100vw] p-8 bg-white text-[#000] space-y-4 flex items-center justify-between flex-col'>
-                    <p onClick={handleVisibility} className=' border border-white p-6 rounded-full inline-flex items-center justify-center h-20 w-20 text-2xl'>X</p>
+                <div  className='border absolute top-0 right-0 h-[100vh] w-[100vw] bg-white text-[#000]  flex items-center justify-between flex-col'>
+                    <p onClick={handleVisibility} className=' border border-white  rounded-full inline-flex items-center justify-center h-20 w-20 text-2xl'>X</p>
                       <ul className=' p-2 w-full mx-auto flex items-center justify-center flex-col  space-y-2'>
                    <Link to='#'> <li className='text-[1rem] rounded-[12px]'>Home</li></Link>
                    
