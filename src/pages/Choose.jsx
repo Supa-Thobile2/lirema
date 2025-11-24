@@ -6,8 +6,11 @@ function Choose() {
   return (
     <div className='block p-4 md:flex items-center justify-center flex-col  space-y-4 md:p-16 space-y-4'>
         <h6 className='text-[.6rem] font-medium font-400'>Why Choose Us</h6>
+        <div className='space-y-2'>
         <h1 className='text-[1.4rem] font-bold font-700'>Unparalleled engineering excellence</h1>
         <p className='text-[.6rem] font-medium font-400'>Delivering integrated solutions across multiple technical domains</p>
+       </div>
+       
         <div className='block space-y-2 md:flex gap-4 '>
             <div className='flex items-center justify-between flex-col space-y-4'>
                 <div className='border space-y-2 md:p-8'>
