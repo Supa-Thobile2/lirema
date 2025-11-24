@@ -14,7 +14,7 @@ import Contact from './Contact'
 
 function Home() {
   return (
-    <div className='space-y-2'>
+    <div className=''>
         
             <Header/>
    
