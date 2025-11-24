@@ -18,7 +18,7 @@ function Hero() {
         <div className='space-y-2'>
         <h1 className='text-[1.4rem]
          font-bold font-900'>Engineering Solutions that build tomorrow</h1>
-        <p className=' text-[.9rem] text-tracking-wider md:text-center text-sm font- font-400'><strong>Li Rema construction </strong> 
+        <p className=' text-[.65rem] text-tracking-wider md:text-center text-sm font- font-400'><strong>Li Rema construction </strong> 
         delivers comprehensive engineering and construction services with precision and expertise. We transform complex challenges into seamless technical solutions.</p>
        
        </div>
