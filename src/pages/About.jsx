@@ -6,7 +6,7 @@ import { Button } from '../components'
 function About() {
   return (
 
-    <div className='block  w-full p-4  md:flex' id='about'>
+    <div className='block  w-full p-8  md:flex' id='about'>
     <div className=' w-full  space-y-8 md:w-1/2  flex flex-col space-y-2 md:space-y-8  md:p-16  mx-auto'>
         <p className='text-[.8rem] font-semibold font-700 text-left'>About </p>
         <div className='space-y-2'>
