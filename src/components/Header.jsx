@@ -32,9 +32,9 @@ function Header() {
                       <ul className='space-y-8 w-full mx-auto flex items-center justify-center flex-col  space-y-2'>
                    <Link to='#'> <li className='text-[1rem] rounded-[12px]'>Home</li></Link>
                    
-                                      <Link to='#services'> <li className='text-[1rem] rounded-[12px]'>Services</li></Link>
-                                                         <Link to='#about'> <li className='text-[1rem] rounded-[12px]'>About</li></Link>
-                                                                            <Link to='#contact'> <li className='text-[1rem] rounded-[12px]'>Contact Us</li></Link>
+                                      <Link to='/service'> <li className='text-[1rem] rounded-[12px]'>Services</li></Link>
+                                                         <Link to='/about'> <li className='text-[1rem] rounded-[12px]'>About</li></Link>
+                                                                            <Link to='/contact'> <li className='text-[1rem] rounded-[12px]'>Contact Us</li></Link>
                                                                                                <Link to='#team'> <li className='text-[1rem] rounded-[12px]'>Our Team</li></Link>
                     <button onClick={handleLogin} className='px-4 py-2 border rounded-full w-[100%] text-[1rem]'>
                         
