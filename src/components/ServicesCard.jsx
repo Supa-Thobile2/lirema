@@ -14,8 +14,8 @@ function ServicesCard(props) {
             <p className='text-[.6rem] font-medium font-200'>{props.description}</p>
             </div>
             <div>
-              <Link to='{props.link}'>
-                <Button text='{props.btnText}'/>
+              <Link to={props.link}>
+                <Button text={props.btnText}/>
                 </Link>
 
             </div>
