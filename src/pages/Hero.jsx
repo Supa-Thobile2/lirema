@@ -13,7 +13,7 @@ function Hero() {
   return (
 
     <div className='block md:flex  md:p-18 mt-8 md:mt-14 ' id='home'>
-    <div className='w-full mx-auto space-y-2 md:w-1/2  p-8 md:p-18 xl:p-20 md:space-y-16 lg:p-16 lg:space-y-18 text-center  flex items-center justify-center flex-col  mx-auto'>
+    <div className='w-full mx-auto  md:w-1/2  p-8 md:p-18 xl:p-20 md:space-y-16 lg:p-16 lg:space-y-18 text-center  flex items-center justify-center flex-col  mx-auto'>
        <div className='space-y-2'>
         <div className='space-y-2'>
         <h1 className='text-[1.4rem]
