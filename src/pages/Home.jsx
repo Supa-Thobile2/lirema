@@ -19,7 +19,7 @@ function Home() {
             <Header/>
    
        
-<div className='p-4 space-y-4'>
+<div className='p-2 space-y-2'>
             <Hero/>
             <Services/>
             <About/>
