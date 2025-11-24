@@ -93,7 +93,7 @@ function AboutPage() {
         </div>
         </div>
         
-        <Team/>
+        
         <div className=' p-8 space-y-4'>
             <p className='text-sm font-light font-200'>Our Journey</p>
             <h3 className='text-md font-bold font-700'>
@@ -130,6 +130,7 @@ function AboutPage() {
             
             
         </div>
+        <Team/>
         <Contact/>
         <Footer/>
 
