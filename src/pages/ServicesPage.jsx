@@ -74,7 +74,7 @@ function ServicesPage() {
          <h1 className='text-sm font-light font-300'>Custom engineering for unique projects requirements</h1>
          <div className='flex items-center gap-4'>
          <Button text='Learn'/>
-         <Button text='Details <FaChevronRight'/>
+         <Button text='Details '/>
          </div>
          </div>
          <div>image</div>
@@ -149,7 +149,7 @@ function ServicesPage() {
          </div>
         
 
-         </div>1
+         </div>
           <Team/>
          <Contact/>
          <Footer/>
