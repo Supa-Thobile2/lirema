@@ -15,7 +15,7 @@ function Choose() {
             <div className='flex items-center justify-between flex-col space-y-2'>
                 <div className='border space-y-2 p-4'>
                     <div className='space-y-2'>
-                    <h1 className='text-[1.5rem] font-bold font-700'>Technical expertise</h1>
+                    <h1 className='text-[.8rem] font-bold font-700'>Technical expertise</h1>
                     <p className='text-[.6rem] font-medium font-200'>Highly skilled engineers with deep technical knowledge</p>
                     </div>
                     <div>
@@ -23,7 +23,7 @@ function Choose() {
                     </div>
                 </div>
                 <div className='border  space-y-2 p-4'>
-                    <h1 className='text-[1.5rem] font-bold font-700'>Technical expertise</h1>
+                    <h1 className='text-[.8rem] font-bold font-700'>Technical expertise</h1>
                     <p className='text-[.6rem] font-medium font-200'>Highly skilled engineers with deep technical knowledge</p>
                     <div>
                         <Button text='Explore Capabilities'/>
@@ -35,11 +35,11 @@ function Choose() {
                     <h6 className='text-[.6rem] font-semibold font-300'
                         >Innovation</h6>
                         <div className='space-y-2'>
-                    <h1 className='text-[1.5rem] font-bold font-700'>Cutting-edge technological solutions for complex challenges</h1>
+                    <h1 className='text-[.8rem] font-bold font-700'>Cutting-edge technological solutions for complex challenges</h1>
                     <p className='text-[.6rem] font-medium font-200'>Advanced problem-solving approaches</p>
                </div>
                 </div>
-                <div className='w-[60%]mx-auto  md:w-1/2'><img src={img} alt='' className='h-full object-fit'/></div>
+                <div className='  md:w-1/2'><img src={img} alt='' className='h-full object-fit'/></div>
             </div>
         </div>
 
