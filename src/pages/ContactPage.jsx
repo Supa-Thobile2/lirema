@@ -41,45 +41,45 @@ function ContactPage() {
                      <p>General Inqueries:</p>
                  </div>
              </div>
-             <div className='w-full mx-auto p-4 space-y-4'>
-                 <form className='w-full  space-y-2  mx-auto'>
+             <div className='w-full mx-auto  space-y-4'>
+                 <form className='w-full  p-8 space-y-2  mx-auto'>
                      <div className=' '>
-                         <input type="email" name="email" id="" placeholder='enter email here' className='p-2 border border-lightgray'/>
+                         <input type="email" name="email" id="" placeholder='enter email here' className='p-2 border border-lightgray w-full rounded'/>
                      </div>
                      <div className=' '>
-                         <input type="text" name="name" id="" placeholder='enter email here' className='p-2 border border-lightgray'/>
+                         <input type="text" name="name" id="" placeholder='enter email here' className='p-2 border border-lightgray w-full rounded'/>
                      </div>
                      <div className=' '>
-                         <input type="text" name="message" id="" placeholder='enter email here' className='p- border border-lightgray w-full'/>
+                         <input type="text" name="message" id="" placeholder='enter email here' className='p-2 border border-lightgray w-full rounded'/>
                      </div>
                      
                          <Button text='Submit'/>
                      
                  </form>
-                 <div className='border p-2 space-y-4'>
+                 <div className='  space-y-4'>
                  <p>Tell us more about you?</p>
-                 <div className=' space-y-4'>
+                 <div className=' space-y-2'>
 
                  <input type="checkbox" name="clent" id="client" />
-                 <label htmlFor="client">Business Client</label><br/>
+                 <label htmlFor="client">Business Client</label><br/><br/>
 
                  <input type="checkbox" name="clent" id="client" />
-                 <label htmlFor="client">Business Client</label><br/>
+                 <label htmlFor="client">Business Client</label><br/><br/>
 
                  <input type="checkbox" name="clent" id="client" />
-                 <label htmlFor="client">Business Client</label><br/>
+                 <label htmlFor="client">Business Client</label><br/><br/>
 
                  <input type="checkbox" name="clent" id="client" />
-                 <label htmlFor="client">Business Client</label><br/>
+                 <label htmlFor="client">Business Client</label><br/><br/>
 
                  <input type="checkbox" name="clent" id="client" />
-                 <label htmlFor="client">Business Client</label><br/>
+                 <label htmlFor="client">Business Client</label><br/><br/>
 
                  <input type="checkbox" name="clent" id="client" />
                  <label htmlFor="client">Business Client</label>
                  <div>
 
-                 <textarea className='border-4 w-full' name="tes" id="" cols="30" rows="10" placeholder='Describe your project in detail'></textarea>
+                 <textarea className='border w-full' name="tes" id="" cols="30" rows="10" placeholder='Describe your project in detail'></textarea><br/><br/>
                  <div className="flex">
                  <input type="checkbox" name="clent" id="client" />
                    <label htmlFor="client">I agree to the terms and conditions</label>
@@ -92,10 +92,10 @@ function ContactPage() {
                  </div>
                
              </div>
-             <div className='p-8 border-8 space-y-4'>
-             <p>Location</p>
-             <h3>Lacation</h3>
-             <p>Find us where engineering meets innovation</p>
+             <div className='p-8  space-y-4'>
+             <p className='text-[.6rem] font-light font-300'>Gauteng</p>
+             <h3 className='text-[1.6rem] font-bold font-700'>Norkem Park North</h3>
+             <p className='text-[.6rem] font-light font-300'>Find us where engineering meets innovation</p>
 
 
 
