@@ -58,7 +58,7 @@ function ServicesPage() {
          </ul>
          <div className='flex items-center gap-4'>
          <Button text='Explore'/>
-         <Button text='Details <FaChevronRight'/>
+         <Button text='Details '/>
          </div>
          </div>
          <div>image</div>
@@ -113,7 +113,7 @@ function ServicesPage() {
          </div>
          <div className='space-y-16 p-4'>
          <h3 className='text-xl font-bold'>Our comprehensive  engineering expertise</h3>
-         <div className='flex items-center'>
+         <div className='flex items-center flex-col
          <div>
          {/* image */}
          <h3>Technical precision</h3>
