@@ -11,7 +11,7 @@ function ServicesPage() {
  
          <Header/>
          <div className='  mt-14 p-8 space-y-20 '>
-             <p className='p-4 border text-sm font-bold'>Buld</p>
+             <p className='text-sm font-bold'>Buld</p>
              <div className='space-y-4'>
              <h1 className='text-xl font-bold  md:text-2xl lg:text-4xl'>Engineering solutions that work</h1>
              <p className='text-md md:text-2xl xl:text-lg'>Delivering precise technical across multiple engineering disciplines with proven reliability and professinal commitment.</p>
