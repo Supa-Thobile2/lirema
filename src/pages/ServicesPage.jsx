@@ -118,9 +118,7 @@ function ServicesPage() {
          {/* image */}
          <h3>Technical precision</h3>
          </div>
-         <div className="w-full">
-         <Button text='Contact'/>
-         </div>
+        
           <div>
          {/* image */}
          <h3>Innovative Solutions</h3>
@@ -130,7 +128,9 @@ function ServicesPage() {
          <h3>Client focused delivery</h3>
          </div>
       
-       
+        <div className="w-full">
+         <Button text='Contact'/>
+         </div>
          </div>
 
          </div>
