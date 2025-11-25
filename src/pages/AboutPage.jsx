@@ -100,7 +100,7 @@ function AboutPage() {
                 Milestones of engineering excellence
             </h3>
             <p className='text-[.6rem] font-light font-200'>A story of continuous growth and technical advancement through strategic development and innovative solutions.</p>
-            <div className='flex items-center w-full gap-4 space-y-2'>
+            <div className='flex items-center w-full gap-4 '>
                 <Button text='View History'/>
                 <Button text='Learn'/>
             </div>
@@ -110,7 +110,7 @@ function AboutPage() {
             <div className='space-y-2'>
                 <h3 className='text-[1.5rem] font-bold font-700'>Our trusted partners</h3>
                 <p className='text-[.6rem] font-light font-200'>Collaborative networks driving technological innovation and excellence.</p>
-                <div className='flex items-center justify-between gap-4 space-y-2'>
+                <div className='flex items-center justify-between gap-4'>
                     <Button text='View Partner'/>
                    <Button text='Learn'/>
 
@@ -122,7 +122,7 @@ function AboutPage() {
             
                 <h3 className='text-[1.5rem] font-bold font-700'>Ready to build your next project?</h3>
                 <p className='text-[.6rem] font-light font-200'>Connect with our expert team to discuss your next engineering and construction needs.</p>
-                <div className='flex items-center justify-between gap-4 space-y-2'>
+                <div className='flex items-center justify-between gap-4'>
                     <Button text='Contact'/>
                     <Button text='Request quote'/>
 
