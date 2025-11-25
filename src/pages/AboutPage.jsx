@@ -45,7 +45,7 @@ function AboutPage() {
                 <div className=' '>
                     <div className='space-y-2'>
                     <p className='text-[.6rem] font-light font-200'>Expertise</p>
-                    <h4 className='text-[1.2rem] font-bold font-700'>Proven technical mastery across multiple engineering domains.</h4>
+                    <h4 className='text-[1rem] font-bold font-700'>Proven technical mastery across multiple engineering domains.</h4>
                     <p className='text-sm font-light font-200'>Deep technical knowledge </p>
                     </div>
                     <div>

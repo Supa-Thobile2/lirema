@@ -7,20 +7,24 @@ function ContactPage() {
   return (
     <>
     <Header/>
-    <div className='p-8 mt-14 space-y-4 border'>
-        <p>Connect</p>
-        <h1>Contact Li Rema Engineering and Construction</h1>
-        <p>Reach out to our expert team for comprehensive engineering and construction solution towards your project goal</p>
+    <div className='p-8 mt-14 space-y-16 '>
+        <p className='text-[.6rem] font-regular font-400'>Connect</p>
+        <div className='space-y-4'>
+        <h1 className='text-[1.5rem] font-bold font-200'>Contact Li Rema Engineering and Construction</h1>
+        <p className='text-[.6rem] font-semibold font-100'>Reach out to our expert team for comprehensive engineering and construction solution towards your project goal</p>
+       </div>
+       
         <div className='flex items-center gap-4'>
-            <button>Call</button>
-            <button>Email</button>
+            <Button text='Email'/>
+            <Button text='Call'/>
+            <Button text='Whatsapp'/>
         </div>
     </div>
      
-        <div className='w-full flex items-center justify-center flex-col p-8 md:p-16 space-y-8 md:space-y-6' id='contact'>
-        <p>Connect</p>
-         <h6 className='text-4xl font-bond font-700'>Contact Us</h6>
-         <p className='text-sm font-light font-200'> Tess us about your engineering and construction project.</p>
+        <div className='w-full flex items-center justify-center flex-col p-8 space-y-16 md:p-16  md:space-y-6' id='contact'>
+        <p className='text-[.6rem] font-light font-200'>Connect</p>
+         <h6 className='text-[1.5rem] font-bond font-700'>Contact Us</h6>
+         <p className='text-[.6rem] font-light font-200'> Tess us about your engineering and construction project.</p>
          <div className='block w-full  md:flex items-center justify-between space-y-4'>
              <div className='space-y-4 w-full mx-auto '>
                  
@@ -37,39 +41,45 @@ function ContactPage() {
                      <p>General Inqueries:</p>
                  </div>
              </div>
-             <div className='w-full mx-auto '>
-                 <form className='w-full  space-y-4  mx-auto'>
-                     <div className='border '>
-                         <input type="email" name="email" id="" placeholder='enter email here' className='p-4 '/>
+             <div className='w-full mx-auto p-4 space-y-4'>
+                 <form className='w-full  space-y-2  mx-auto'>
+                     <div className=' '>
+                         <input type="email" name="email" id="" placeholder='enter email here' className='p-2 border border-lightgray'/>
                      </div>
-                     <div className='border '>
-                         <input type="text" name="name" id="" placeholder='enter email here' className='p-4'/>
+                     <div className=' '>
+                         <input type="text" name="name" id="" placeholder='enter email here' className='p-2 border border-lightgray'/>
                      </div>
-                     <div className='border '>
-                         <input type="text" name="message" id="" placeholder='enter email here' className='p-4'/>
+                     <div className=' '>
+                         <input type="text" name="message" id="" placeholder='enter email here' className='p- border border-lightgray w-full'/>
                      </div>
-                     <div className='w-full mx-auto '>
+                     
                          <Button text='Submit'/>
-                     </div>
+                     
                  </form>
                  <div className='border p-2 space-y-4'>
                  <p>Tell us more about you?</p>
                  <div className=' space-y-4'>
 
                  <input type="checkbox" name="clent" id="client" />
-                 <label htmlFor="client">Business Client</label>
+                 <label htmlFor="client">Business Client</label><br/>
+
                  <input type="checkbox" name="clent" id="client" />
-                 <label htmlFor="client">Business Client</label>
+                 <label htmlFor="client">Business Client</label><br/>
+
                  <input type="checkbox" name="clent" id="client" />
-                 <label htmlFor="client">Business Client</label>
+                 <label htmlFor="client">Business Client</label><br/>
+
                  <input type="checkbox" name="clent" id="client" />
-                 <label htmlFor="client">Business Client</label>
+                 <label htmlFor="client">Business Client</label><br/>
+
                  <input type="checkbox" name="clent" id="client" />
-                 <label htmlFor="client">Business Client</label>
+                 <label htmlFor="client">Business Client</label><br/>
+
                  <input type="checkbox" name="clent" id="client" />
                  <label htmlFor="client">Business Client</label>
                  <div>
-                 <textarea className='border-4' name="tes" id="" cols="30" rows="10" placeholder='Describe your project in detail'></textarea>
+
+                 <textarea className='border-4 w-full' name="tes" id="" cols="30" rows="10" placeholder='Describe your project in detail'></textarea>
                  <div className="flex">
                  <input type="checkbox" name="clent" id="client" />
                    <label htmlFor="client">I agree to the terms and conditions</label>
