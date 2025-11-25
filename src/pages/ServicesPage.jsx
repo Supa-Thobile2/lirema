@@ -33,7 +33,7 @@ function ServicesPage() {
          
          
          <div className='block md:flex items-center'>
-         <div className='p-2 space-y-8'>
+         <div className='p-2 space-y-2'>
         <h3 className='text-xl font-bold'>HVAC services for comfort</h3>
          <p className='text-sm font-light font-300 '>Comprehensive heating and cooling solutions</p>
          <div className='flex items-center'>
@@ -56,7 +56,7 @@ function ServicesPage() {
          <li className='text-sm font-light font-400 '>Comprehensive site management</li>
          
          </ul>
-         <div className='block space-y-2 md:space-y-0 md:flex items-center gap-4'>
+         <div className='flex items-center gap-4'>
          <Button text='Explore'/>
          <Button text='Details <FaChevronRight'/>
          </div>
@@ -72,7 +72,7 @@ function ServicesPage() {
          <div className='p-2 space-y-2'>
           <h3 className='text-xl font-bold'>Specialized construction solutions </h3>
          <h1 className='text-sm font-light font-300'>Custom engineering for unique projects requirements</h1>
-         <div className='block space-y-2 md:flex items-center gap-4'>
+         <div className='flex items-center gap-4'>
          <Button text='Learn'/>
          <Button text='Details <FaChevronRight'/>
          </div>
@@ -87,7 +87,7 @@ function ServicesPage() {
          <div className='p-2 space-y-4'>
          <p className='text-sm font-medium font-400'>Electrify</p>
          <h1 className='text-xl font-bold'>Advanced electrical system design and maintanance</h1>
-         <div className='block space-y-4 md:flex items-center gap-4'>
+         <div className='flex items-center gap-4'>
          <Button text='Learn'/>
          <Button text='Details <FaChevronRight'/>
          </div>
@@ -102,7 +102,7 @@ function ServicesPage() {
          <div className='p-2 space-y-4'>
          <p className='text-sm font-medium font-400'>Smart</p>
          <h1 className='text-xl font-bold'>Smart home solutions for modern living</h1>
-         <div className='block space-y-4 md:flex items-center gap-4'>
+         <div className='flex items-center gap-4'>
          <Button text='Learn'/>
          <Button text='Details <FaChevronRight'/>
          </div>
@@ -113,7 +113,7 @@ function ServicesPage() {
          </div>
          <div className='space-y-16 p-4'>
          <h3 className='text-xl font-bold'>Our comprehensive  engineering expertise</h3>
-         <div className='block md:flex items-center'>
+         <div className='flex items-center'>
          <div>
          {/* image */}
          <h3>Technical precision</h3>
@@ -140,7 +140,7 @@ function ServicesPage() {
          <div className='p-2 space-y-4'>
         
          <h1 className='text-xl font-bold'>Get your project started today</h1>
-         <div className='block space-y-2 md:flex items-center gap-4'>
+         <div className='flex items-center gap-4'>
          <Button text='Quote'/>
          <Button text='Details <FaChevronRight/>'/>
          </div>
@@ -149,7 +149,7 @@ function ServicesPage() {
          </div>
         
 
-         </div>
+         </div>1
           <Team/>
          <Contact/>
          <Footer/>
