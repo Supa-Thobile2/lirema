@@ -113,7 +113,7 @@ function ServicesPage() {
          </div>
          <div className='space-y-16 p-4'>
          <h3 className='text-xl font-bold'>Our comprehensive  engineering expertise</h3>
-         <div className='flex items-center flex-col
+         <div className='flex items-center flex-col'>
          <div>
          {/* image */}
          <h3>Technical precision</h3>
