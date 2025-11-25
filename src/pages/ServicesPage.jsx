@@ -89,7 +89,7 @@ function ServicesPage() {
          <h1 className='text-xl font-bold'>Advanced electrical system design and maintanance</h1>
          <div className='flex items-center gap-4'>
          <Button text='Learn'/>
-         <Button text='Details <FaChevronRight'/>
+         <Button text='Details '/>
          </div>
          </div>
          <div>image</div>
@@ -104,7 +104,7 @@ function ServicesPage() {
          <h1 className='text-xl font-bold'>Smart home solutions for modern living</h1>
          <div className='flex items-center gap-4'>
          <Button text='Learn'/>
-         <Button text='Details <FaChevronRight'/>
+         <Button text='Details '/>
          </div>
          </div>
          <div>image</div>
@@ -142,7 +142,7 @@ function ServicesPage() {
          <h1 className='text-xl font-bold'>Get your project started today</h1>
          <div className='flex items-center gap-4'>
          <Button text='Quote'/>
-         <Button text='Details <FaChevronRight/>'/>
+         <Button text='Details '/>
          </div>
          </div>
          <div>image</div>
