@@ -11,12 +11,12 @@ function ServicesPage() {
  
          <Header/>
          <div className='  mt-14 p-8 space-y-20 '>
-             <p className='text-sm font-bold'>Buld</p>
+             <p className='text-[.6rem]     '>Buld</p>
              <div className='space-y-4'>
              <h1 className='text-xl font-bold  md:text-2xl lg:text-4xl'>Engineering solutions that work</h1>
              <p className='text-md md:text-2xl xl:text-lg'>Delivering precise technical across multiple engineering disciplines with proven reliability and professinal commitment.</p>
              </div>
-             <div className='block md:flex items-center space-y-2 md:space-y-0 gap-6 w-full'>
+             <div className='flex items-center  gap-6 w-full'>
                  <div className='w-full'>
                     <Button text='Service'/>
                  </div>
