@@ -29,7 +29,7 @@ function AboutPage() {
             </div>
 
         </div>
-        <div className=' p-8 space-y-2'>
+        <div className=' px-8 py-20 space-y-2'>
             <p className='text-[.6rem] font-light font-200'>Our Mission</p>
             <h1 className='text-[1.5rem] font-bold font-700'>Engineering excellence through innovation and precision</h1>
             <p className='text-[.6rem] font-light font-200'>Li Rema Engineering and construction stands as pioneering force in technical solutions. We deliver comprehensive engineering services that merge technical expertise with strategic vision.</p>
