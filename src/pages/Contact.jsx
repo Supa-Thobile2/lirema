@@ -16,15 +16,15 @@ function Contact() {
                 
                 <div className='space-y-2'>
                     <FaRegEnvelopeOpen/>
-                    <p className='text-[.6rem] font-light font-300'>General Inqueries:</p>
+                    <p className='text-[.6rem] font-light font-300'>General Inqueries:litabaletsatsi@gmail.com</p>
                 </div>
                 <div className='space-y-2'>
                     <FaPhoneAlt/>
-                    <p className='text-[.6rem] font-light font-300'>General Inqueries:</p>
+                    <p className='text-[.6rem] font-light font-300'>General Inqueries: 074 089 6568</p>
                 </div>
                 <div className='space-y-2'>
                     <FaAddressCard/>
-                    <p className='text-[.6rem] font-light font-300'>General Inqueries:</p>
+                    <p className='text-[.6rem] font-light font-300'>General Inqueries:No. # Lorna Street, Birchleigh North, Kempton Park</p>
                 </div>
             </div>
             <div className='w-full mx-auto '>

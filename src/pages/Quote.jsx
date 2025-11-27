@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../assets/keyGuy.png'
+import img from '../images/mariola-grobelska-TFFanH3SYjM-unsplash.jpg'
 import { Button } from '../components'
 
 function Quote() {

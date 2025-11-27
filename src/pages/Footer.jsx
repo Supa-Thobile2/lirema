@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { Button } from '../components'
 
 function Footer() {
   return (
@@ -9,13 +11,17 @@ function Footer() {
         <div className=' space-y-4 w-full'>
           <h1 className='text-[1rem] font-bold font-700'>Li Rema Engineering & Construction</h1>
           <div className='space-y-2'>
-            <ul className='block space-y-2 md:flex items-center justify-evenly '>
-              <li className=' text-[.9rem] font-regular font-400'>Home</li>
-              <li className=' text-[.9rem] font-regular font-400'>Services</li>
-              <li className=' text-[.9rem] font-regular font-400'>About</li>
-              <li className=' text-[.9rem] font-regular font-400'>Contact</li>
-              <li className=' text-[.9rem] font-regular font-400'>Projects</li>
-            </ul>
+            <ul className='space-y-8 w-full mx-auto flex items-center justify-center flex-col  space-y-2'>
+                            <Link to='/'> <li className='text-[1rem] rounded-[12px]'>Home</li></Link>
+                            
+                                               <Link to='/services'> <li className='text-[1rem] rounded-[12px]'>Services</li></Link>
+                                                                  <Link to='/about'> <li className='text-[1rem] rounded-[12px]'>About</li></Link>
+                                                                                     <Link to='/contacts'> <li className='text-[1rem] rounded-[12px]'>Contact Us</li></Link>
+                                                                                                        <Link to='#team'> <li className='text-[1rem] rounded-[12px]'>Our Team</li></Link>
+                             
+                                 <Button text='login'/>
+                                 
+                         </ul>
 
           </div>
 

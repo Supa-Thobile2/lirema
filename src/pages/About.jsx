@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaBriefcase, FaHardHat } from 'react-icons/fa'
-import img from '../assets/keyGuy.png'
+import img from '../images/pavel-neznanov-w95Fb7EEcjE-unsplash.jpg'
 import { Button } from '../components'
 
 function About() {

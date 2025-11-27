@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../assets/keyGuy.png'
+import img from '../images/vishnu-mohanan-pfR18JNEMv8-unsplash.jpg'
 import { Button } from '../components'
 
 function Choose() {

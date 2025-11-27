@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../assets/keyGuy.png'
+import img from '../images/emmanuel-ikwuegbu-zWOgsj3j0wA-unsplash.jpg'
 import { Link } from 'react-router-dom'
 import Button from './Button'
 

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import img from '../assets/keyGuy.png'
+import img from '../images/mostafa-mahmoudi-47jO5Y8nsYo-unsplash.jpg'
 import { Link } from 'react-router-dom'
 import { Button } from '../components'
 
