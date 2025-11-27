@@ -23,16 +23,24 @@ function Team() {
              <div className='    flex items-center justify-center flex-col'>
                 <img src={img} alt='' className='object-fit w-20 h-20 rounded-full'/>
                 <div className='space-y-2 p-4 text-center'>
-                <h4 className='text-[1rem] font-bold '>Litaba Letsatsi</h4>
-                <p className='text-[.6re] font-semibold font-200'>Chief Technician</p>
+                <h4 className='text-[1rem] font-bold '>Tshego Leshilo</h4>
+                <p className='text-[.6re] font-semibold font-200'>Accounts</p>
                 <p className='text-[.6rem] font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
             </div>
             </div>
              <div className='    flex items-center justify-center flex-col'>
                 <img src={img} alt='' className='object-fit w-20 h-20 rounded-full'/>
                 <div className='space-y-2 p-4 text-center'>
-                <h4 className='text-[1rem] font-bold '>Litaba Letsatsi</h4>
-                <p className='text-[.6re] font-semibold font-200'>Chief Technician</p>
+                <h4 className='text-[1rem] font-bold '>Sphesihle Mntambo</h4>
+                <p className='text-[.6re] font-semibold font-200'>Technician</p>
+                <p className='text-[.6rem] font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
+            </div>
+            </div>
+             <div className='    flex items-center justify-center flex-col'>
+                <img src={img} alt='' className='object-fit w-20 h-20 rounded-full'/>
+                <div className='space-y-2 p-4 text-center'>
+                <h4 className='text-[1rem] font-bold '>Lethabo Mohato</h4>
+                <p className='text-[.6re] font-semibold font-200'>Technician</p>
                 <p className='text-[.6rem] font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
             </div>
             </div>
