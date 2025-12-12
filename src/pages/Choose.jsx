@@ -1,50 +1,149 @@
-import React from 'react'
-import img from '../images/vishnu-mohanan-pfR18JNEMv8-unsplash.jpg'
-import { Button } from '../components'
+import React, { useRef } from "react";
+import img from "../images/tech.webp";
+import { Button } from "../components";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 function Choose() {
+  const imageRef = useRef(null);
+
+  // Parallax effect
+  const { scrollYProgress } = useScroll({
+    target: imageRef,
+    offset: ["start end", "end start"],
+  });
+
+  const parallaxY = useTransform(scrollYProgress, [0, 1], ["-40px", "40px"]);
+
+  // Animation variants
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.25, delayChildren: 0.2 },
+    },
+  };
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 25 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  };
+
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.8 } },
+  };
+
   return (
-    <div className='block p-4 md:flex items-center justify-center flex-col  space-y-4 md:p-16 space-y-4'>
-        <h6 className='text-[.6rem] font-medium font-400'>Why Choose Us</h6>
-        <div className='space-y-2'>
-        <h1 className='text-[1.4rem] font-bold font-700'>Unparalleled engineering excellence</h1>
-        <p className='text-[.6rem] font-medium font-400'>Delivering integrated solutions across multiple technical domains</p>
-       </div>
-       
-        <div className='block space-y-2 md:flex gap-4 '>
-            <div className='flex items-center justify-between flex-col space-y-2'>
-                <div className='border space-y-2 p-4'>
-                    <div className='space-y-2'>
-                    <h1 className='text-[.8rem] font-bold font-700'>Technical expertise</h1>
-                    <p className='text-[.6rem] font-medium font-200'>Highly skilled engineers with deep technical knowledge</p>
-                    </div>
-                    <div>
-                        <Button text='Explore Capabilities'/>
-                    </div>
-                </div>
-                <div className='border  space-y-2 p-4'>
-                    <h1 className='text-[.8rem] font-bold font-700'>Technical expertise</h1>
-                    <p className='text-[.6rem] font-medium font-200'>Highly skilled engineers with deep technical knowledge</p>
-                    <div>
-                        <Button text='Explore Capabilities'/>
-                    </div>
-                </div>
-            </div>
-            <div className='w-full  block md:flex border  '>
-                <div className=' flex items-center justify-center p-4 space-y-2 flex-col w-full space-y-1 md:w-1/2'>
-                    <h6 className='text-[.6rem] font-semibold font-300'
-                        >Innovation</h6>
-                        <div className='space-y-2'>
-                    <h1 className='text-[.8rem] font-bold font-700'>Cutting-edge technological solutions for complex challenges</h1>
-                    <p className='text-[.6rem] font-medium font-200'>Advanced problem-solving approaches</p>
-               </div>
-                </div>
-                <div className='  md:w-1/2'><img src={img} alt='' className='h-full object-fit'/></div>
-            </div>
+    <section
+      className="px-6 py-20 max-w-6xl mx-auto space-y-12"
+      aria-labelledby="choose-title"
+    >
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+        className="space-y-6 text-center"
+      >
+        <motion.p variants={fadeUp} className="text-sm font-medium">
+          Why Choose Us
+        </motion.p>
+
+        <motion.h1
+          id="choose-title"
+          variants={fadeUp}
+          className="text-2xl md:text-4xl font-bold"
+        >
+          Unparalleled engineering excellence
+        </motion.h1>
+
+        <motion.p
+          variants={fadeUp}
+          className="text-sm md:text-base text-gray-700 max-w-xl mx-auto"
+        >
+          Delivering integrated solutions across multiple technical domains.
+        </motion.p>
+      </motion.div>
+
+      {/* CARD SECTION */}
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="grid md:grid-cols-2 gap-8"
+      >
+        {/* LEFT COLUMN - TWO STACKED CARDS */}
+        <div className="space-y-6">
+          {/* Card 1 */}
+          <motion.div
+            variants={fadeIn}
+            className="p-6 border rounded-xl shadow-sm space-y-4 bg-white"
+          >
+            <h2 className="text-lg font-bold">Technical Expertise</h2>
+            <p className="text-sm text-gray-600">
+              Highly skilled engineers with deep technical knowledge.
+            </p>
+
+            <motion.div whileHover={{ scale: 1.07 }} whileTap={{ scale: 0.95 }}>
+              <Button text="Explore Capabilities" />
+            </motion.div>
+          </motion.div>
+
+          {/* Card 2 */}
+          <motion.div
+            variants={fadeIn}
+            className="p-6 border rounded-xl shadow-sm space-y-4 bg-white"
+          >
+            <h2 className="text-lg font-bold">Quality Assurance</h2>
+            <p className="text-sm text-gray-600">
+              Rigorous testing and validation for reliable performance.
+            </p>
+
+            <motion.div whileHover={{ scale: 1.07 }} whileTap={{ scale: 0.95 }}>
+              <Button text="Explore Capabilities" />
+            </motion.div>
+          </motion.div>
         </div>
 
-    </div>
-  )
+        {/* RIGHT COLUMN - IMAGE + TEXT CARD */}
+        <motion.div
+          variants={fadeUp}
+          className="border rounded-xl overflow-hidden bg-white flex flex-col md:flex-row"
+        >
+          {/* Text */}
+          <div className="flex flex-col justify-center p-6 space-y-3 md:w-1/2">
+            <p className="text-xs font-semibold">Innovation</p>
+
+            <h2 className="text-lg font-bold">
+              Cutting-edge technological solutions for complex challenges
+            </h2>
+
+            <p className="text-sm text-gray-600">
+              Advanced problem-solving approaches delivering impactful results.
+            </p>
+          </div>
+
+          {/* Parallax Image */}
+          <motion.div
+            ref={imageRef}
+            style={{ y: parallaxY }}
+            className="md:w-1/2 h-48 md:h-auto overflow-hidden"
+          >
+            <img
+              src={img}
+              alt="Engineering Innovation"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
 }
 
-export default Choose
+export default Choose;

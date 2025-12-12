@@ -5,14 +5,14 @@ function Subscribe() {
   return (
     <div className='space-y-8 flex items-center justify-center flex-col p-8 md:p-16 md:space-y-12'>
     <div className='space-y-2'>
-    <h1 className='text-[1.5rem] font-bold font-700'>Stay Informed Engineering insights</h1>
+    <h1 className='text-[1rem] font-bold font-700'>Stay Informed Engineering insights</h1>
     <p className='text-[.6rem] font-regular font-200'> Receive the latest update, technical innovations and industry trends directly to your inbox.</p>
   </div>  
-    <div className='flex items-center justify-between w-full  md:w-[40%] mx-auto '>
-        <input type="email" name="email" id="email" className='w-full outline-none border rounded-full p-2' />
-        
+    <div className='relative flex items-center justify-between w-full  md:w-[40%] mx-auto '>
+        <input type="email" name="email" id="email" className='w-full outline-none border border-[lightgray] rounded-full p-2' />
+        <div  className='absolute top-0  right-0'>
              <Button text='Subscribe Now'/>
-
+</div>
         
        
     </div>

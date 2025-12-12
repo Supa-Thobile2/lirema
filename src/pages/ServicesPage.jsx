@@ -1,172 +1,116 @@
-import React from 'react'
-import { Button, Header } from '../components'
-import { FaChevronRight } from 'react-icons/fa'
-import img from '../images/scott-blake-x-ghf9LjrVg-unsplash.jpg'
-import img2 from '../images/kettenreaktion-l_Vn4HlFQVw-unsplash.jpg'
-import img3 from '../images/quan-jing-HSzTjbAF5Qs-unsplash.jpg'
-import img4 from '../images/yk-k-cWPULrqLCL8-unsplash.jpg'
-import img5 from '../images/nicolas-thomas-3GZi6OpSDcY-unsplash.jpg'
-import img6 from '../images/andy-tang-jP_KGADOp9c-unsplash.jpg'
-import img7 from '../images/kien-nguyen-994AH40vmVs-unsplash.jpg'
-import Team from './Team'
-import Contact from './Contact'
-import Footer from './Footer'
+import React from 'react';
+import { Button, Header } from '../components';
+import img2 from '../images/hvac3.jpg';
+import img3 from '../images/construction3.webp';
+import img4 from '../images/construction2.webp';
+import img5 from '../images/electric1.jpg';
+import img6 from '../images/camera2.webp';
+import img7 from '../images/camera1.jpg';
+import Team from './Team';
+import Contact from './Contact';
+import Footer from './Footer';
 
-function ServicesPage() {
-   return (
-     <div>
- 
-         <Header/>
-         <div className='  mt-14 p-8 space-y-20 '>
-             <p className='text-[.6rem]     '>Buld</p>
-             <div className='space-y-4'>
-             <h1 className='text-xl font-bold  md:text-2xl lg:text-4xl'>Engineering solutions that work</h1>
-             <p className='text-md md:text-2xl xl:text-lg'>Delivering precise technical across multiple engineering disciplines with proven reliability and professinal commitment.</p>
-             </div>
-             <div className='flex items-center  gap-6 w-full'>
-                 <div className='w-full'>
-                    <Button text='Service'/>
-                 </div>
-                  <div className='w-full'>
-                     <Button text='Contact'/>
-                 </div>
- 
-             </div>
- 
-         </div>
-         <div className=' p-4'>
-          
-           <p className='text-[1.2rem] font-medium font-400 ml-4'>cool</p>
-         
-         
-         <div className='block md:flex items-center '>
-         <div className='space-y-4 p-4'>
-        <h3 className='text-[1.6rem] font-bold'>HVAC services for comfort</h3>
-         <p className='text-[1.2rem] font-light font-300 '>Comprehensive heating and cooling solutions</p>
-         <div className='flex items-center'>
-         <Button text='Learn'/>
-         </div>
-         </div>
-         <div><img src={img2} alt=''/></div>
-         </div>
-
-         </div>
-           <div className='  p-4'>
-        
-         <div className='block md:flex items-center'>
-         <div className=' space-y-4 p-4 '>
-         <p className='text-[1.2rem] font-medium font-400'>Civil</p>
-         <h1 className='text-[1.8rem] font-bold'>Civil and Construction services that build futures</h1>
-         <ul className='space-y-2'>
-         <li className='text-[1.2rem] font-light font-400 '>Integrated project</li>
-         <li className='text-[1.2rem] font-light font-400 '>Sustainable construction</li>
-         <li className='text-[1.2rem] font-light font-400 '>Comprehensive site management</li>
-         
-         </ul>
-         <div className='flex items-center gap-4'>
-         <Button text='Explore'/>
-         <Button text='Details '/>
-         </div>
-         </div>
-         <div><img  src={img3} alt=''/></div>
-         </div>
-
-         </div>
-           <div className='  p-4'>
-            <p className='text-[1.2rem] font-medium font-400'>build</p>
-        
-         <div className='block md:flex items-center space-y-4'>
-         <div className='p-2 space-y-2'>
-          <h3 className='text-[1.6rem] font-bold'>Specialized construction solutions </h3>
-         <h1 className='text-[1.2rem] font-light font-300'>Custom engineering for unique projects requirements</h1>
-         <div className='flex items-center gap-4'>
-         <Button text='Learn'/>
-         <Button text='Details '/>
-         </div>
-         </div>
-         <div><img src={img4} alt=''/></div>
-         </div>
-
-         </div>
-          <div className=' p-4'>
-
-         <div className='block md:flex items-center'>
-         <div className='p-2 space-y-4'>
-         <p className='text-[1.2rem] font-medium font-400'>Electrify</p>
-         <h1 className='text-[1.6rem] font-bold'>Advanced electrical system design and maintanance</h1>
-         <div className='flex items-center gap-4'>
-         <Button text='Learn'/>
-         <Button text='Details '/>
-         </div>
-         </div>
-         <div><img src={img5} alt=""/></div>
-         </div>
-
-         </div>
-           <div className='  p-4'>
-
-         <div className='block md:flex items-center'>
-         <div className='p-2 space-y-4'>
-         <p className='text-[1.2rem] font-medium font-400'>Smart</p>
-         <h1 className='text-[1.6rem] font-bold'>Smart home solutions for modern living</h1>
-         <div className='flex items-center gap-4'>
-         <Button text='Learn'/>
-         <Button text='Details '/>
-         </div>
-         </div>
-         <div><img src={img} alt=''/></div>
-         </div>
-
-         </div>
-         <div className=' p-4'>
-         <h3 className='text-[1.6rem] font-semibold font-300'>Our comprehensive  engineering expertise</h3>
-         <div className='flex items-center flex-col'>
-         <div>
-         <img src={img7} alt=''/>
-         <h3 className='text-[1.4rem] font-semibold font-300'>Technical precision</h3>
-         </div>
-        
-          <div>
-         <img src={img7} alt=''/>
-         <h3 className='text-[1.4rem] font-semibold font-300'>Innovative Solutions</h3>
-         </div>
-          <div>
-         <img src={img7} alt=''/>
-         <h3 className='text-[1.4rem] font-semibold font-300'>Client focused delivery</h3>
-         </div>
-      
-        <div className="w-full">
-         <Button text='Contact'/>
-         </div>
-         </div>
-
-         </div>
-          <div className='  p-4'>
-
-         <div className='flex items-center'>
-         <div className='p-2 space-y-4'>
-        
-         <h1 className='text-xl font-bold'>Get your project started today</h1>
-         <div className='flex items-center gap-4'>
-         <Button text='Quote'/>
-         <Button text='Details '/>
-         </div>
-         </div>
-         <div>
-          <img src={img6} alt=''/>
-         </div>
-         </div>
-        
-
-         </div>
-          <Team/>
-         <Contact/>
-         <Footer/>
-         
-         
-
-     </div>
-   )
+function ServiceCard({ title, subtitle, description, image, buttons }) {
+  return (
+    <div className="flex flex-col md:flex-row items-center gap-8 p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <div className="flex-1 space-y-3">
+        {subtitle && <p className="text-sm font-medium text-gray-500">{subtitle}</p>}
+        <h2 className="text-xl md:text-2xl font-bold">{title}</h2>
+        {description && <p className="text-sm text-gray-600">{description}</p>}
+        <div className="flex flex-wrap gap-3 mt-2">
+          {buttons.map((btn, idx) => (
+            <Button key={idx} text={btn} />
+          ))}
+        </div>
+      </div>
+      {image && (
+        <div className="flex-1">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover rounded-xl shadow-sm"
+          />
+        </div>
+      )}
+    </div>
+  );
 }
 
-export default ServicesPage
+function ServicesPage() {
+  return (
+    <div className="bg-gray-50 min-h-screen">
+      <Header />
+
+      {/* Hero Section */}
+      <div className="mt-16 px-6 md:px-16 text-center md:text-left space-y-4">
+        <p className="text-sm font-medium text-gray-500 uppercase">Build</p>
+        <h1 className="text-2xl md:text-4xl font-bold">Engineering solutions that work</h1>
+        <p className="text-gray-600 max-w-2xl mx-auto md:mx-0">
+          Delivering precise technical solutions across multiple engineering disciplines with
+          proven reliability and professional commitment.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-4">
+          <Button text="Services" />
+          <Button text="Contact" />
+        </div>
+      </div>
+
+      {/* Service Sections */}
+      <div className="px-6 md:px-16 mt-12 space-y-12">
+        <ServiceCard
+          title="HVAC services for comfort"
+          description="Comprehensive heating and cooling solutions tailored to your needs."
+          image={img2}
+          buttons={['Learn More']}
+        />
+
+        <ServiceCard
+          subtitle="Civil"
+          title="Civil and Construction services that build futures"
+          description="Integrated project management, sustainable construction, and comprehensive site management."
+          image={img3}
+          buttons={['Explore', 'Details']}
+        />
+
+        <ServiceCard
+          title="Specialized construction solutions"
+          description="Custom engineering for unique project requirements."
+          image={img4}
+          buttons={['Learn', 'Details']}
+        />
+
+        <ServiceCard
+          subtitle="Electrify"
+          title="Advanced electrical system design and maintenance"
+          image={img5}
+          buttons={['Learn', 'Details']}
+        />
+
+        <ServiceCard
+          subtitle="Smart"
+          title="Smart home solutions for modern living"
+          image={img7}
+          buttons={['Learn', 'Details']}
+        />
+
+        {/* Call to Action */}
+        <ServiceCard
+          title="Get your project started today"
+          image={img6}
+          buttons={['Quote', 'Details']}
+        />
+      </div>
+
+      {/* Team and Contact */}
+      <div className="mt-16">
+        <Team />
+      </div>
+      <div className="mt-16">
+        <Contact />
+      </div>
+      <Footer />
+    </div>
+  );
+}
+
+export default ServicesPage;
