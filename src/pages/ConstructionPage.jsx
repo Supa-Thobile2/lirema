@@ -1,84 +1,147 @@
-import React from 'react'
-import { Button, Header } from '../components'
-import Contact from './Contact'
-import Footer from './Footer'
-import Team from './Team'
-import Quote from './Quote'
+import React from "react";
+import { motion } from "framer-motion";
+import { Button, Header } from "../components";
+import Contact from "./Contact";
+import Footer from "./Footer";
+import Team from "./Team";
+import Quote from "./Quote";
 
 function ConstructionPage() {
- return (
+  // --- ANIMATION VARIANTS ---
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.2 },
+    },
+  };
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 25 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+  };
+
+  return (
     <div>
+      <Header />
 
-        <Header/>
-        <div className='space-y-2'>
-        <div className='border-6 p-16 space-y-15 mt-12 space-y-4 md:p-18 md:space-y-24 lg:p-14  lg:space-y-16 xl:p-14  flex items-center justify-center flex-col'>
-            <p className='p-4 border text-sm font-bold'>Construction Solutions</p>
-            <div className='space-y-2'>
-            <h1 className='text-3xl md:text-8xl lg:text-4xl font-bold font-700'>Construction solutions</h1>
-            <p className='text-md md:text-lg xl:text-lg'>Building innovative solutions that transform infrastructure and drive technological progress across multiple factors.</p>
-           </div>
-            <div className='flex items-center gap-2 w-full'>
-                <div>
-                    <Button text='Learn'/>
-                </div>
-                 <div>
-                    <Button text='Contact'/>
-                </div>
+      <motion.section
+        className="py-16 px-4 md:px-12 space-y-12 md:space-y-16 lg:space-y-20 flex flex-col items-center"
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        aria-labelledby="construction-hero-heading"
+      >
+        {/* Hero Section */}
+        <motion.p
+          className="text-sm font-semibold text-gray-500 uppercase"
+          variants={fadeUp}
+        >
+          Construction Solutions
+        </motion.p>
+        <motion.h1
+          id="construction-hero-heading"
+          className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-center"
+          variants={fadeUp}
+        >
+          Construction Solutions
+        </motion.h1>
+        <motion.p
+          className="text-sm md:text-base lg:text-lg text-center text-gray-700 max-w-3xl"
+          variants={fadeUp}
+        >
+          Building innovative solutions that transform infrastructure and drive
+          technological progress across multiple sectors.
+        </motion.p>
 
-            </div>
+        <motion.div
+          className="flex flex-wrap gap-4 justify-center mt-6"
+          variants={fadeUp}
+        >
+          <Button text="Learn" ariaLabel="Learn more about construction solutions" />
+          <Button text="Contact" ariaLabel="Contact Li Rema Construction" />
+        </motion.div>
+      </motion.section>
 
-        </div>
-        <div className='border-6  p-16 space-y-16  md:p-18 md:space-y-24 lg:p-14  lg:space-y-16 xl:p-14  flex items-center justify-center flex-col'>
-            <p>Construction</p>
-            <div className='space-y-2'>
-            <h1 className='text-lg font-bold font-700'>Construction Expertise</h1>
-            <p>Lorem, ipsum dolor.</p>
-            </div>
-            <div className='   flex items-center justify-center  gap-4'>
-                <div classname='w-full '>
-                    <Button text='Learn'/>
-                </div>
-                <div classname='w-full '>
-                    <Button text='Learn'/>
-                </div>
-            </div>
+      {/* Expertise Section */}
+      <motion.section
+        className="py-16 px-4 md:px-12 space-y-12 md:space-y-16 flex flex-col items-center bg-gray-50"
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        aria-labelledby="construction-expertise-heading"
+      >
+        <motion.p className="text-sm font-semibold text-gray-500 uppercase" variants={fadeUp}>
+          Construction
+        </motion.p>
+        <motion.h2
+          id="construction-expertise-heading"
+          className="text-xl md:text-2xl font-bold text-center"
+          variants={fadeUp}
+        >
+          Construction Expertise
+        </motion.h2>
+        <motion.p className="text-sm md:text-base text-gray-700 text-center max-w-2xl" variants={fadeUp}>
+          We provide end-to-end construction services with precision, safety, and
+          reliability to deliver projects on time and within budget.
+        </motion.p>
 
-        </div>
-        <div className='border-6 p-16  space-y-16  flex items-center justify-center flex-col'>
-                <div className='space-y-8'>
-                    <h1>Lorem, ipsum dolor.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    <div className=' space-y-2 flex gap-4'>
-                        <div className='w-full'>
-                            <Button text='Learn'/>
-                        </div>
-                         <div className='w-full'>
-                           <Button text='Learn'/>
-                        </div>
+        <motion.div
+          className="flex flex-wrap gap-4 justify-center mt-6"
+          variants={fadeUp}
+        >
+          <Button text="Learn" ariaLabel="Learn more about our expertise" />
+          <Button text="Learn" ariaLabel="Learn more about our expertise" />
+        </motion.div>
+      </motion.section>
 
-                    </div>
+      {/* Project Examples Section */}
+      <motion.section
+        className="py-16 px-4 md:px-12 space-y-12 md:space-y-16 flex flex-col items-center"
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        aria-labelledby="construction-projects-heading"
+      >
+        <motion.h2 id="construction-projects-heading" className="text-xl md:text-2xl font-bold" variants={fadeUp}>
+          Sample Projects
+        </motion.h2>
+        <motion.p className="text-gray-700 max-w-3xl text-center" variants={fadeUp}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          imperdiet, nulla et dictum interdum, nisi lorem egestas odio.
+        </motion.p>
+        <motion.div className="flex flex-wrap gap-4 justify-center mt-6" variants={fadeUp}>
+          <Button text="Learn" ariaLabel="Learn more about project 1" />
+          <Button text="Learn" ariaLabel="Learn more about project 2" />
+        </motion.div>
+      </motion.section>
 
+      {/* Highlight Section */}
+      <motion.section
+        className="py-12 px-4 md:px-12 space-y-6 flex flex-col items-center bg-gray-50"
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <motion.p className="text-sm font-semibold text-gray-500 uppercase" variants={fadeUp}>
+          Construction Solutions
+        </motion.p>
+        <motion.h2 className="text-lg md:text-xl font-bold" variants={fadeUp}>
+          Delivering Reliable Construction Services
+        </motion.h2>
+      </motion.section>
 
-                </div>
-                
-        </div>
-        <div className='border-6 p-8  space-y-2  flex items-center justify-center flex-col'>
-            <p>Construction solutions</p>'
-            <h1 className='text-lg font-bold font-700'>Construction Solutions</h1>
-           
-
-        </div>
-       
-        
-       
-        <Team/>
-        <Quote/>
-   
-        <Contact/>
-        <Footer/>
-        </div>
+      {/* Common Sections */}
+      <Team />
+      <Quote />
+      <Contact />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default ConstructionPage
+export default ConstructionPage;

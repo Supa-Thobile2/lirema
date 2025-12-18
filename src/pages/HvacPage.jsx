@@ -1,163 +1,175 @@
-import React from 'react'
-import { Button, Header } from '../components'
-import Contact from './Contact'
-import Footer from './Footer'
-import img from '../assets/keyGuy.png'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Button, Header } from '../components';
+import Contact from './Contact';
+import Footer from './Footer';
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+};
 
 function HvacPage() {
   return (
-    <div>
+    <div className="bg-gray-50 min-h-screen scroll-smooth">
+      <Header />
 
-        <Header/>
-        <div className='space-y-2'>
-        <div className=' p-16 mt-14 space-y-16 md:p-28 md:space-y-24 lg:p-14  lg:space-y-16 xl:p-14  flex items-center justify-center flex-col'>
-            <p className='text-sm font-bold'>Comfort</p>
-            <div className='space-y-4'>
-            <h1 className='text-3xl md:text-8xl lg:text-4xl font-bold font-700'>Precision HVAC solutions</h1>
-            <p className='text-md md:text-lg xl:text-lg'>Engineered climate control systems designed to optimize comfort and efficiency for residential and commercial spaces with expert technical precision.</p>
-            </div>
-            
-            <div className='flex items-center justify-center gap-2 w-full'>
-                <div>
-                   <Button text='Explore'/>
-                </div>
-                 <div>
-                    <Button text='Contact'/>
-                </div>
+      {/* Hero Section */}
+      <motion.section
+        className="text-center md:text-left px-6 md:px-20 pt-16 md:pt-24 space-y-6 md:space-y-12"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
+        <motion.p variants={fadeUpVariant} className="text-sm md:text-base font-semibold text-purple-700 uppercase tracking-wide">
+          Comfort
+        </motion.p>
+        <motion.h1 variants={fadeUpVariant} className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900">
+          Precision HVAC Solutions
+        </motion.h1>
+        <motion.p variants={fadeUpVariant} className="text-sm md:text-lg text-gray-700 max-w-3xl mx-auto md:mx-0 leading-relaxed">
+          Engineered climate control systems designed to optimize comfort and efficiency
+          for residential and commercial spaces with expert technical precision.
+        </motion.p>
+        <motion.div variants={fadeUpVariant} className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-4">
+          <Button text="Explore" />
+          <Button text="Contact" />
+        </motion.div>
+      </motion.section>
 
-            </div>
+      {/* Installation Section */}
+      <motion.section
+        className="px-6 md:px-20 mt-16 space-y-12 md:space-y-0 md:grid md:grid-cols-2 gap-12 items-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
+        <motion.div variants={fadeUpVariant} className="space-y-6">
+          <h6 className="text-sm md:text-base font-medium text-gray-500 uppercase">Install</h6>
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900">Professional HVAC Installation for Optimal Comfort</h2>
+          <p className="text-gray-700">
+            We design and implement precise HVAC systems tailored to your specific environmental needs.
+            Our technicians ensure seamless integration and maximize efficiency for every space.
+          </p>
+          <ul className="list-disc pl-5 space-y-2 text-gray-700">
+            <li>Custom system matching your unique requirements</li>
+            <li>Energy-efficient solutions that reduce operational costs</li>
+            <li>Advanced technology for precise temperature control</li>
+          </ul>
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <Button text="Consult" />
+            <Button text="Details" />
+          </div>
+        </motion.div>
 
+        {/* Placeholder for Installation Image */}
+        <motion.div
+          variants={fadeUpVariant}
+          className="rounded-xl w-full h-64 md:h-80 bg-gray-200 flex items-center justify-center text-gray-400 font-semibold text-lg shadow-lg"
+        >
+          Image Placeholder
+        </motion.div>
+      </motion.section>
+
+      {/* Maintenance Section */}
+      <motion.section
+        className="px-6 md:px-20 mt-16 space-y-12 md:space-y-0 md:grid md:grid-cols-2 gap-12 items-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
+        <motion.div variants={fadeUpVariant} className="space-y-6">
+          <p className="text-sm md:text-base font-semibold text-purple-700 uppercase">Maintain</p>
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900">Comprehensive HVAC Maintenance for Long-Term Performance</h2>
+          <p className="text-gray-700">
+            Regular maintenance prevents unexpected breakdowns and extends system lifespans. Our skilled technicians provide thorough inspections and proactive servicing.
+          </p>
+          <ul className="list-disc pl-5 space-y-2 text-gray-700">
+            <li>Scheduled preventative maintenance programs</li>
+            <li>Detailed diagnostics and performance tracking</li>
+            <li>Quick responses and expert technical advice</li>
+          </ul>
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <Button text="Schedule" />
+            <Button text="Learn" />
+          </div>
+        </motion.div>
+
+        {/* Placeholder for Maintenance Image */}
+        <motion.div
+          variants={fadeUpVariant}
+          className="rounded-xl w-full h-64 md:h-80 bg-gray-200 flex items-center justify-center text-gray-400 font-semibold text-lg shadow-lg"
+        >
+          Image Placeholder
+        </motion.div>
+      </motion.section>
+
+      {/* Repair Section */}
+      <motion.section
+        className="px-6 md:px-20 mt-16 space-y-12 md:space-y-0 md:grid md:grid-cols-2 gap-12 items-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
+        <motion.div variants={fadeUpVariant} className="space-y-6">
+          <p className="text-sm md:text-base font-semibold text-purple-700 uppercase">Repair</p>
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900">Swift HVAC Repair Services</h2>
+          <p className="text-gray-700">
+            Rapid diagnostics and precise repair solutions for all HVAC systems.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <Button text="Repair" />
+            <Button text="Contact" />
+          </div>
+        </motion.div>
+
+        {/* Placeholder for Repair Image */}
+        <motion.div
+          variants={fadeUpVariant}
+          className="rounded-xl w-full h-64 md:h-80 bg-gray-200 flex items-center justify-center text-gray-400 font-semibold text-lg shadow-lg"
+        >
+          Image Placeholder
+        </motion.div>
+      </motion.section>
+
+      {/* Call to Action Section */}
+      <motion.section
+        className="px-6 md:px-20 mt-16 text-center space-y-6 md:space-y-12"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeUpVariant}
+      >
+        <h2 className="text-xl md:text-3xl font-bold text-gray-900">
+          Ready to optimize your climate control?
+        </h2>
+        <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
+          Get expert HVAC solutions designed for your specific needs and environment.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-4">
+          <Button text="Quote" />
+          <Button text="Contact" />
         </div>
-        <div className='space-y-2 p-8 block md:flex gap-4'>
-            <div className='space-y-8'>
-            <h6 className='text-sm font-light font-300'>Install </h6>
-            <h1 className='text-2xl md:text-8xl lg:text-4xl font-bold font-700'>Professional HVAC installation for optimal comfort</h1>
-            <p>We design and implement precise HVAC systems tailored to your specific environmental needs. Our technicians ensure seamless integration and maxixise efficiency for every space.</p>
-            <ul className="space-y-2">
-                <li>Custom system matching your unique requirements</li>
-                <li>Energy-efficiency solutions that reduce operational costs</li>
-                <li>Advanced technology for precise temperature control</li>
-            </ul>
-            <div className='flex items-center justify-between flex-col gap-4'>
-                <div className='w-full'>
-                    <Button text='Consult'/>
-                </div>
-                <div className='w-full'>
-                   <Button text='Details'/>
-                </div>
+      </motion.section>
 
-
-            </div>
-            </div>
-            <div className='  md:w-1/2 mx-auto'>
-      <img src={img} alt='' className='object-fit w-full h-full block'/>
-
+      {/* Contact & Footer */}
+      <Contact />
+      <Footer />
     </div>
-        </div>
-        <div className='block p-8 space-y-2  md:flex'>
-            <div className='space-y-8'>
-                <p className='text-sm font-bold font-300'>Maintain</p>
-                <h4 className='text-2xl font-bold font-500'>Comprehensive HVAC maintainance long term perfomance</h4>
-                <p className='text-sm font-light font-200'>Regular maintanance prevents unexpected breakdowns and extends sytems lifespans. Our skilled technicians provide thorough inspections and proactive servicing.
-                </p>
-                <ul className='space-y-4'>
-                    <li>Scheduled preventative maintanance programs</li>
-                     <li>Detailed diagnostics and performance tracking</li>
-                      <li>Quick responses and experttechnical advise</li>
-                </ul>
-                <div className='block space-y-2 md:flex'>
-                    <div className='w-full'> 
-                        <Button text='Schedule'/>
-
-                    </div>
-                    <div className='w-full'> 
-                        <Button text='Learn'/>
-
-                    </div>
-
-                </div>
-            </div>
-               <div className='  md:w-1/2 mx-auto'>
-      <img src={img} alt='' className='object-fit w-full h-full block'/>
-
-    </div>
-
-        </div>
-        <div className='block p-8 space-y-12 md:flex items-center justify-center flex-col'>
-            <p>Repair</p>
-            
-                <div className='space-y-4'>
-                <h1 className='text-2xl font-bold font-500'>Swift HVAC Repair Services</h1>
-                <p>Rapid diagnostics and precise repair solutions for all HVAC systems.</p>
-                </div>
-            <div className='block md:flex'>
-                  <div className='  md:w-1/2 mx-auto'>
-      <img src={img} alt='' className='object-fit w-full h-full block'/>
-
-    </div>
-                <div className='space-y-4'>
-                    
-                    <h1 className='text-lg font-bold font-700'>Expert trobleshooting and resolution</h1>
-                    <p>We diagnose and fix complex HVAC issues with minimal downtime and efficiency</p>
-
-                    <div className='flex items-center gap-4'>
-                        <div className='w-full'>
-                           <Button text='Repair'/> 
-                        </div>
-                        <div className='w-full'>
-                           <Button text='Contact'/>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-        <div className='block p-8 space-y-8 md:flex items-center justify-center flex-col'>
-            <div>
-                video
-            </div>
-            <div className='space-y-8'>
-                <h1 className='text-lg font-bold font-700'>Li Rema Engineering & Construction can transform your HVAC system</h1>
-                <div className='flex items-center divide'>
-                <p></p>
-                <p>logo</p>
-                </div>
-            </div>
-
-        </div>
-        <div className='block p-8 space-y-16 md:flex items-center justify-center flex-col'>
-            <div className='space-y-8'>
-                <p>
-                    HVAC
-                </p>
-                <div className='space-y-4'>
-                <h1 className='text-lg font-bold font-500'>Ready to optimize your climate control?</h1>
-                <p>Get expert HVAC solutions designed for your specific needs and environment</p>
-                </div>
-                <div className='block md:flex items-center justify-center'>
-                <div className='flex items-center justify-center gap-4'>
-                    <div className='w-full'>
-                        <Button text='Quote'/>
-                    </div>
-                     <div className='w-full'>
-                        <Button text='Contact'/>
-                    </div>
-
-                </div>
-                <div>image</div>
-                </div>
-            </div>
-            
-
-        </div>
-        <Contact/>
-        <Footer/>
-        </div>
-    </div>
-  )
+  );
 }
 
-export default HvacPage
+export default HvacPage;

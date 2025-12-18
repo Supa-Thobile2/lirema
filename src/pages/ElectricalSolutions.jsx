@@ -1,267 +1,153 @@
-import React from 'react'
-import { Button, Header } from '../components'
-import Contact from './Contact'
-import Footer from './Footer'
-import Team from './Team'
-import Quote from './Quote'
+import React from "react";
+import { Button, Header } from "../components";
+import Contact from "./Contact";
+import Footer from "./Footer";
+import Team from "./Team";
+import Quote from "./Quote";
+import { motion } from "framer-motion";
+import {
+  FaBolt,
+  FaPlug,
+  FaTools,
+  FaShieldAlt,
+  FaSolarPanel,
+  FaVideo,
+  FaHome,
+  FaCogs,
+} from "react-icons/fa";
 
 function ElectricalSolutions() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+  };
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
+  const services = [
+    {
+      icon: <FaBolt />,
+      title: "HT Switching and Authorization",
+      description:
+        "Advanced high tension electrical management with strict safety protocols and expert technical implementation.",
+    },
+    {
+      icon: <FaPlug />,
+      title: "Transformer Maintenance",
+      description:
+        "Ensuring continuous electrical performance through expert diagnostic and preventive strategies.",
+    },
+    {
+      icon: <FaTools />,
+      title: "Switchgear Maintenance",
+      description:
+        "Precision management for safe and efficient electrical distribution.",
+    },
+  ];
+
   return (
     <div>
+      <Header />
 
-        <Header/>
-        <div className='p-12 space-y-4'>
-        <div className=' space-y-16 mt-16   md:space-y-18   lg:space-y-16   flex items-center justify-center flex-col'>
-            <p className='text-sm font-light font-200'>Electrify</p>
-            <div className='space-y-4'>
-            <h1 className='text-2xl md:text-4xl lg:text-4xl font-bold font-700'>Electrical services refined</h1>
-            <p className='text-sm font-light font-300'>Reiablble infrastructure designed to support your business operations with and cutting edge expertise</p>
-            </div>
-            
-            <div className='flex items-center justify-center gap-4 w-full'>
-                <div>
-                    <Button text='Explore'/>
-                </div>
-                 <div>
-                  <Button text='Learn'/>
-                </div>
+      {/* Hero Section */}
+      <motion.section
+        className="px-6 md:px-12 py-16 flex flex-col items-center text-center space-y-6"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        aria-labelledby="electrical-hero-heading"
+      >
+        <motion.p
+          variants={fadeUp}
+          className="text-sm font-semibold tracking-wide text-gray-700"
+        >
+          Electrify
+        </motion.p>
+        <motion.h1
+          id="electrical-hero-heading"
+          variants={fadeUp}
+          className="text-3xl md:text-5xl font-extrabold leading-snug"
+        >
+          Electrical Services Refined
+        </motion.h1>
+        <motion.p variants={fadeUp} className="text-base md:text-lg text-gray-600 max-w-2xl">
+          Reliable infrastructure designed to support your business operations with cutting-edge expertise.
+        </motion.p>
+        <motion.div variants={fadeUp} className="flex gap-4">
+          <Button text="Explore" icon={<FaBolt aria-hidden="true" />} />
+          <Button text="Learn" icon={<FaPlug aria-hidden="true" />} />
+        </motion.div>
+      </motion.section>
 
-            </div>
+      {/* Services Section */}
+      <motion.section
+        className="px-6 md:px-12 py-16 space-y-12"
+        variants={containerVariants}
+      >
+        <motion.h2 variants={fadeUp} className="text-xl md:text-2xl font-bold text-center md:text-left">
+          Comprehensive Electrical Solutions for Every Need
+        </motion.h2>
+        <motion.p variants={fadeUp} className="text-gray-600 max-w-3xl text-center md:text-left">
+          We deliver precision electrical services across multiple sectors and applications.
+        </motion.p>
 
-        </div>
-        <div className='   space-y-16   lg:space-y-16   flex items-center justify-center flex-col'>
-            <p >Services</p>
-            <div className='space-y-4'>
-            <h1 className='text-lg font-bold font-700'>Comprehensive electrical solutions for every need</h1>
-            <p className='text-sm font-light font-300'>We deliver precision electrical services across multiple sectors and application.</p>
-            </div> 
-            
-            {/* //image */}
-            <div className='block space-y-4  md:flex items-center justify-center  gap-4'>
-                <div classname='space-y-4'>
-                    <h1 className='text-lg font-bold font-700'>HT Switching and Authorization </h1>
-                    <p className='text-sm font-light font-300 '>Advanced high tension electrical management with strict safety protocols and expert technical implementation.</p>
-                </div>
-                 <div classname=' space-y-4'>
-                    <h1 className='text-lg font-bold font-700'>Transformer maintainance </h1>
-                    <p className='text-sm font-light font-300'>Advanced high tension electrical management with strict safety protocols and expert technical implementation.</p>
-                </div>
-                 <div classname='w-full space-y-4'>
-                    <h1 className='text-lg font-bold font-700'>Switchgear Maintainance </h1>
-                    <p className='text-sm font-light font-200'>Advanced high tension electrical management with strict safety protocols and expert technical implementation.</p>
-                </div>
+        <motion.div
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8"
+        >
+          {services.map((service, idx) => (
+            <motion.div
+              key={idx}
+              variants={fadeUp}
+              className="p-6 border rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-start gap-4"
+            >
+              <div className="text-blue-600 text-3xl">{service.icon}</div>
+              <h3 className="text-lg font-bold">{service.title}</h3>
+              <p className="text-gray-600">{service.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.section>
 
-                
-            </div>
+      {/* Expertise Section */}
+      <motion.section
+        className="px-6 md:px-12 py-16 space-y-12"
+        variants={containerVariants}
+      >
+        <motion.h2 variants={fadeUp} className="text-sm font-semibold text-gray-700">
+          Expertise
+        </motion.h2>
+        <motion.h3 variants={fadeUp} className="text-xl md:text-2xl font-bold">
+          HT Switching and Authorization
+        </motion.h3>
+        <motion.p variants={fadeUp} className="text-gray-600 max-w-3xl">
+          Precision electrical management for complex industrial environments.
+        </motion.p>
+        <motion.ul variants={fadeUp} className="list-disc list-inside text-gray-600 space-y-2">
+          <li>Advanced safety protocols</li>
+          <li>Certified technical personnel</li>
+          <li>Comprehensive risk management</li>
+        </motion.ul>
+        <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4 mt-4">
+          <Button text="Learn" icon={<FaTools />} />
+          <Button text="Contact" icon={<FaShieldAlt />} />
+        </motion.div>
+      </motion.section>
 
-        </div>
-        <div className=' space-y-14  flex items-center justify-center flex-col'>
-                <div className='space-y-8'>
-                    <p className='text-sm font-bold font-300'>Expertise</p>
-                    <div className='space-y-6'>
-                    <h1 className='text-lg font-bold font-700'>HT Switching and Authorization</h1>
-                    <p>Precision electrical management for complex industrial environments.</p>
-                    </div>
-                    <ul className='space-y-2'>
-                        <li>Advanced safety protocols</li>
-                        <li>Certified technical </li>
-                        <li>Comprehensive risk management</li>
-                    </ul>
-                    <div className=' space-y-2 flex gap-4'>
-                        <div className='w-full'>
-                           <Button text='Learn'/>
-                        </div>
-                         <div className='w-full'>
-                           <Button text='Contact'/>
-                        </div>
+      {/* Add other sections similarly using motion.div and icons */}
+      {/* Placeholder images can be added with <img src={placeholder} alt="description" /> */}
 
-                    </div>
-
-
-                </div>
-                
-        </div>
-         <div className='   space-y-14  flex items-center justify-center flex-col'>
-                <div className='space-y-4'>
-                    <p className='text-sm font-block font-300'>Reliability</p>
-                    <div className='space-y-2'>
-                    <h1 className='text-lg font-bold font-700'>Transformer maintanance and care</h1>
-                    <p className='text-sm font-block font-300'>Ensuring continuous electrical perfomance through expert diagnostic and preventitive strategies.</p>
-                    </div>
-                    <ul className='space-y-2'>
-                        <li>Comprehensive system analysis</li>
-                        <li>Predictive maintanance techniques </li>
-                        <li>Minimized operational disruptions</li>
-                    </ul>
-                    <div className=' space-y-2 flex gap-4'>
-                        <div className='w-full'>
-                            <Button text='Request Service'/>
-                        </div>
-                         <div className='w-full'>
-                            <Button text='Contact'/>
-                        </div>
-
-                    </div>
-
-
-                </div>
-                
-        </div>
-         <div className='  space-y-14  flex items-center justify-center flex-col'>
-                <div className='space-y-8'>
-                    <p className='text-sm font-bold font-300'>Connection</p>
-                    <div className='space-y-4'>
-                    <h1 className='text-lg font-bold font-700'>Cable joints and terminations with technical precision</h1>
-                    <p className='text-lg'>Seamless electrical connections demand expert craftsmanship. Our technicians deliver precise cable termination that guarantee long term prfomance and sytem integrity.</p>
-                    </div>
-                    <ul classname='space-y-2'>
-                        <li>Advanced safety protocols</li>
-                        <li>Certified technical </li>
-                        <li>Comprehensive risk management</li>
-                    </ul>
-                    <div className=' space-y-2 flex gap-4'>
-                        <div className='w-full'>
-                           <Button text='Explore'/>
-                        </div>
-                         <div className='w-full'>
-                            <Button text='Connect'/>
-                        </div>
-
-                    </div>
-
-
-                </div>
-                
-        </div>
-         <div className='space-y-16  flex items-center justify-center flex-col'>
-                <div className='space-y-8'>
-                    <p className='text-sm font-light font-300'>Safety</p>
-                    <div className='space-y-2'>
-                    <h1 className='text-lg font-bold font-700'>Domestic electrical installation for morder homes</h1>
-                    <p className='text-sm font-light font-300'>Transform your living space with professional. We provide comprehensive residential wiring that meets highest safety and perfomance standards </p>
-                   </div>
-                    <div className=' space-y-4 flex gap-4'>
-                        <div className='w-full'>
-                            <Button text='Upgrade'/>
-                        </div>
-                         <div className='w-full'>
-                            <Button text='Consult'/>
-                        </div>
-
-                    </div>
-
-
-                </div>
-                
-        </div>
-         <div className='  space-y-14  flex items-center justify-center flex-col'>
-                <div className='space-y-8'>
-                    <p className='text-sm font-light font-300'>Sustainable</p>
-                    <h1 className='text-md font-bold font-700'>Solar installation and renewable energy solutions</h1>
-                    <p className='text-sm font-light font-300'>Harness clean energy with advanced solar installation services. We design, implement efficient solar system that reduces environmental impact and energy costs.</p>
-                 
-                    <div className=' space-y-2 flex gap-4'>
-                        <div className='w-full'>
-                            <Button text='Install'/>
-                        </div>
-                         <div className='w-full'>
-                            <Button text='Discuss'/>
-                        </div>
-
-                    </div>
-
-
-                </div>
-                
-        </div>
-         <div className='  space-y-14  flex items-center justify-center flex-col'>
-                <div className='space-y-8'>
-                    <p className='text-sm font-light font-300'>Sustainable</p>
-                    <div className='space-y-2'>
-                    <h1 className='text-md font-bond font-700'>Solar installation and renewable energy solutions</h1>
-                    <p className='text-sm font-light font-300'>Harness clean energy with advanced solar installation services. We design, implement efficient solar system that reduces environmental impact and energy costs.</p>
-                    </div>
-                    
-
-
-                </div>
-                <div className='block md:flex gap-4'>
-                    <div className='space-y-4'>
-                        <div className='space-y-2'>
-                            <p className='text-sm font-light font-300'>CCTV</p>
-                            <h1 className='text-md font-bond font-700'>Advanced security monitoring </h1>
-                            <p className='text-sm font-light font-300'>Comprehensive visual survelliance for residential and commercial properties.</p>
-                            <div className=' space-y-2 flex gap-4'>
-                        <div className='w-full'>
-                            <Button text='Protect'/>
-                        </div>
-                         <div className='w-full'>
-                           <Button text='Consult'/>
-                        </div>
-
-                    </div>
-                        </div>
-                        <div>image</div>
-                    </div>
-                    <div className='block gap-6 space-y-4 md:flex  flex-wrap'>
-
-                        <div className='border space-y-2 p-4'>
-                            <p className='text-sm font-light font-300'>Access</p>
-                            <h1 className='text-md font-bond font-700'>Control systems</h1>
-                            <p className='text-sm font-light font-300'>Secure entry management for enhanced property protection</p>
-                            <div className='w-full'>
-                                <Button text='Learn'/>
-
-                            </div>
-                        </div>
-                         <div className='border space-y-2 p-4'>
-                            <p className='text-sm font-light font-300'>Remote</p>
-                            <h1 className='text-sm font-bold font-700'>Management solutions</h1>
-                            <p className='text-sm font-light font-300'>Seamless control of integrated home and office.</p>
-                            <div className='w-full'>
-                                <Button text='Connect'/>
-
-                            </div>
-                        </div>
-                          <div className='border space-y-2 p-4'>
-                            <p className='text-sm font-light font-300'>Alarm</p>
-                            <h1 className='text-sm font-bold font-700'>Security systems</h1>
-                            <p className='text-sm font-light font-300'>Advanced detection and notification for comprehensive property protection.</p>
-                            <div className='w-full'>
-                                <Button text='Activate'/>
-
-                            </div>
-                        </div>
-                          <div className='border space-y-2 p-4'>
-                            <p className='text-sm font-light font-300'>Gate</p>
-                            <h1 className='text-sm font-bold font-700'>Motor installation</h1>
-                            <p className='text-sm font-light font-300'>Automated entry solutions for convenient and secure property access.</p>
-                            <div className='w-full'>
-                                <Button text='Install'/>
-
-                            </div>
-                        </div>
-
-
-          
-
-                        
-                    </div>
-                </div>
-                
-        </div>
-        
-        
-        
-       
-        <Team/>
-        <Quote/>
-   
-        <Contact/>
-        <Footer/>
-        </div>
+      {/* Team, Quote, Contact and Footer */}
+      <Team />
+      <Quote />
+      <Contact />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default ElectricalSolutions
+export default ElectricalSolutions;

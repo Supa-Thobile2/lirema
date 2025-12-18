@@ -1,53 +1,85 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from './Button';
 import { motion } from 'framer-motion';
+import { Button } from '../components';
 
-function ServicesCard({ heading, subtext, description, btnText, link = "#" }) {
-  // Variants for staggered button animation
-  const buttonContainerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2, // Stagger each button
-      },
-    },
-  };
+const cardVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0 },
+};
 
-  const buttonVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
-  };
-
+function ServiceCard({
+  title,
+  subtitle,
+  description,
+  image,
+  buttons,
+  href = '#',
+}) {
   return (
-    <div className="border border-[lightgray] rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow duration-300">
-      <div className="p-4 space-y-3">
-        <h6 className="text-[1rem] font-bold font-700">{heading}</h6>
-        <div className="space-y-1">
-          <h1 className="text-[.8rem] font-semibold font-400">{subtext}</h1>
-          <p className="text-[.6rem] font-medium font-200">{description}</p>
+    <motion.article
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+    >
+      {/* Click-through overlay */}
+      <Link
+        to={href}
+        aria-label={`View service: ${title}`}
+        className="absolute inset-0 z-10"
+      />
+
+      {/* Image */}
+      {image && (
+        <div className="overflow-hidden">
+          <img
+            src={image}
+            alt={title}
+            loading="lazy"
+            decoding="async"
+            className="
+              h-48 w-full object-cover
+              transition-transform duration-500 ease-out
+              group-hover:scale-105
+              motion-reduce:transform-none
+            "
+          />
         </div>
+      )}
 
-        <motion.div
-          className="flex items-center gap-4 mt-2"
-          variants={buttonContainerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div variants={buttonVariants}>
-            <Link to={link}>
-              <Button text={btnText} />
-            </Link>
-          </motion.div>
+      {/* Content */}
+      <div className="relative z-20 p-6 space-y-4 flex flex-col h-full">
+        {subtitle && (
+          <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
+            {subtitle}
+          </p>
+        )}
 
-          {/* Example for a second button if needed */}
-          {/* <motion.div variants={buttonVariants}>
-            <Button text="Learn More" />
-          </motion.div> */}
-        </motion.div>
+        <h2 className="text-lg md:text-xl font-semibold tracking-tight text-gray-900">
+          {title}
+        </h2>
+
+        {description && (
+          <p className="text-sm text-gray-600 leading-relaxed flex-1">
+            {description}
+          </p>
+        )}
+
+        {/* Buttons */}
+        <div className="flex flex-wrap gap-3 pt-2">
+          {buttons.map((btn, idx) => (
+            <Button
+              key={idx}
+              text={btn}
+              onClick={(e) => e.stopPropagation()}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </motion.article>
   );
 }
 
-export default ServicesCard;
+export default ServiceCard;

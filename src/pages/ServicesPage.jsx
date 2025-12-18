@@ -1,115 +1,165 @@
 import React from 'react';
 import { Button, Header } from '../components';
+import { motion } from 'framer-motion';
+
 import img2 from '../images/hvac3.jpg';
 import img3 from '../images/construction3.webp';
 import img4 from '../images/construction2.webp';
 import img5 from '../images/electric1.jpg';
 import img6 from '../images/camera2.webp';
 import img7 from '../images/camera1.jpg';
+
 import Team from './Team';
 import Contact from './Contact';
 import Footer from './Footer';
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0 },
+};
+
 function ServiceCard({ title, subtitle, description, image, buttons }) {
   return (
-    <div className="flex flex-col md:flex-row items-center gap-8 p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-      <div className="flex-1 space-y-3">
-        {subtitle && <p className="text-sm font-medium text-gray-500">{subtitle}</p>}
-        <h2 className="text-xl md:text-2xl font-bold">{title}</h2>
-        {description && <p className="text-sm text-gray-600">{description}</p>}
-        <div className="flex flex-wrap gap-3 mt-2">
+    <motion.article
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+    >
+      {image && (
+        <img
+          src={image}
+          alt={title}
+          className="h-48 w-full object-cover"
+        />
+      )}
+
+      <div className="p-6 space-y-4 flex-1 flex flex-col">
+        {subtitle && (
+          <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
+            {subtitle}
+          </p>
+        )}
+
+        <h2 className="text-lg md:text-xl font-semibold tracking-tight text-gray-900">
+          {title}
+        </h2>
+
+        {description && (
+          <p className="text-sm text-gray-600 leading-relaxed flex-1">
+            {description}
+          </p>
+        )}
+
+        <div className="flex flex-wrap gap-3 pt-2">
           {buttons.map((btn, idx) => (
             <Button key={idx} text={btn} />
           ))}
         </div>
       </div>
-      {image && (
-        <div className="flex-1">
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover rounded-xl shadow-sm"
-          />
-        </div>
-      )}
-    </div>
+    </motion.article>
   );
 }
 
 function ServicesPage() {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <>
       <Header />
 
-      {/* Hero Section */}
-      <div className="mt-16 px-6 md:px-16 text-center md:text-left space-y-4">
-        <p className="text-sm font-medium text-gray-500 uppercase">Build</p>
-        <h1 className="text-2xl md:text-4xl font-bold">Engineering solutions that work</h1>
-        <p className="text-gray-600 max-w-2xl mx-auto md:mx-0">
-          Delivering precise technical solutions across multiple engineering disciplines with
-          proven reliability and professional commitment.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-4">
-          <Button text="Services" />
-          <Button text="Contact" />
-        </div>
-      </div>
+      <main className="overflow-hidden">
+        {/* HERO */}
+        <section
+          className="px-6 pt-24 pb-16 md:px-20"
+          aria-labelledby="services-heading"
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl space-y-6"
+          >
+            <p className="text-sm font-medium uppercase tracking-wide text-gray-500">
+              Build
+            </p>
 
-      {/* Service Sections */}
-      <div className="px-6 md:px-16 mt-12 space-y-12">
-        <ServiceCard
-          title="HVAC services for comfort"
-          description="Comprehensive heating and cooling solutions tailored to your needs."
-          image={img2}
-          buttons={['Learn More']}
-        />
+            <h1
+              id="services-heading"
+              className="text-3xl md:text-5xl font-semibold tracking-tight text-gray-900"
+            >
+              Engineering solutions that work
+            </h1>
 
-        <ServiceCard
-          subtitle="Civil"
-          title="Civil and Construction services that build futures"
-          description="Integrated project management, sustainable construction, and comprehensive site management."
-          image={img3}
-          buttons={['Explore', 'Details']}
-        />
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl">
+              Delivering precise technical solutions across multiple engineering
+              disciplines with proven reliability and professional commitment.
+            </p>
 
-        <ServiceCard
-          title="Specialized construction solutions"
-          description="Custom engineering for unique project requirements."
-          image={img4}
-          buttons={['Learn', 'Details']}
-        />
+            <div className="flex gap-4 pt-4">
+              <Button text="Services" />
+              <Button text="Contact" variant="secondary" />
+            </div>
+          </motion.div>
+        </section>
 
-        <ServiceCard
-          subtitle="Electrify"
-          title="Advanced electrical system design and maintenance"
-          image={img5}
-          buttons={['Learn', 'Details']}
-        />
+        {/* SERVICES GRID */}
+        <section className="px-6 py-20 md:px-20 bg-gray-50">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <ServiceCard
+              title="HVAC services for comfort"
+              description="Comprehensive heating and cooling solutions tailored to your needs."
+              image={img2}
+              buttons={['Learn more']}
+            />
 
-        <ServiceCard
-          subtitle="Smart"
-          title="Smart home solutions for modern living"
-          image={img7}
-          buttons={['Learn', 'Details']}
-        />
+            <ServiceCard
+              subtitle="Civil"
+              title="Civil and construction services that build futures"
+              description="Integrated project management, sustainable construction, and comprehensive site execution."
+              image={img3}
+              buttons={['Explore', 'Details']}
+            />
 
-        {/* Call to Action */}
-        <ServiceCard
-          title="Get your project started today"
-          image={img6}
-          buttons={['Quote', 'Details']}
-        />
-      </div>
+            <ServiceCard
+              title="Specialized construction solutions"
+              description="Custom engineering approaches for unique project requirements."
+              image={img4}
+              buttons={['Learn', 'Details']}
+            />
 
-      {/* Team and Contact */}
-      <div className="mt-16">
+            <ServiceCard
+              subtitle="Electrify"
+              title="Advanced electrical system design and maintenance"
+              description="Reliable, efficient electrical infrastructure built to modern standards."
+              image={img5}
+              buttons={['Learn', 'Details']}
+            />
+
+            <ServiceCard
+              subtitle="Smart"
+              title="Smart home solutions for modern living"
+              description="Integrated automation, surveillance, and intelligent control systems."
+              image={img7}
+              buttons={['Learn', 'Details']}
+            />
+
+            <ServiceCard
+              title="Get your project started today"
+              description="Talk to our experts and turn your idea into a successful project."
+              image={img6}
+              buttons={['Quote', 'Details']}
+            />
+          </div>
+        </section>
+
+        {/* SHARED SECTIONS */}
         <Team />
-      </div>
-      <div className="mt-16">
+        <Quote />
         <Contact />
-      </div>
-      <Footer />
-    </div>
+        <Footer />
+      </main>
+    </>
   );
 }
 

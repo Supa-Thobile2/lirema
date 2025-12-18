@@ -2,14 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../components";
 import { motion } from "framer-motion";
+import { FaHome, FaTools, FaInfoCircle, FaEnvelope, FaUsers } from "react-icons/fa";
 
 function Footer() {
-  // Animation variants
   const container = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1, 
-      transition: { staggerChildren: 0.15, delayChildren: 0.2 } 
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
     },
   };
 
@@ -18,7 +19,6 @@ function Footer() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
-  // Floating shapes animation
   const float = {
     animate: {
       y: [0, -10, 0],
@@ -32,16 +32,24 @@ function Footer() {
     },
   };
 
+  const linkHover = { scale: 1.05, color: "#1e40af" };
+
+  const footerLinks = [
+    { to: "/", label: "Home", icon: <FaHome /> },
+    { to: "/services", label: "Services", icon: <FaTools /> },
+    { to: "/about", label: "About", icon: <FaInfoCircle /> },
+    { to: "/contacts", label: "Contact", icon: <FaEnvelope /> },
+    { to: "#team", label: "Our Team", icon: <FaUsers /> },
+  ];
+
   return (
-    <footer className="relative overflow-hidden w-full px-6 py-20 md:py-24">
+    <footer className="relative overflow-hidden w-full px-6 py-20 md:py-24 bg-gray-50">
       {/* Animated Gradient Background */}
-      <div className="absolute inset-0 -z-10">
-        <motion.div
-          className="w-full h-full bg-gradient-to-r from-blue-100 via-blue-200 to-purple-100"
-          animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        />
-      </div>
+      <motion.div
+        className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-100 via-blue-200 to-purple-100"
+        animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      />
 
       {/* Floating Shapes */}
       <motion.div
@@ -68,10 +76,7 @@ function Footer() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <motion.h2
-          variants={fadeUp}
-          className="text-2xl md:text-3xl font-bold"
-        >
+        <motion.h2 variants={fadeUp} className="text-2xl md:text-3xl font-bold">
           Li Rema Engineering & Construction
         </motion.h2>
 
@@ -79,13 +84,33 @@ function Footer() {
           variants={fadeUp}
           className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 md:gap-8 space-y-2 md:space-y-0"
         >
-          <Link to="/"><li className="text-lg hover:text-gray-800 transition-all rounded-md cursor-pointer">Home</li></Link>
-          <Link to="/services"><li className="text-lg hover:text-gray-800 transition-all rounded-md cursor-pointer">Services</li></Link>
-          <Link to="/about"><li className="text-lg hover:text-gray-800 transition-all rounded-md cursor-pointer">About</li></Link>
-          <Link to="/contacts"><li className="text-lg hover:text-gray-800 transition-all rounded-md cursor-pointer">Contact</li></Link>
-          <Link to="#team"><li className="text-lg hover:text-gray-800 transition-all rounded-md cursor-pointer">Our Team</li></Link>
+          {footerLinks.map((item, index) => (
+            <motion.li
+              key={index}
+              whileHover={linkHover}
+              className="flex items-center gap-2 text-lg cursor-pointer transition-colors duration-300"
+            >
+              <Link to={item.to} className="flex items-center gap-2">
+                <motion.span
+                  animate={{
+                    y: [0, -4, 0], // Subtle vertical movement
+                  }}
+                  transition={{
+                    duration: 3 + index * 0.5, // Slightly different speed per icon
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                    ease: "easeInOut",
+                  }}
+                >
+                  {item.icon}
+                </motion.span>
+                {item.label}
+              </Link>
+            </motion.li>
+          ))}
+
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button text="Login" />
+            <Button text="Login" ariaLabel="Login to your account" />
           </motion.div>
         </motion.ul>
 
@@ -93,10 +118,16 @@ function Footer() {
           variants={fadeUp}
           className="flex flex-col md:flex-row items-center justify-between text-gray-600 mt-6 gap-4 md:gap-0"
         >
-          <p className="text-sm">© 2025 <strong>Li Rema Construction</strong>. All Rights Reserved.</p>
+          <p className="text-sm">
+            © 2025 <strong>Li Rema Construction</strong>. All Rights Reserved.
+          </p>
           <div className="flex gap-4 md:gap-6">
-            <p className="text-sm hover:text-gray-800 cursor-pointer">Privacy Policy</p>
-            <p className="text-sm hover:text-gray-800 cursor-pointer">Terms of Service</p>
+            <p className="text-sm hover:text-gray-900 cursor-pointer transition-colors duration-300">
+              Privacy Policy
+            </p>
+            <p className="text-sm hover:text-gray-900 cursor-pointer transition-colors duration-300">
+              Terms of Service
+            </p>
           </div>
         </motion.div>
       </motion.div>
