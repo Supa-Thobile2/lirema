@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../components";
@@ -50,24 +51,19 @@ function Footer() {
         animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       />
+=======
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Button } from '../components'
 
-      {/* Floating Shapes */}
-      <motion.div
-        variants={float}
-        animate="animate"
-        className="absolute top-10 left-10 w-12 h-12 rounded-full bg-purple-300 opacity-40 blur-2xl"
-      />
-      <motion.div
-        variants={float}
-        animate="animate"
-        className="absolute top-1/2 right-20 w-24 h-24 rounded-full bg-blue-300 opacity-30 blur-3xl"
-      />
-      <motion.div
-        variants={float}
-        animate="animate"
-        className="absolute bottom-20 left-1/3 w-16 h-16 rounded-full bg-pink-300 opacity-25 blur-2xl"
-      />
+function Footer() {
+  return (
+    <div className='w-full p-8 '>
+    
+>>>>>>> parent of 3a49e25 (updated project by adding framer animation)
 
+
+<<<<<<< HEAD
       {/* Content */}
       <motion.div
         className="max-w-6xl mx-auto space-y-8 text-center md:text-left relative z-10"
@@ -128,11 +124,47 @@ function Footer() {
             <p className="text-sm hover:text-gray-900 cursor-pointer transition-colors duration-300">
               Terms of Service
             </p>
+=======
+        <div className=' space-y-4 w-full'>
+          <h1 className='text-[1rem] font-bold font-700'>Li Rema Engineering & Construction</h1>
+          <div className='space-y-2'>
+            <ul className='space-y-8 w-full mx-auto flex items-center justify-center flex-col  space-y-2'>
+                            <Link to='/'> <li className='text-[1rem] rounded-[12px]'>Home</li></Link>
+                            
+                                               <Link to='/services'> <li className='text-[1rem] rounded-[12px]'>Services</li></Link>
+                                                                  <Link to='/about'> <li className='text-[1rem] rounded-[12px]'>About</li></Link>
+                                                                                     <Link to='/contacts'> <li className='text-[1rem] rounded-[12px]'>Contact Us</li></Link>
+                                                                                                        <Link to='#team'> <li className='text-[1rem] rounded-[12px]'>Our Team</li></Link>
+                             
+                                 <Button text='login'/>
+                                 
+                         </ul>
+
+>>>>>>> parent of 3a49e25 (updated project by adding framer animation)
           </div>
-        </motion.div>
-      </motion.div>
-    </footer>
-  );
+
+          <div className='block space-y-2 md:flex items-center justify-between'>
+            <div>
+              <p className='text-[.7rem] font-light font-700'> 2025 <strong>LiRema Construction</strong> All Rights Reserved.</p>
+            </div>
+            <div className='block md:flex items-center justify-between space-y-2'>
+              <p  className='text-[1rem] font-light font-700'>Privacy Policy</p>
+              <p  className='text-[1rem] font-light font-700'>Terms Of Service</p>
+              {/* <p>Cookie setting</p> */}
+            </div>
+          </div>
+
+        </div>
+
+
+
+     
+
+
+
+        
+    </div>
+  )
 }
 
-export default Footer;
+export default Footer

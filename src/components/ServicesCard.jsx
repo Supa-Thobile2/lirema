@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '../components';
@@ -83,3 +84,33 @@ function ServiceCard({
 }
 
 export default ServiceCard;
+=======
+import React from 'react'
+import img from '../images/emmanuel-ikwuegbu-zWOgsj3j0wA-unsplash.jpg'
+import { Link } from 'react-router-dom'
+import Button from './Button'
+
+function ServicesCard(props) {
+  return (
+    <div className=' border border-[lightgray] '>
+      <img src={img} alt='' className='object-fit block h-full'/>
+        <div className='space-y-2 p-4'>
+            <h6 className='text-[1rem] font-bold font-400'>{props.heading}</h6>
+            <div className='space-y-2'>
+            <h1 className='text-[.7rem] font-semibold font-400'>{props.subtext}</h1>
+            <p className='text-[.6rem] font-medium font-200'>{props.description}</p>
+            </div>
+            <div>
+              <Link to={props.link}>
+                <Button text={props.btnText}/>
+                </Link>
+
+            </div>
+        </div>
+        
+    </div>
+  )
+}
+
+export default ServicesCard
+>>>>>>> parent of 3a49e25 (updated project by adding framer animation)

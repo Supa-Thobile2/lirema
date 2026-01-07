@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -138,6 +139,63 @@ function Team() {
       </motion.div>
     </section>
   );
+=======
+import React from 'react'
+
+import img from '../assets/keyGuy.png'
+
+function Team() {
+  return (
+    <div className='block w-full mx-auto space-y-4 md:space-y-8 md:flex items-center justify-center flex-col p-6 md:p-18 space-y-2 md:space-6 ' id='team'>
+        <h6 className='text-[.6rem] font-bold font-200'>Team</h6>
+        <div className='space-y-2'>
+        <h1 className='text-[1.5rem] font-bold'>Our Team</h1>
+        <p className='text-[.6rem] font-medium font-200'>Experienced professionals driving technical innovation</p>
+        </div>
+        
+        <div className='block md:flex items-center space-y-2 gap-4 md:gap-8 md:space-y-0'>
+            <div className='   flex items-center justify-center flex-col'>
+                <img src={img} alt='' className='object-fit w-20 h-20 rounded-full'/>
+                <div className='space-y-2 p-4 text-center'>
+                <h4 className='text-[1rem] font-bold '>Litaba Letsatsi</h4>
+                <p className='text-[.6re] font-semibold font-200'>Chief Technician</p>
+                <p className='text-[.6rem] font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
+            </div>
+            </div>
+             <div className='    flex items-center justify-center flex-col'>
+                <img src={img} alt='' className='object-fit w-20 h-20 rounded-full'/>
+                <div className='space-y-2 p-4 text-center'>
+                <h4 className='text-[1rem] font-bold '>Tshego Leshilo</h4>
+                <p className='text-[.6re] font-semibold font-200'>Accounts</p>
+                <p className='text-[.6rem] font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
+            </div>
+            </div>
+             <div className='    flex items-center justify-center flex-col'>
+                <img src={img} alt='' className='object-fit w-20 h-20 rounded-full'/>
+                <div className='space-y-2 p-4 text-center'>
+                <h4 className='text-[1rem] font-bold '>Sphesihle Mntambo</h4>
+                <p className='text-[.6re] font-semibold font-200'>Technician</p>
+                <p className='text-[.6rem] font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
+            </div>
+            </div>
+             <div className='    flex items-center justify-center flex-col'>
+                <img src={img} alt='' className='object-fit w-20 h-20 rounded-full'/>
+                <div className='space-y-2 p-4 text-center'>
+                <h4 className='text-[1rem] font-bold '>Lethabo Mohato</h4>
+                <p className='text-[.6re] font-semibold font-200'>Technician</p>
+                <p className='text-[.6rem] font-regular font-200'>Visionary leader with deacdes of experience in engineering and management</p>
+            </div>
+            </div>
+         
+          
+
+        </div>
+
+
+
+    </div>
+  )
+>>>>>>> parent of 3a49e25 (updated project by adding framer animation)
 }
 
-export default Team;
+export default Team

@@ -1,6 +1,4 @@
-// import img1 from '../images/havc1.jpg'
-// import img2 from '../images/emmanuel-ikwuegbu-_2AlIm-F6pw-unsplash(1).jpg'
-// import img3 from '../images/emmanuel-ikwuegbu-_2AlIm-F6pw-unsplash(1).jpg'
+
 
 
 

@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import img from '../images/electric1.jpg';
 import { Button } from '../components';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+import React from 'react'
+import img from '../images/mariola-grobelska-TFFanH3SYjM-unsplash.jpg'
+import { Button } from '../components'
+>>>>>>> parent of 3a49e25 (updated project by adding framer animation)
 
 function Quote() {
   const [open, setOpen] = useState(false);
@@ -14,6 +20,7 @@ function Quote() {
   }, [open]);
 
   return (
+<<<<<<< HEAD
     <section
       className="relative overflow-hidden px-6 py-16 md:py-24 md:px-20 flex flex-col md:flex-row items-center gap-12"
       id="quote"
@@ -177,6 +184,26 @@ function Quote() {
       </AnimatePresence>
     </section>
   );
+=======
+    <div className='block p-4 space-y-8 md:flex items-center justify-center md:p-18'>
+        <div className='space-y-12 p-4 md:p-8'>
+          <div className='space-y-2'>
+            <h1 className='text-[1.5rem] font-bold font-600'>Ready to build your future</h1>
+            <p className='text-[.6rem] font-medium font-200'>Connect with our expert engineering team to transform your complex technical challenges into innovative solutions</p>
+           </div>
+            <div className='flex items-center gap-6 w-full'>
+               <Button text='Quote'/>
+               <Button text='Consult'/>
+            </div>
+        </div>
+        <div>
+            <img src={img} alt='' className='h-full block object-fit'/>
+
+        </div>
+
+    </div>
+  )
+>>>>>>> parent of 3a49e25 (updated project by adding framer animation)
 }
 
-export default Quote;
+export default Quote
