@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button, Header } from "../components";
 import Team from "./Team";
 import Contact from "./Contact";
@@ -30,9 +31,17 @@ function AboutPage() {
             Building engineering solutions that transform infrastructure.
           </p>
 
-          <div className="flex  justify-center gap-4 pt-8">
-            <Button text="Learn" ariaLabel="Learn more about us" />
-            <Button text="Contact" ariaLabel="Contact our team" />
+          <div className="flex justify-center gap-4 pt-8">
+            <Link
+              to="/about"
+              aria-label="Learn more about LI Rema Engineering and Construction history"
+            >
+              <Button text="Learn" />
+            </Link>
+
+            <Link to="/contacts" aria-label="Contact our team">
+              <Button text="Contact" />
+            </Link>
           </div>
         </div>
       </section>
@@ -80,10 +89,12 @@ function AboutPage() {
                 Deep technical knowledge.
               </p>
 
-              <Button
-                text="Learn"
-                ariaLabel="Learn more about this strength"
-              />
+              <Link
+                to="/history"
+                aria-label="Learn more about our engineering expertise"
+              >
+                <Button text="Learn" />
+              </Link>
 
               <div className="h-24 w-full bg-gray-200 rounded-md flex items-center justify-center">
                 <span className="text-xs text-gray-500">Image</span>
@@ -106,23 +117,47 @@ function AboutPage() {
           innovation.
         </p>
 
-        <div className="flex  gap-4 pt-4 justify-center sm:justify-start">
-          <Button text="View History" />
-          <Button text="Learn" />
+        <div className="flex gap-4 pt-4 justify-center sm:justify-start">
+          <Link
+            to="/history"
+            aria-label="View our company history and milestones"
+          >
+            <Button text="View History" />
+          </Link>
+
+          <Link
+            to="/about"
+            aria-label="Learn more about LI Rema Engineering history"
+          >
+            <Button text="Learn" />
+          </Link>
         </div>
       </section>
 
       {/* PARTNERS SECTION */}
       <section className="px-6 py-20 max-w-4xl mx-auto space-y-6">
-        <h3 className="text-2xl font-bold text-neutral-900">Our Trusted Partners</h3>
+        <h3 className="text-2xl font-bold text-neutral-900">
+          Our Trusted Partners
+        </h3>
 
         <p className="text-sm text-neutral-600 leading-relaxed">
           Collaborative networks driving innovation and excellence.
         </p>
 
-        <div className="flex  gap-4 pt-4 justify-center sm:justify-start">
-          <Button text="View Partner" />
-          <Button text="Learn" />
+        <div className="flex gap-4 pt-4 justify-center sm:justify-start">
+          <Link
+            to="/partners"
+            aria-label="View our partners and accreditations"
+          >
+            <Button text="View Partner" />
+          </Link>
+
+          <Link
+            to="/partners"
+            aria-label="Learn more about our professional partnerships"
+          >
+            <Button text="Learn" />
+          </Link>
         </div>
 
         <div className="h-40 bg-gray-200 rounded-md flex items-center justify-center mt-4">
@@ -141,8 +176,13 @@ function AboutPage() {
         </p>
 
         <div className="flex justify-center gap-4 pt-4">
-          <Button text="Contact" />
-          <Button text="Request Quote" />
+          <Link to="/contacts" aria-label="Contact our team">
+            <Button text="Contact" />
+          </Link>
+
+          <Link to="/quote" aria-label="Request a project quote">
+            <Button text="Request Quote" />
+          </Link>
         </div>
       </section>
 

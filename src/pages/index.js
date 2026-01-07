@@ -27,4 +27,4 @@ export { default as AboutPage } from './AboutPage'
   export { default as OurTeam } from './OurTeam'
    export { default as PrivacyPolicy } from './PrivacyPolicy'
     export { default as TermsAndConditions } from './TermsAndConditions'
-
+export { default as HistoryPage } from './HistoryPage'
