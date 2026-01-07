@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import {  About, AboutPage, Civil, ConstructionPage, ContactPage, ElectricalSolutions, Home, HvacPage, ServicesPage, Specialized } from '../src/pages'
+import {  About, AboutPage, Civil, ConstructionPage, ContactPage, ElectricalSolutions, Home, HvacPage, QuoteForm, ServicesPage, Specialized, Smart, Partners, OurTeam, PrivacyPolicy, TermsAndConditions } from '../src/pages'
+
 
 
 
@@ -28,6 +29,14 @@ function App() {
       <Route path='/civil' element={<Civil/>}/>
       <Route path='/special' element={<Specialized/>}/> 
   <Route path='/contacts' element={<ContactPage/>}/>
+
+
+<Route path='/quote' element={<QuoteForm/>}/>
+<Route path='/smart-home' element={<Smart/>}/>
+<Route path='/partners' element={<Partners/>}/>
+<Route path='/teams' element={<OurTeam/>}/>
+<Route path='/policy' element={<PrivacyPolicy/>}/>
+<Route path='/terms' element={<TermsAndConditions/>}/>
 
 </Routes>
 </BrowserRouter>

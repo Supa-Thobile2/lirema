@@ -15,18 +15,15 @@
     padding: 0;
     background-color: #F8FAFC;
     font-family: 'Cormorant', sans-serif;
+   
+    
 
     
 }
 
-
-
-
 #root{
-  min-width:100%;
-  background-color: #F8FAFC;
-  
-} 
+    width: 100%
+}
 
 
 

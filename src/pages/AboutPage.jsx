@@ -1,313 +1,158 @@
-<<<<<<< HEAD
-import React, { useRef } from "react";
+import React from "react";
 import { Button, Header } from "../components";
 import Team from "./Team";
 import Contact from "./Contact";
 import Footer from "./Footer";
-import { motion, useScroll, useTransform } from "framer-motion";
 
 function AboutPage() {
-  const heroRef = useRef(null);
-
-  // Hero parallax
-  const { scrollYProgress: heroScroll } = useScroll({
-    target: heroRef,
-    offset: ["start end", "end start"],
-  });
-  const heroParallax = useTransform(heroScroll, [0, 1], ["-20px", "20px"]);
-
-  // Framer Motion Variants
-  const container = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.25, delayChildren: 0.2 } },
-  };
-
-  const fadeUp = {
-    hidden: { opacity: 0, y: 25 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
-  };
-
-  const fadeIn = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.8 } },
-  };
-
-  const hoverLift = {
-    hover: { y: -5, scale: 1.02, transition: { duration: 0.3, ease: "easeOut" } },
-  };
-
-=======
-import React from 'react'
-import { Button, Header } from '../components'
-import Team from './Team'
-import Contact from './Contact'
-import Footer from './Footer'
-
-
-function AboutPage() {
->>>>>>> parent of 3a49e25 (updated project by adding framer animation)
   return (
-    <div>
+    <div className="bg-gray-50">
+      <Header />
 
-<<<<<<< HEAD
-      {/* HERO-LIKE TOP SECTION WITH PARALLAX HEADING */}
+      {/* HERO SECTION */}
       <section
-        ref={heroRef}
-        className="py-24 px-6 md:px-12 text-center bg-gradient-to-r from-blue-50 to-white"
+        className="text-center py-20 md:py-28"
         aria-labelledby="about-title"
       >
-        <motion.div
-          className="space-y-6 max-w-3xl mx-auto"
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.4 }}
-        >
-          <motion.p
-            variants={fadeUp}
-            className="text-sm md:text-base font-semibold text-blue-600 uppercase tracking-wide"
-          >
+        <div className="space-y-6 max-w-3xl mx-auto px-6 sm:px-8">
+          <p className="text-sm md:text-base font-semibold text-neutral-500 uppercase">
             Our Story
-          </motion.p>
+          </p>
 
-          <motion.h1
+          <h1
             id="about-title"
-            variants={fadeUp}
-            style={{ y: heroParallax }}
-            className="text-3xl md:text-5xl lg:text-6xl font-bold leading-snug text-gray-900"
+            className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-wide text-neutral-900"
           >
             About Us
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            variants={fadeUp}
-            className="text-base md:text-lg text-gray-700"
-          >
-            Building engineering solutions that transform infrastructure with precision, innovation, and reliability.
-          </motion.p>
+          <p className="text-base md:text-lg text-neutral-600 leading-relaxed">
+            Building engineering solutions that transform infrastructure.
+          </p>
 
-          <motion.div
-            variants={fadeUp}
-            className="flex justify-center gap-4 flex-wrap"
-          >
-            <motion.div whileHover={{ scale: 1.07 }} whileTap={{ scale: 0.95 }}>
-              <Button text="Learn" ariaLabel="Learn more about us" />
-            </motion.div>
+          <div className="flex  justify-center gap-4 pt-8">
+            <Button text="Learn" ariaLabel="Learn more about us" />
+            <Button text="Contact" ariaLabel="Contact our team" />
+          </div>
+        </div>
+      </section>
 
-            <motion.div whileHover={{ scale: 1.07 }} whileTap={{ scale: 0.95 }}>
-              <Button text="Contact" ariaLabel="Contact our team" />
-            </motion.div>
-          </motion.div>
-        </motion.div>
+      {/* MISSION SECTION */}
+      <section className="px-6 py-20 max-w-4xl mx-auto space-y-6 sm:space-y-8">
+        <p className="text-sm font-light text-neutral-500">Our Mission</p>
+
+        <h2 className="text-2xl md:text-4xl font-bold text-neutral-900">
+          Engineering excellence through innovation and precision
+        </h2>
+
+        <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
+          Li Rema Engineering and Construction stands as a pioneering force in
+          technical solutions. We merge deep engineering knowledge with
+          strategic vision to deliver impactful projects.
+        </p>
       </section>
 
       {/* STRENGTHS SECTION */}
-      <section className="px-6 py-16 md:px-12 max-w-6xl mx-auto">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="space-y-6"
-        >
-          <motion.p variants={fadeUp} className="text-sm md:text-base font-medium text-blue-600 uppercase tracking-wide">
-            Our Strengths
-          </motion.p>
+      <section className="px-6 py-20 max-w-5xl mx-auto space-y-6">
+        <p className="text-sm font-light text-neutral-500">Our Strengths</p>
 
-          <motion.h2 variants={fadeUp} className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-            Why choose Li Rema?
-          </motion.h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-neutral-900">
+          Why choose Li Rema?
+        </h2>
 
-          <motion.p variants={fadeUp} className="text-sm md:text-base text-gray-700">
-            Comprehensive engineering solutions for complex challenges delivered with expertise and precision.
-          </motion.p>
+        <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
+          Comprehensive engineering solutions for complex challenges.
+        </p>
 
-          {/* Strength Cards */}
-          <div className="grid md:grid-cols-3 gap-8 pt-6">
-            {[1, 2, 3].map((card) => {
-              const cardRef = useRef(null);
-              const { scrollYProgress: cardScroll } = useScroll({
-                target: cardRef,
-                offset: ["start end", "end start"],
-              });
-              const imageParallax = useTransform(cardScroll, [0, 1], ["-10px", "10px"]);
+        <div className="grid md:grid-cols-3 gap-6 pt-6">
+          {[1, 2, 3].map((card) => (
+            <div
+              key={card}
+              className="p-6 bg-white rounded-xl shadow-sm space-y-4 border border-neutral-200"
+            >
+              <p className="text-xs font-medium text-neutral-500">Expertise</p>
 
-              return (
-                <motion.div
-                  key={card}
-                  ref={cardRef}
-                  variants={fadeIn}
-                  whileHover="hover"
-                  initial="rest"
-                  animate="rest"
-                  className="p-6 bg-white rounded-xl shadow-lg space-y-4 border border-gray-200 cursor-pointer hover:shadow-xl transition-shadow duration-300"
-                  variants={hoverLift}
-                  role="region"
-                  aria-labelledby={`strength-title-${card}`}
-                >
-                  <p className="text-xs md:text-sm font-semibold text-blue-600 uppercase tracking-wide">
-                    Expertise
-                  </p>
-                  <h4 id={`strength-title-${card}`} className="text-lg md:text-xl font-bold text-gray-900">
-                    Proven technical mastery across engineering domains
-                  </h4>
-                  <p className="text-sm md:text-base text-gray-600">
-                    Deep technical knowledge and hands-on experience.
-                  </p>
+              <h4 className="text-lg font-bold text-neutral-900">
+                Proven technical mastery across engineering domains.
+              </h4>
 
-                  {/* Parallax Image */}
-                  <motion.div
-                    style={{ y: imageParallax }}
-                    className="h-24 w-full bg-gray-200 rounded-md flex items-center justify-center"
-                  >
-                    <span className="text-xs text-gray-500">Image</span>
-                  </motion.div>
+              <p className="text-sm text-neutral-600">
+                Deep technical knowledge.
+              </p>
 
-                  <motion.div whileHover={{ scale: 1.07 }} whileTap={{ scale: 0.95 }}>
-                    <Button text="Learn" ariaLabel="Learn more about this strength" />
-                  </motion.div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
+              <Button
+                text="Learn"
+                ariaLabel="Learn more about this strength"
+              />
+
+              <div className="h-24 w-full bg-gray-200 rounded-md flex items-center justify-center">
+                <span className="text-xs text-gray-500">Image</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
-      {/* Other sections (Journey, Partners, CTA, Team, Contact, Footer) remain the same */}
+      {/* JOURNEY SECTION */}
+      <section className="px-6 py-20 max-w-4xl mx-auto space-y-6">
+        <p className="text-sm font-light text-neutral-500">Our Journey</p>
 
+        <h3 className="text-2xl font-bold text-neutral-900">
+          Milestones of engineering excellence
+        </h3>
+
+        <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
+          A story of continuous growth and technical advancement through
+          innovation.
+        </p>
+
+        <div className="flex  gap-4 pt-4 justify-center sm:justify-start">
+          <Button text="View History" />
+          <Button text="Learn" />
+        </div>
+      </section>
+
+      {/* PARTNERS SECTION */}
+      <section className="px-6 py-20 max-w-4xl mx-auto space-y-6">
+        <h3 className="text-2xl font-bold text-neutral-900">Our Trusted Partners</h3>
+
+        <p className="text-sm text-neutral-600 leading-relaxed">
+          Collaborative networks driving innovation and excellence.
+        </p>
+
+        <div className="flex  gap-4 pt-4 justify-center sm:justify-start">
+          <Button text="View Partner" />
+          <Button text="Learn" />
+        </div>
+
+        <div className="h-40 bg-gray-200 rounded-md flex items-center justify-center mt-4">
+          <span className="text-xs text-gray-500">Partner Images</span>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="px-6 py-20 max-w-4xl mx-auto text-center space-y-6">
+        <h3 className="text-2xl font-bold text-neutral-900">
+          Ready to build your next project?
+        </h3>
+
+        <p className="text-sm text-neutral-600 leading-relaxed">
+          Connect with our expert team to discuss your engineering needs.
+        </p>
+
+        <div className="flex justify-center gap-4 pt-4">
+          <Button text="Contact" />
+          <Button text="Request Quote" />
+        </div>
+      </section>
+
+      {/* TEAM & CONTACT */}
       <Team />
       <Contact />
+
       <Footer />
-=======
-        <Header/>
-        <div className=' px-8 py-20 mt-14 space-y-16 md:p-18 md:space-y-24 lg:p-14  lg:space-y-16 xl:p-14  flex items-center justify-center flex-col'>
-
-            <p className='p-4  text-[.6rem] font-bold'>Our Story</p>
-            <div className='space-y-2'>
-            <h1 className='text-[1.5rem] font-bold fomt-700 md:text-8xl lg:text-4xl'>About Us</h1>
-            <p className='text-[.6rem] md:text-lg xl:text-lg'>Building engineering solutions that transform infrastructure.</p>
-           </div>
-           
-            <div className='flex items-center gap-4'>
-                <div>
-                   <Button text='Learn'/>
-                </div>
-                 <div>
-                   <Button text='Contact'/>
-                </div>
-
-            </div>
-
-        </div>
-        <div className=' px-8 py-20 space-y-2'>
-            <p className='text-[.6rem] font-light font-200'>Our Mission</p>
-            <h1 className='text-[1.5rem] font-bold font-700'>Engineering excellence through innovation and precision</h1>
-            <p className='text-[.6rem] font-light font-200'>Li Rema Engineering and construction stands as pioneering force in technical solutions. We deliver comprehensive engineering services that merge technical expertise with strategic vision.</p>
-            {/* image */}
-
-        </div>
-        <div className=' p-8 space-y-2 '>
-            <p className='text-[.6rem] font-light font-200'>Our Strenghts</p>
-            <h1 className='text-[1.6rem] font-bold font-700'>Why choose Li Rema?</h1>
-            <p className='text-[.6rem] font-light font-200'>Comprehensive engineering solutions for complex challenges.</p>
-            <div className='block space-y-2 md:flex items-center'>
-            <div className='block space-y-2 p-4 md:flex items-center border border-lightgray'>
-                <div className=' '>
-                    <div className='space-y-2'>
-                    <p className='text-[.6rem] font-light font-200'>Expertise</p>
-                    <h4 className='text-[1rem] font-bold font-700'>Proven technical mastery across multiple engineering domains.</h4>
-                    <p className='text-sm font-light font-200'>Deep technical knowledge </p>
-                    </div>
-                    <div>
-                        <Button text='Learn'/>
-                      
-                    </div>
-
-                </div>
-                <div>
-                    image
-                </div>
-            </div>
-             <div className='block  p-4 md:flex items-center border border-lightgray'>
-                <div className=' space-y-2'>
-                    <p className='text-[.6rem] font-light font-200'>Expertise</p>
-                    <h4 className='text-[1.2rem] font-bold font-700'>Proven technical mastery across multiple engineering domains.</h4>
-                    <p className='text-[.6rem] font-light font-200'>Deep technical knowledge </p>
-                    <div>
-                        <Button text='Learn'/>
-                      
-                    </div>
-
-                </div>
-                <div>
-                    image
-                </div>
-            </div>
-             <div className='block p-4 md:flex items-center border border-lightgray'>
-                <div className=' space-y-2'>
-                    <p className='text-[.6rem] font-light font-200'>Expertise</p>
-                    <h4 className='text-[1.2rem] font-bold font-700'>Proven technical mastery across multiple engineering domains.</h4>
-                    <p className='text-[.6rem] font-light font-200'>Deep technical knowledge </p>
-                    <div>
-                        <Button text='Learn'/>
-                      
-                    </div>
-
-                </div>
-                <div>
-                    image
-                </div>
-            </div>
-
-
-        </div>
-        </div>
-        
-        
-        <div className=' p-8 space-y-2'>
-            <p className='text-[.6rem] font-light font-200'>Our Journey</p>
-            <h3 className='text-[1.5rem] font-bold font-700'>
-                Milestones of engineering excellence
-            </h3>
-            <p className='text-[.6rem] font-light font-200'>A story of continuous growth and technical advancement through strategic development and innovative solutions.</p>
-            <div className='flex items-center w-full gap-4 '>
-                <Button text='View History'/>
-                <Button text='Learn'/>
-            </div>
-            {/* history links */}
-        </div>
-        <div  className=' p-8 space-y-2'>
-            <div className='space-y-2'>
-                <h3 className='text-[1.5rem] font-bold font-700'>Our trusted partners</h3>
-                <p className='text-[.6rem] font-light font-200'>Collaborative networks driving technological innovation and excellence.</p>
-                <div className='flex items-center justify-between gap-4'>
-                    <Button text='View Partner'/>
-                   <Button text='Learn'/>
-
-                </div>
-            </div>
-            <div>image</div>
-        </div>
-              <div  className=' p-8 space-y-2'>
-            
-                <h3 className='text-[1.5rem] font-bold font-700'>Ready to build your next project?</h3>
-                <p className='text-[.6rem] font-light font-200'>Connect with our expert team to discuss your next engineering and construction needs.</p>
-                <div className='flex items-center justify-between gap-4'>
-                    <Button text='Contact'/>
-                    <Button text='Request quote'/>
-
-                </div>
-            
-            
-        </div>
-        <Team/>
-        <Contact/>
-        <Footer/>
-
-        
->>>>>>> parent of 3a49e25 (updated project by adding framer animation)
     </div>
-  )
+  );
 }
 
-export default AboutPage
+export default AboutPage;

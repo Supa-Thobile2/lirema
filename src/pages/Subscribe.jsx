@@ -1,139 +1,51 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Button } from '../components';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from "react";
+import { Button } from "../components";
 
 function Subscribe() {
-<<<<<<< HEAD
-  const [open, setOpen] = useState(false);
-  const emailRef = useRef(null);
-=======
-  return (
-    <div className='space-y-8 flex items-center justify-center flex-col p-8 md:p-16 md:space-y-12'>
-    <div className='space-y-2'>
-    <h1 className='text-[1.5rem] font-bold font-700'>Stay Informed Engineering insights</h1>
-    <p className='text-[.6rem] font-regular font-200'> Receive the latest update, technical innovations and industry trends directly to your inbox.</p>
-  </div>  
-    <div className='flex items-center justify-between w-full  md:w-[40%] mx-auto '>
-        <input type="email" name="email" id="email" className='w-full outline-none border rounded-full p-2' />
-        
-             <Button text='Subscribe Now'/>
-
-        
-       
-    </div>
-    <p className='text-[0.6rem] font-semibold font-200'>By subscribing you agree to our terms and conditions of service</p>
->>>>>>> parent of 3a49e25 (updated project by adding framer animation)
-
-  useEffect(() => {
-    if (!open && emailRef.current) {
-      emailRef.current.focus();
-    }
-  }, [open]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setOpen(true);
-    e.target.reset();
-  };
-
   return (
     <section
-      className="flex flex-col items-center justify-center px-6 py-16 md:py-24 space-y-10 text-center"
       aria-labelledby="subscribe-heading"
+      className="bg-neutral-50  flex flex-col items-center mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24"
     >
-      {/* Text */}
-      <header className="space-y-4 max-w-xl">
-        <h1
+      {/* Heading */}
+      <header className="text-center space-y-2 max-w-xl">
+        <h2
           id="subscribe-heading"
-          className="text-xl md:text-3xl font-semibold tracking-tight text-gray-900"
+          className="text-xl md:text-2xl font-bold text-neutral-900"
         >
-          Stay informed with engineering insights
-        </h1>
-        <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-          Receive the latest updates, technical innovations, and construction
-          industry trends directly in your inbox.
+          Stay Informed: Engineering Insights
+        </h2>
+        <p className="text-sm md:text-base text-neutral-700 leading-relaxed">
+          Receive the latest updates, technical innovations, and industry trends
+          directly to your inbox.
         </p>
       </header>
 
-      {/* Form */}
-      <form
-        onSubmit={handleSubmit}
-        className="relative w-full max-w-md"
-      >
+      {/* Email Form */}
+      <form className="relative w-full max-w-md flex items-center">
         <label htmlFor="email" className="sr-only">
           Email address
         </label>
-
         <input
-          ref={emailRef}
+          type="email"
           id="email"
           name="email"
-          type="email"
-          required
-          placeholder="Enter your email address"
-          className="w-full rounded-full border border-gray-300 px-5 py-3 pr-36 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+          placeholder="Enter your email"
+          className="
+            w-full rounded-full border border-neutral-300 px-4 py-2
+            text-sm text-neutral-900 placeholder-neutral-400
+            focus:outline-none focus:ring-2 focus:ring-purple-300
+          "
         />
-
-        <div className="absolute inset-y-0 right-1 flex items-center">
-          <Button text="Subscribe" type="submit" />
+        <div className="absolute top-0 right-0 h-full flex items-center pr-1">
+          <Button text="Subscribe Now" />
         </div>
       </form>
 
-      {/* Disclaimer */}
-      <p className="text-xs text-gray-500 max-w-md">
-        By subscribing, you agree to Li Rema Construction’s terms and conditions.
+      {/* Terms */}
+      <p className="text-xs text-neutral-500 text-center max-w-xs">
+        By subscribing, you agree to our terms and conditions of service.
       </p>
-
-      {/* Thank You Modal */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="thank-you-title"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setOpen(false)}
-          >
-            <motion.div
-              className="bg-white rounded-2xl p-6 md:p-8 max-w-sm w-full text-center space-y-4"
-              initial={{ scale: 0.95, y: 20 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.95, y: 20 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <h2
-                id="thank-you-title"
-                className="text-lg font-semibold text-gray-900"
-              >
-                Thank you for subscribing!
-              </h2>
-
-              <p className="text-sm text-gray-600 leading-relaxed">
-                You’re now subscribed to updates from{' '}
-                <span className="font-medium text-gray-900">
-                  Li Rema Construction
-                </span>
-                . We’re excited to share insights with you.
-              </p>
-
-              <button
-                onClick={() => setOpen(false)}
-                className="mt-4 rounded-full bg-purple-600 px-6 py-2 text-sm font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400"
-              >
-                Close
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Screen reader utility */}
-      <span className="sr-only">
-        Subscription confirmation dialog
-      </span>
     </section>
   );
 }

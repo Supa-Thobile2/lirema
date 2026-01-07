@@ -1,215 +1,110 @@
+Here’s a **clean, copy-pasteable prompt** you can use to update **any existing React code** (including the pages you just shared) to improve **layout, accessibility, and typography using Tailwind CSS**, **without creating or editing a Tailwind config file**.
+
+---
+
+## 🔧 Code Update Prompt: Layout, Accessibility & Typography (Tailwind CSS Only)
+
+**Role:**
+You are a senior frontend engineer specializing in React and Tailwind CSS (v3+).
+
+**Task:**
+Refactor the provided React component(s) to improve **layout structure**, **typography hierarchy**, and **accessibility**, using **only Tailwind CSS utility classes inline**.
+⚠️ Do **not** create or modify `tailwind.config.js`.
+⚠️ Do **not** introduce external animation or UI libraries.
+
+---
+
+### ✅ Objectives
+
+#### 1. Layout & Spacing
+
+* Replace inconsistent spacing with a clear vertical rhythm:
+
+  * Use `section`, `max-w-*`, `mx-auto`, `px-*`, `py-*`
+  * Standardize spacing using `space-y-*`, `gap-*`
+* Improve responsiveness using `sm / md / lg / xl` breakpoints
+* Use Flexbox/Grid consistently (`flex`, `grid`, `grid-cols-*`)
+* Remove invalid or incorrect class names (`border-6`, `space-y-15`, `font-700`, etc.)
+
+---
+
+#### 2. Typography System
+
+* Establish a clear hierarchy:
+
+  * Page heading → `h1`
+  * Section titles → `h2`
+  * Subsections → `h3`
+* Use Tailwind font utilities correctly:
+
+  * `font-light`, `font-normal`, `font-medium`, `font-semibold`, `font-bold`
+* Use readable text scales:
+
+  * Headings: `text-2xl → text-5xl`
+  * Body text: `text-sm → text-base → text-lg`
+* Improve readability:
+
+  * Apply `leading-relaxed` or `leading-loose`
+  * Use `max-w-prose` for long text blocks
+
+---
+
+#### 3. Accessibility Improvements (WCAG-Friendly)
+
+* Replace generic `<div>` wrappers with semantic elements:
+
+  * `header`, `main`, `section`, `footer`
+* Ensure:
+
+  * One `<h1>` per page
+  * Logical heading order (no skipping levels)
+* Improve button accessibility:
+
+  * Ensure buttons have visible focus styles (`focus-visible:ring`)
+  * Avoid vague labels like “Learn” → prefer “Learn more about electrical services”
+* Add:
+
+  * `aria-label` where context is unclear
+  * `role="list"` and `role="listitem"` for custom lists if needed
+
+---
+
+#### 4. Tailwind Best Practices
+
+* Use utility-first styling only
+* No custom CSS files
+* No config extensions
+* Prefer:
+
+  * `rounded-xl`, `shadow-sm`, `border border-neutral-200`
+  * Neutral color palette (`text-neutral-*`, `bg-neutral-*`)
+* Ensure consistent button alignment and sizing
+
+---
+
+### 🧹 Cleanup Requirements
+
+* Fix all `className` typos (`classname` → `className`)
+* Remove duplicate or redundant wrappers
+* Normalize section padding and margins
+* Ensure mobile-first layout consistency
+
+---
+
+### 📦 Output Requirements
+
+* Return the **fully refactored React component**
+* Keep existing component imports and logic intact
+* Improve code readability and maintainability
+* Do **not** add comments unless they clarify accessibility decisions
+
+---
+
+If you want, I can now:
+
  
- //Sales Anaanlysis section
- 
- <div className='w-[95%] mx-auto md:w-5/6 border-4 min-h-[100vh] space-y-6  p-2'>
-    {/* navbar section */}
-      <div className="sticky inset-0 top-0 w-full mx-auto z-500 p-4">
-       <div className='flex items-center justify-between'>
+* ✅ Refactor `ConstructionPage` using the same system
+* ✅ Add **Tailwind-only animations** (`transition`, `hover`, `motion-safe`)
+* ✅ Create a **shared typography/layout standard** for your entire site
 
-       
-       
-        <div>
-          <h3 className='text-[1.6rem] font-bold '>Overview</h3>
-          <p className="text-[.9rem] font-regular">Detailed Information about your store</p>
-        </div>
-        <div className='hidden md:flex items-center justify-between gap-4 space-x-4'>
-          <div className="border flex items-center  p-[.5rem] rounded-[0.9rem]">
-            <FaSearch/>
-            <input type="text" name="search" id="search" className="w-full outline-none"/>
-
-          </div>
-          <div className='flex items-center justify-between gap-2'>
-            <div>
-              <FaBell/>
-            </div>
-            <div className='w-10 h-10 rounded-full border flex item-center justify-center'>
-              Image
-            </div>
-            <div>
-              <FaArrowDownZA/>
-            </div>
-          </div>
-        </div>
-        <div className="md:hidden">
-          <FaBars/>
-        </div>
-        </div>
-
-      </div>
-
-      {/* Analytics Data Section*/}
-      <div className="block  p-2 space-y-2  md:flex items-center ">
-      {overViewData.map((item, index)=>{
-       return <SalesCard
-       key={index}
-        icon={item.icon}
-        heading={item.heading}
-        subText={item.subText}
-        subPer={item.subPer}
-        />
-      })}
-      
-      </div>
-
-
-      {/* product section */}
-      <div className="block space-y-2 md:flex items-center p-2  gap-2">
-
-    
-
-      <div className='w-full md:w-1/2 p-4 border space-y-4'>
-
-        <div className='flex justify-between items-center'>
-          <h3>Product</h3>
-          <p className='flex items-center justify-center gap-2'>Dec 21 - Dec 31 <FaRegCalendar/> </p>
-
-        </div>
-
-        <div>
-          {/* {productsData.map((item, index)=>{
-            return( 
-           <table>
-            <thead>
-              <tr>
-                <th>{item.heading}</th>
-              </tr>
-              <tbody>
-                <tr>$</tr>
-                <tr>4343</tr>
-                <tr>43</tr>
-              </tbody>
-            </thead>
-           </table>
-
-            )
-
-          })}  */}
-          <table class="table-auto">
-  <thead>
-    <tr>
-      <th>Song</th>
-      <th>Artist</th>
-      <th>Year</th>
-    </tr>
-  </thead>
-  <tbody className='space-y-4'>
-    <tr>
-      <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-      <td>Malcolm Lockyer</td>
-      <td>1961</td>
-    </tr>
-    <tr className='py-4'>
-      <td>Witchy Woman</td>
-      <td>The Eagles</td>
-      <td>1972</td>
-    </tr>
-    <tr className='py-4'>
-      <td>Shining Star</td>
-      <td>Earth, Wind, and Fire</td>
-      <td>1975</td>
-    </tr>
-  </tbody>
-</table>
-
-        </div>
-
-      </div>
-
-      <div className="w-full md:w-1/2 p-4 border">
-      <div className='flex justify-between items-center'>
-          <h3>Transaction History</h3>
-          <p className=''> <FaEllipsis/> </p>
-
-        </div>
-        <div className=" space-y-8">
-        {transactionHistoryData.map((item, index)=>{
-           return <TransactionCard
-            key={index}
-            icon={item.icon}
-            heading={item.heading}
-            subText={item.subText}
-            subText2={item.subText2}
-            subPer={item.subPer}
-            className='space-y-4'
-            
-            />
-
-        })}
-        
-        </div>
-
-      </div>
-
-        </div>
-    </div>
-
-
-
-
-
-
-    theme
-
-    
-@theme {
-
-/* 
-  h1: 24px;
-  h2: 
-  h3
-  h4
-  h5
-  h6 */
-  /* font-family */
-  /* --font-inter: Inter, sans-serif; */
-
-  /* background color */
-
-  /* --bg-primary-600: blue; */
-
-  /* background-color */
-/* --border: 1px;
---border-color: grey; */
-
-
-/* Text-color */
-
-  /* --color-white: #fff; */
-
-  /* handling different screen sizes */
-
-  /* --breakpoint-sm: 30rem;
-  --breakpoint-md: 48rem;
-  --breakpoint-xl: 64rem; */
-/* 
-
-  Text-size */
-/* 
-  --text-xs: 8px;
-  --text-sm: 10px;
-  --text-base: 12px;
-  --text-lg: 14px;
-  --text-xl: 16px; */
-  
-/* flex layout */
-/* 
-.md-grid{
-  @apply grid grid-cols-2 gap-2 
-
-} */
-/* 
-.flex-center{
-  @apply flex justify-center items gap-2
-} */
-/* .flex-center-col{
-  @apply flex justify-center items flex-col gap-2
-} */
-
-
-/* .flex-between{
-  @apply flex items-center justify-between
-} */
-
-/* .flex-between-col{
-  @apply flex items-center justify-between */
-}
+Just tell me what’s next.

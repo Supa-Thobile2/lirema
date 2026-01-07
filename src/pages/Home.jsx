@@ -1,42 +1,45 @@
-import React from 'react'
+import React from "react";
 
-import Hero from './Hero'
-import Services from './Services'
-import About from './About'
-import Work from './Work'
-import Footer from './Footer'
-import { Header } from '../components'
-import Choose from './Choose'
-import Team from './Team'
-import Quote from './Quote'
-import Subscribe from './Subscribe'
-import Contact from './Contact'
+import Hero from "./Hero";
+import Services from "./Services";
+import About from "./About";
+import Work from "./QuoteForm";
+import Choose from "./Choose";
+import Team from "./Team";
+import Quote from "./Quote";
+import Subscribe from "./Subscribe";
+import Contact from "./Contact";
+import Footer from "./Footer";
+
+import { Header } from "../components";
 
 function Home() {
   return (
-    <div className=''>
-        
-            <Header/>
-   
-       
-<div className='p-2 space-y-2'>
-            <Hero/>
-            <Services/>
-            <About/>
-            <Choose/>
-            <Quote/>
-            <Subscribe/>
-            <Team/>
-            <Contact/>
-          </div>
-            
-      
+    <>
+      <Header />
 
-        
-            <Footer/>
-        
-    </div>
-  )
+      <main
+        id="main-content"
+        className="
+          mx-auto max-w-7xl
+          px-4 sm:px-6 lg:px-8
+          space-y-4 sm:space-y-24
+          py-8
+        "
+      >
+        <Hero />
+        <Services />
+        <About />
+        <Choose />
+        <Quote />
+        <Subscribe />
+        <Team />
+        <Contact />
+      </main>
+
+      <Footer />
+    </>
+  );
 }
 
-export default Home
+export default Home;

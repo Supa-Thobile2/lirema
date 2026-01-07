@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Button, Header } from "../components";
 import Contact from "./Contact";
 import Footer from "./Footer";
@@ -7,269 +7,232 @@ import Team from "./Team";
 import Quote from "./Quote";
 
 function Civil() {
-  // --- ANIMATION VARIANTS ---
-  const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.2 },
-    },
-  };
-
-  const fadeUp = {
-    hidden: { opacity: 0, y: 25 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
-  };
-
-  const hoverEffect = {
-    whileHover: { scale: 1.05, y: -2 },
-    whileTap: { scale: 0.95 },
-  };
-
-  const buttonHover = {
-    whileHover: { scale: 1.05, backgroundColor: "#2563EB", color: "#fff" },
-    whileTap: { scale: 0.95 },
-  };
-
   return (
-    <div>
+    <>
       <Header />
 
-      {/* Hero Section */}
-      <motion.section
-        className="py-16 px-4 md:px-12 space-y-12 md:space-y-16 flex flex-col items-center"
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        aria-labelledby="civil-hero-heading"
-      >
-        <motion.p className="text-sm font-semibold text-gray-500 uppercase" variants={fadeUp}>
-          Civil
-        </motion.p>
-        <motion.h1
-          id="civil-hero-heading"
-          className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-center"
-          variants={fadeUp}
+      <main className="mt-16 space-y-24">
+
+        {/* ================= HERO ================= */}
+        <section
+          aria-labelledby="civil-hero-heading"
+          className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12"
         >
-          Civil Engineering Excellence
-        </motion.h1>
-        <motion.p className="text-sm md:text-base lg:text-lg text-center text-gray-700 max-w-3xl" variants={fadeUp}>
-          Transform landscapes with precision engineering and innovative construction solutions that drive progress.
-        </motion.p>
-        <motion.div className="flex flex-wrap gap-4 justify-center mt-6" variants={fadeUp}>
-          <motion.div {...buttonHover}>
-            <Button text="Explore" ariaLabel="Explore Civil Engineering services" />
-          </motion.div>
-          <motion.div {...buttonHover}>
-            <Button text="Contact" ariaLabel="Contact Li Rema Civil Engineering" />
-          </motion.div>
-        </motion.div>
-      </motion.section>
+          <header className="mx-auto max-w-3xl text-center space-y-6">
+            <p className="text-sm font-medium tracking-wide text-neutral-500">
+              Civil
+            </p>
 
-      {/* Expertise Section */}
-      <motion.section
-        className="py-16 px-4 md:px-12 space-y-12 md:space-y-16 flex flex-col items-center bg-gray-50"
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        aria-labelledby="civil-expertise-heading"
-      >
-        <motion.div
-          className="space-y-4 p-6 rounded-lg shadow-lg bg-white w-full md:max-w-4xl"
-          variants={fadeUp}
-          {...hoverEffect}
-        >
-          <motion.p className="text-sm font-semibold text-gray-500 uppercase" variants={fadeUp}>
-            Services
-          </motion.p>
-          <motion.h2
-            id="civil-expertise-heading"
-            className="text-xl md:text-2xl font-bold text-center"
-            variants={fadeUp}
-          >
-            Civil Construction Expertise
-          </motion.h2>
-          <motion.p className="text-sm md:text-base text-gray-700 text-center max-w-2xl" variants={fadeUp}>
-            Transforming landscapes through precision engineering and innovative solutions. We deliver comprehensive civil construction services that meet the highest industry standards.
-          </motion.p>
-          <motion.div className="flex flex-wrap gap-4 justify-center mt-6" variants={fadeUp}>
-            <motion.div {...buttonHover}>
-              <Button text="Learn" ariaLabel="Learn more about Civil Construction Expertise" />
-            </motion.div>
-            <motion.div {...buttonHover}>
-              <Button text="Contact" ariaLabel="Contact Civil Construction Team" />
-            </motion.div>
-          </motion.div>
-        </motion.div>
-      </motion.section>
+            <h1
+              id="civil-hero-heading"
+              className="text-2xl md:text-4xl font-bold tracking-tight text-neutral-900"
+            >
+              Civil Engineering Excellence
+            </h1>
 
-      {/* Foundations Section */}
-      <motion.section
-        className="py-16 px-4 md:px-12 space-y-12 md:space-y-16 flex flex-col items-center"
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        aria-labelledby="foundations-heading"
-      >
-        <motion.div
-          className="space-y-4 p-6 rounded-lg shadow-lg bg-white w-full md:max-w-4xl"
-          variants={fadeUp}
-          {...hoverEffect}
-        >
-          <motion.p className="text-sm font-semibold text-gray-500 uppercase" variants={fadeUp}>
-            Foundations
-          </motion.p>
-          <motion.h2 id="foundations-heading" className="text-xl md:text-2xl font-bold text-center" variants={fadeUp}>
-            Site Preparation and Groundwork
-          </motion.h2>
-          <motion.p className="text-sm md:text-base text-gray-700 text-center max-w-3xl" variants={fadeUp}>
-            Comprehensive site preparation using advanced techniques and equipment. We ensure stable and optimized foundations for all construction projects.
-          </motion.p>
-          <motion.div className="flex flex-wrap gap-4 justify-center mt-6" variants={fadeUp}>
-            <motion.div {...buttonHover}>
-              <Button text="Explore" ariaLabel="Explore Foundations Services" />
-            </motion.div>
-            <motion.div {...buttonHover}>
-              <Button text="Details" ariaLabel="View Details on Foundations Services" />
-            </motion.div>
-          </motion.div>
-        </motion.div>
-      </motion.section>
+            <p className="text-base md:text-lg leading-relaxed text-neutral-600">
+              Transform landscapes with precision engineering and innovative
+              construction solutions that drive progress.
+            </p>
 
-      {/* Residential & Commercial */}
-      <motion.section
-        className="py-16 px-4 md:px-12 space-y-12 md:space-y-16 flex flex-col items-center bg-gray-50"
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        aria-labelledby="residential-heading"
-      >
-        <motion.div
-          className="space-y-4 p-6 rounded-lg shadow-lg bg-white w-full md:max-w-4xl"
-          variants={fadeUp}
-          {...hoverEffect}
-        >
-          <motion.p className="text-sm font-semibold text-gray-500 uppercase" variants={fadeUp}>
-            Construction
-          </motion.p>
-          <motion.h2 id="residential-heading" className="text-xl md:text-2xl font-bold text-center" variants={fadeUp}>
-            Residential and Commercial Building Solutions
-          </motion.h2>
-          <motion.p className="text-sm md:text-base text-gray-700 text-center max-w-3xl" variants={fadeUp}>
-            We transform spaces with precision and vision. Our construction approach integrates cutting-edge techniques with practical engineering expertise.
-          </motion.p>
-          <motion.div className="flex flex-wrap gap-4 justify-center mt-6" variants={fadeUp}>
-            <motion.div {...buttonHover}>
-              <Button text="Explore" ariaLabel="Explore Residential and Commercial Construction" />
-            </motion.div>
-            <motion.div {...buttonHover}>
-              <Button text="Details" ariaLabel="View Details of Residential and Commercial Construction" />
-            </motion.div>
-          </motion.div>
-        </motion.div>
-      </motion.section>
+            <nav className="flex justify-center gap-4 pt-4">
+              <Link to="/services">
+                <Button text="Explore services" />
+              </Link>
+              <Link to="/contacts">
+                <Button text="Contact us" />
+              </Link>
+            </nav>
+          </header>
+        </section>
 
-      {/* Builds Section with Video */}
-      <motion.section
-        className="py-16 px-4 md:px-12 space-y-12 md:space-y-16 flex flex-col items-center"
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        aria-labelledby="builds-heading"
-      >
-        <motion.div className="flex flex-col md:flex-row gap-8 items-center justify-center w-full" variants={fadeUp}>
-          <motion.div
-            className="w-full md:w-1/2 h-64 bg-gray-200 flex items-center justify-center rounded-lg shadow-lg"
-            {...hoverEffect}
-          >
-            <p>Video Placeholder</p>
-          </motion.div>
-          <motion.div className="w-full md:w-1/2 space-y-4" variants={fadeUp}>
-            <motion.p className="text-sm font-semibold text-gray-500 uppercase">Builds</motion.p>
-            <motion.h2 id="builds-heading" className="text-xl md:text-2xl font-bold">
-              Comprehensive Residential Construction Services
-            </motion.h2>
-            <motion.p className="text-sm md:text-base text-gray-700">
-              We design and construct houses that blend functionality with modern architectural principles. Our residential projects reflect individual client visions.
-            </motion.p>
-            <motion.div className="flex flex-wrap gap-4 mt-4" variants={fadeUp}>
-              <motion.div {...buttonHover}>
-                <Button text="Explore" ariaLabel="Explore Residential Builds" />
-              </motion.div>
-              <motion.div {...buttonHover}>
-                <Button text="Details" ariaLabel="View Details of Residential Builds" />
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        </motion.div>
-      </motion.section>
+        {/* ================= SERVICES OVERVIEW ================= */}
+        <section className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+          <header className="mx-auto max-w-3xl text-center space-y-4">
+            <p className="text-sm font-medium tracking-wide text-neutral-500">
+              Services
+            </p>
 
-      {/* Management & Consultation Sections */}
-      <motion.section
-        className="py-16 px-4 md:px-12 space-y-12 md:space-y-16 flex flex-col items-center bg-gray-50"
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
+            <h2 className="text-xl md:text-3xl font-bold text-neutral-900">
+              Civil Construction Expertise
+            </h2>
+
+            <p className="text-base leading-relaxed text-neutral-600">
+              Comprehensive civil construction services delivered to the highest
+              industry standards.
+            </p>
+          </header>
+
+          <div className="mt-8 flex justify-center gap-4">
+            <Link to="/services">
+              <Button text="Learn more" />
+            </Link>
+            <Link to="/contacts">
+              <Button text="Contact us" />
+            </Link>
+          </div>
+        </section>
+
+        {/* ================= FOUNDATIONS ================= */}
+        <section className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-3xl text-center space-y-6">
+            <p className="text-sm font-medium tracking-wide text-neutral-500">
+              Foundations
+            </p>
+
+            <h2 className="text-xl md:text-2xl font-bold text-neutral-900">
+              Site Preparation & Groundwork
+            </h2>
+
+            <p className="text-base leading-relaxed text-neutral-600">
+              Advanced site preparation ensuring stable and optimized foundations
+              for all construction projects.
+            </p>
+
+            <div className="flex justify-center gap-4">
+              <Link to="/services">
+                <Button text="Explore" />
+              </Link>
+              <Link to="/quote">
+                <Button text="Request quote" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= CONSTRUCTION ================= */}
+        <section className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-3xl text-center space-y-6">
+            <p className="text-sm font-medium tracking-wide text-neutral-500">
+              Construction
+            </p>
+
+            <h2 className="text-xl md:text-2xl font-bold text-neutral-900">
+              Residential & Commercial Building
+            </h2>
+
+            <p className="text-base leading-relaxed text-neutral-600">
+              Precision-built spaces combining modern architecture with
+              practical engineering expertise.
+            </p>
+
+            <div className="flex justify-center gap-4">
+              <Link to="/services">
+                <Button text="Explore" />
+              </Link>
+              <Link to="/contacts">
+                <Button text="Details" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= FEATURED BUILD ================= */}
+        <section className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+          <div className="grid gap-8 md:grid-cols-2 items-center">
+            <div className="h-48 rounded-md bg-neutral-200 flex items-center justify-center">
+              <span className="text-sm text-neutral-500">Featured project media</span>
+            </div>
+
+            <div className="space-y-4">
+              <p className="text-sm font-medium tracking-wide text-neutral-500">
+                Builds
+              </p>
+
+              <h2 className="text-xl font-bold text-neutral-900">
+                Residential Construction Services
+              </h2>
+
+              <p className="text-sm leading-relaxed text-neutral-600">
+                Custom-built homes designed around functionality, comfort, and
+                client vision.
+              </p>
+
+              <div className="flex gap-4">
+                <Link to="/services">
+                  <Button text="Explore" />
+                </Link>
+                <Link to="/quote">
+                  <Button text="Get quote" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= MANAGEMENT & CONSULTATION ================= */}
         {[
           {
             label: "Management",
             title: "Project Consulting Service",
-            text: "Comprehensive project management from concept to completion. We deliver strategic solutions that transform complex challenges into successful outcomes.",
-            buttons: ["Learn", "Contact"],
+            text:
+              "End-to-end project management delivering strategic outcomes.",
           },
           {
             label: "Consultation",
             title: "Strategic Project Planning",
-            text: "Developing comprehensive project roadmaps that align technical requirements with business objectives and resource optimization.",
-            buttons: ["Explore", "Details"],
+            text:
+              "Comprehensive planning aligned with technical and business goals.",
           },
-          {
-            label: "Get Started",
-            title: "Ready to start your next project",
-            text: "Collaborate with our expert civil engineering team for comprehensive construction solutions.",
-            buttons: ["Consult", "Quote"],
-          },
-        ].map((section, idx) => (
-          <motion.div
-            key={idx}
-            className="flex flex-col items-center text-center space-y-4 p-6 rounded-lg shadow-lg bg-white w-full md:max-w-4xl"
-            variants={fadeUp}
-            {...hoverEffect}
-            aria-labelledby={`section-${idx}-heading`}
+        ].map((item) => (
+          <section
+            key={item.title}
+            className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12"
           >
-            <motion.p className="text-sm font-semibold text-gray-500 uppercase" variants={fadeUp}>
-              {section.label}
-            </motion.p>
-            <motion.h2 id={`section-${idx}-heading`} className="text-xl md:text-2xl font-bold" variants={fadeUp}>
-              {section.title}
-            </motion.h2>
-            <motion.p className="text-sm md:text-base text-gray-700 max-w-2xl" variants={fadeUp}>
-              {section.text}
-            </motion.p>
-            <motion.div className="flex flex-wrap gap-4 justify-center mt-4" variants={fadeUp}>
-              {section.buttons.map((btn, bidx) => (
-                <motion.div key={bidx} {...buttonHover}>
-                  <Button text={btn} ariaLabel={`${btn} ${section.title}`} />
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
-        ))}
-      </motion.section>
+            <div className="mx-auto max-w-3xl text-center space-y-6">
+              <p className="text-sm font-medium tracking-wide text-neutral-500">
+                {item.label}
+              </p>
 
-      {/* Common Sections */}
-      <Team />
-      <Quote />
-      <Contact />
+              <h2 className="text-xl font-bold text-neutral-900">
+                {item.title}
+              </h2>
+
+              <p className="text-base leading-relaxed text-neutral-600">
+                {item.text}
+              </p>
+
+              <div className="flex justify-center gap-4">
+                <Link to="/services">
+                  <Button text="Learn more" />
+                </Link>
+                <Link to="/contacts">
+                  <Button text="Contact us" />
+                </Link>
+              </div>
+            </div>
+          </section>
+        ))}
+
+        {/* ================= CTA ================= */}
+        <section className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-3xl text-center space-y-6">
+            <h2 className="text-xl font-bold text-neutral-900">
+              Ready to start your next project?
+            </h2>
+
+            <p className="text-base leading-relaxed text-neutral-600">
+              Partner with our expert civil engineering team today.
+            </p>
+
+            <div className="flex justify-center gap-4">
+              <Link to="/contacts">
+                <Button text="Consult" />
+              </Link>
+              <Link to="/quote">
+                <Button text="Request quote" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <Team />
+        <Quote />
+        <Contact />
+      </main>
+
       <Footer />
-    </div>
+    </>
   );
 }
 
