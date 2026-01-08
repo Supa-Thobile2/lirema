@@ -108,3 +108,66 @@ If you want, I can now:
 * ✅ Create a **shared typography/layout standard** for your entire site
 
 Just tell me what’s next.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create a modern, mobile-first, fully responsive UI using Tailwind CSS utility classes only (no custom CSS).
+
+Requirements:
+
+Use a mobile-first approach with responsive breakpoints (sm, md, lg, xl)
+
+Layout must adapt using utilities such as flex, grid, gap, container, and responsive width classes
+
+Typography must scale across screen sizes using responsive text utilities
+
+Example: text-base sm:text-lg md:text-xl lg:text-2xl
+
+Adjust spacing (padding, margin, gap) responsively for different screen sizes
+
+Ensure touch-friendly UI on mobile (adequate padding and button sizes)
+
+Use semantic HTML (header, main, section, footer)
+
+Include at least:
+
+Responsive navigation bar
+
+Hero section with responsive heading and paragraph text
+
+Card or content grid that changes column count per breakpoint
+
+Call-to-action button with responsive typography
+
+Ensure good readability and hierarchy on small, medium, and large screens
+
+Output:
+
+Provide clean, well-structured HTML (or JSX if using React)
+
+Use Tailwind CSS utility classes only
+
+Add brief comments explaining how responsiveness is achieved

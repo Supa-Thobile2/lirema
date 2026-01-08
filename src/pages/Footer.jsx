@@ -13,9 +13,16 @@ function Footer() {
         Footer
       </h2>
 
-      <div className="mx-auto max-w-7xl px-6 py-20 md:py-24 space-y-10">
-        {/* Brand */}
-        <header>
+      <div
+        className="
+          mx-auto max-w-7xl
+          px-4 sm:px-6 lg:px-12
+          py-16 sm:py-20 lg:py-24
+          space-y-10
+        "
+      >
+        {/* ================= BRAND ================= */}
+        <header className="flex justify-center md:justify-start">
           <Link
             to="/"
             className="inline-flex items-center gap-3"
@@ -23,49 +30,72 @@ function Footer() {
             <img
               src={logo}
               alt="Construction engineering technology"
-              className="w-10 h-10 rounded-lg border border-neutral-200 object-contain"
+              className="h-10 w-10 rounded-lg border border-neutral-200 object-contain"
             />
-            <span className="text-xl md:text-2xl font-bold text-neutral-900">
+            <span className="text-lg sm:text-xl lg:text-2xl font-bold text-neutral-900">
               Li Rema Construction
             </span>
           </Link>
         </header>
 
-        {/* Navigation */}
-        <nav
-          aria-label="Footer navigation"
-        >
-          <ul className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8">
-            {[
-              { to: '/', label: 'Home' },
-              { to: '/services', label: 'Services' },
-              { to: '/about', label: 'About' },
-              { to: '/contacts', label: 'Contact' },
-              { to: '/teams', label: 'Our Team' }
-            ].map((item) => (
-              <li key={item.label}>
+        {/* ================= NAVIGATION ================= */}
+        <nav aria-label="Footer navigation">
+          <ul
+            className="
+              flex flex-col items-center gap-4
+              md:flex-row md:items-center md:justify-between
+            "
+          >
+            {/* Links */}
+            <li className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
+              {[
+                { to: '/', label: 'Home' },
+                { to: '/services', label: 'Services' },
+                { to: '/about', label: 'About' },
+                { to: '/contacts', label: 'Contact' },
+                { to: '/teams', label: 'Our Team' },
+              ].map((item) => (
                 <Link
+                  key={item.label}
                   to={item.to}
-                  className="text-base font-medium text-neutral-700 hover:text-neutral-900 focus-visible:ring-2 focus-visible:ring-offset-2 rounded-md"
+                  className="
+                    text-sm sm:text-base font-medium
+                    text-neutral-700 hover:text-neutral-900
+                    focus-visible:outline-none
+                    focus-visible:ring-2 focus-visible:ring-blue-500
+                    focus-visible:ring-offset-2
+                    rounded-md px-2 py-1
+                  "
                 >
                   {item.label}
                 </Link>
-              </li>
-            ))}
+              ))}
+            </li>
 
+            {/* CTA */}
             <li>
               <Button
                 text="Login"
                 ariaLabel="Login to your account"
-                className="focus-visible:ring-2 focus-visible:ring-offset-2"
+                className="
+                  px-6 py-2 sm:py-3
+                  text-sm sm:text-base
+                  focus-visible:ring-2 focus-visible:ring-offset-2
+                "
               />
             </li>
           </ul>
         </nav>
 
-        {/* Footer bottom */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-neutral-600">
-          <p className="text-sm leading-relaxed">
+        {/* ================= FOOTER BOTTOM ================= */}
+        <div
+          className="
+            flex flex-col items-center gap-4
+            md:flex-row md:justify-between
+            text-neutral-600
+          "
+        >
+          <p className="text-sm text-center md:text-left">
             © 2025{' '}
             <strong className="font-semibold text-neutral-900">
               Li Rema Construction
@@ -75,14 +105,26 @@ function Footer() {
 
           <div className="flex gap-4 md:gap-6">
             <Link
-              to="/privacy"
-              className="text-sm hover:text-neutral-800 focus-visible:ring-2 focus-visible:ring-offset-2 rounded-md"
+              to="/policy"
+              className="
+                text-sm hover:text-neutral-800
+                focus-visible:outline-none
+                focus-visible:ring-2 focus-visible:ring-blue-500
+                focus-visible:ring-offset-2
+                rounded-md px-2 py-1
+              "
             >
               Privacy Policy
             </Link>
             <Link
               to="/terms"
-              className="text-sm hover:text-neutral-800 focus-visible:ring-2 focus-visible:ring-offset-2 rounded-md"
+              className="
+                text-sm hover:text-neutral-800
+                focus-visible:outline-none
+                focus-visible:ring-2 focus-visible:ring-blue-500
+                focus-visible:ring-offset-2
+                rounded-md px-2 py-1
+              "
             >
               Terms of Service
             </Link>

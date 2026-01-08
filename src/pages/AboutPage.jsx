@@ -1,198 +1,205 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Button, Header } from "../components";
-import Team from "./Team";
-import Contact from "./Contact";
-import Footer from "./Footer";
+import React from "react"
+import { Link } from "react-router-dom"
+import { Button, Header } from "../components"
+import Team from "./Team"
+import Contact from "./Contact"
+import Footer from "./Footer"
 
 function AboutPage() {
   return (
     <div className="bg-gray-50">
       <Header />
 
-      {/* HERO SECTION */}
-      <section
-        className="text-center py-20 md:py-28"
-        aria-labelledby="about-title"
-      >
-        <div className="space-y-6 max-w-3xl mx-auto px-6 sm:px-8">
-          <p className="text-sm md:text-base font-semibold text-neutral-500 uppercase">
-            Our Story
-          </p>
+      <main>
+        {/* ================= HERO ================= */}
+        <section
+          aria-labelledby="about-title"
+          className="
+            text-center
+            px-4 sm:px-6
+            py-20 sm:py-24 lg:py-32
+          "
+        >
+          <div className="mx-auto max-w-3xl space-y-6">
+            <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-neutral-500">
+              Our Story
+            </p>
 
-          <h1
-            id="about-title"
-            className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-wide text-neutral-900"
-          >
-            About Us
-          </h1>
-
-          <p className="text-base md:text-lg text-neutral-600 leading-relaxed">
-            Building engineering solutions that transform infrastructure.
-          </p>
-
-          <div className="flex justify-center gap-4 pt-8">
-            <Link
-              to="/about"
-              aria-label="Learn more about LI Rema Engineering and Construction history"
+            <h1
+              id="about-title"
+              className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-neutral-900"
             >
-              <Button text="Learn" />
-            </Link>
+              About Us
+            </h1>
 
-            <Link to="/contacts" aria-label="Contact our team">
-              <Button text="Contact" />
-            </Link>
-          </div>
-        </div>
-      </section>
+            <p className="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed">
+              Building engineering solutions that transform infrastructure.
+            </p>
 
-      {/* MISSION SECTION */}
-      <section className="px-6 py-20 max-w-4xl mx-auto space-y-6 sm:space-y-8">
-        <p className="text-sm font-light text-neutral-500">Our Mission</p>
-
-        <h2 className="text-2xl md:text-4xl font-bold text-neutral-900">
-          Engineering excellence through innovation and precision
-        </h2>
-
-        <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
-          Li Rema Engineering and Construction stands as a pioneering force in
-          technical solutions. We merge deep engineering knowledge with
-          strategic vision to deliver impactful projects.
-        </p>
-      </section>
-
-      {/* STRENGTHS SECTION */}
-      <section className="px-6 py-20 max-w-5xl mx-auto space-y-6">
-        <p className="text-sm font-light text-neutral-500">Our Strengths</p>
-
-        <h2 className="text-2xl md:text-4xl font-bold text-neutral-900">
-          Why choose Li Rema?
-        </h2>
-
-        <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
-          Comprehensive engineering solutions for complex challenges.
-        </p>
-
-        <div className="grid md:grid-cols-3 gap-6 pt-6">
-          {[1, 2, 3].map((card) => (
-            <div
-              key={card}
-              className="p-6 bg-white rounded-xl shadow-sm space-y-4 border border-neutral-200"
-            >
-              <p className="text-xs font-medium text-neutral-500">Expertise</p>
-
-              <h4 className="text-lg font-bold text-neutral-900">
-                Proven technical mastery across engineering domains.
-              </h4>
-
-              <p className="text-sm text-neutral-600">
-                Deep technical knowledge.
-              </p>
-
-              <Link
-                to="/history"
-                aria-label="Learn more about our engineering expertise"
-              >
-                <Button text="Learn" />
+            <div className="flex flex-wrap justify-center gap-4 pt-6">
+              <Link to="/about">
+                <Button text="Learn More" />
               </Link>
 
-              <div className="h-24 w-full bg-gray-200 rounded-md flex items-center justify-center">
-                <span className="text-xs text-gray-500">Image</span>
-              </div>
+              <Link to="/contacts">
+                <Button text="Contact" />
+              </Link>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* JOURNEY SECTION */}
-      <section className="px-6 py-20 max-w-4xl mx-auto space-y-6">
-        <p className="text-sm font-light text-neutral-500">Our Journey</p>
+        {/* ================= MISSION ================= */}
+        <section className="px-4 sm:px-6 py-16 sm:py-20 max-w-4xl mx-auto space-y-6">
+          <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
+            Our Mission
+          </p>
 
-        <h3 className="text-2xl font-bold text-neutral-900">
-          Milestones of engineering excellence
-        </h3>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-900">
+            Engineering excellence through innovation and precision
+          </h2>
 
-        <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
-          A story of continuous growth and technical advancement through
-          innovation.
-        </p>
+          <p className="text-sm sm:text-base text-neutral-600 leading-relaxed">
+            Li Rema Engineering and Construction stands as a pioneering force in
+            technical solutions. We merge deep engineering knowledge with
+            strategic vision to deliver impactful projects.
+          </p>
+        </section>
 
-        <div className="flex gap-4 pt-4 justify-center sm:justify-start">
-          <Link
-            to="/history"
-            aria-label="View our company history and milestones"
-          >
-            <Button text="View History" />
-          </Link>
+        {/* ================= STRENGTHS ================= */}
+        <section className="px-4 sm:px-6 py-16 sm:py-20 max-w-6xl mx-auto space-y-8">
+          <header className="space-y-3">
+            <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
+              Our Strengths
+            </p>
 
-          <Link
-            to="/about"
-            aria-label="Learn more about LI Rema Engineering history"
-          >
-            <Button text="Learn" />
-          </Link>
-        </div>
-      </section>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-900">
+              Why choose Li Rema?
+            </h2>
 
-      {/* PARTNERS SECTION */}
-      <section className="px-6 py-20 max-w-4xl mx-auto space-y-6">
-        <h3 className="text-2xl font-bold text-neutral-900">
-          Our Trusted Partners
-        </h3>
+            <p className="text-sm sm:text-base text-neutral-600">
+              Comprehensive engineering solutions for complex challenges.
+            </p>
+          </header>
 
-        <p className="text-sm text-neutral-600 leading-relaxed">
-          Collaborative networks driving innovation and excellence.
-        </p>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[1, 2, 3].map((card) => (
+              <article
+                key={card}
+                className="
+                  flex flex-col justify-between
+                  rounded-2xl border border-neutral-200
+                  bg-white p-6
+                  shadow-sm
+                "
+              >
+                <div className="space-y-4">
+                  <p className="text-xs font-semibold text-neutral-500">
+                    Expertise
+                  </p>
 
-        <div className="flex gap-4 pt-4 justify-center sm:justify-start">
-          <Link
-            to="/partners"
-            aria-label="View our partners and accreditations"
-          >
-            <Button text="View Partner" />
-          </Link>
+                  <h3 className="text-lg font-bold text-neutral-900">
+                    Proven technical mastery across engineering domains
+                  </h3>
 
-          <Link
-            to="/partners"
-            aria-label="Learn more about our professional partnerships"
-          >
-            <Button text="Learn" />
-          </Link>
-        </div>
+                  <p className="text-sm text-neutral-600">
+                    Deep technical knowledge.
+                  </p>
+                </div>
 
-        <div className="h-40 bg-gray-200 rounded-md flex items-center justify-center mt-4">
-          <span className="text-xs text-gray-500">Partner Images</span>
-        </div>
-      </section>
+                <div className="mt-6 space-y-4">
+                  <Link to="/history">
+                    <Button text="Learn More" />
+                  </Link>
 
-      {/* FINAL CTA */}
-      <section className="px-6 py-20 max-w-4xl mx-auto text-center space-y-6">
-        <h3 className="text-2xl font-bold text-neutral-900">
-          Ready to build your next project?
-        </h3>
+                  <div className="h-24 rounded-md bg-gray-200 flex items-center justify-center">
+                    <span className="text-xs text-gray-500">Image</span>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
-        <p className="text-sm text-neutral-600 leading-relaxed">
-          Connect with our expert team to discuss your engineering needs.
-        </p>
+        {/* ================= JOURNEY ================= */}
+        <section className="px-4 sm:px-6 py-16 sm:py-20 max-w-4xl mx-auto space-y-6">
+          <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
+            Our Journey
+          </p>
 
-        <div className="flex justify-center gap-4 pt-4">
-          <Link to="/contacts" aria-label="Contact our team">
-            <Button text="Contact" />
-          </Link>
+          <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900">
+            Milestones of engineering excellence
+          </h3>
 
-          <Link to="/quote" aria-label="Request a project quote">
-            <Button text="Request Quote" />
-          </Link>
-        </div>
-      </section>
+          <p className="text-sm sm:text-base text-neutral-600 leading-relaxed">
+            A story of continuous growth and technical advancement through
+            innovation.
+          </p>
 
-      {/* TEAM & CONTACT */}
-      <Team />
-      <Contact />
+          <div className="flex flex-wrap gap-4 pt-4">
+            <Link to="/history">
+              <Button text="View History" />
+            </Link>
+
+            <Link to="/about">
+              <Button text="Learn More" />
+            </Link>
+          </div>
+        </section>
+
+        {/* ================= PARTNERS ================= */}
+        <section className="px-4 sm:px-6 py-16 sm:py-20 max-w-4xl mx-auto space-y-6">
+          <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900">
+            Our Trusted Partners
+          </h3>
+
+          <p className="text-sm sm:text-base text-neutral-600">
+            Collaborative networks driving innovation and excellence.
+          </p>
+
+          <div className="flex flex-wrap gap-4 pt-4">
+            <Link to="/partners">
+              <Button text="View Partners" />
+            </Link>
+
+            <Link to="/partners">
+              <Button text="Learn More" />
+            </Link>
+          </div>
+
+          <div className="h-40 rounded-xl bg-gray-200 flex items-center justify-center">
+            <span className="text-xs text-gray-500">Partner Images</span>
+          </div>
+        </section>
+
+        {/* ================= FINAL CTA ================= */}
+        <section className="px-4 sm:px-6 py-20 max-w-4xl mx-auto text-center space-y-6">
+          <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900">
+            Ready to build your next project?
+          </h3>
+
+          <p className="text-sm sm:text-base text-neutral-600">
+            Connect with our expert team to discuss your engineering needs.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
+            <Link to="/contacts">
+              <Button text="Contact" />
+            </Link>
+
+            <Link to="/quote">
+              <Button text="Request Quote" />
+            </Link>
+          </div>
+        </section>
+
+        {/* ================= TEAM & CONTACT ================= */}
+        <Team />
+        <Contact />
+      </main>
 
       <Footer />
     </div>
-  );
+  )
 }
 
-export default AboutPage;
+export default AboutPage

@@ -15,24 +15,25 @@ function Smart() {
     <>
       <Header />
 
-      <main className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-16 space-y-32">
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-24 sm:space-y-32">
 
         {/* ================= HERO ================= */}
-        <section className="text-center space-y-6">
-          <p className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
+        <section className="text-center space-y-4 sm:space-y-6">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-500">
             Smart Living
           </p>
 
-          <h1 className="text-3xl md:text-5xl font-bold text-neutral-900">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900">
             Smart home & security solutions
           </h1>
 
-          <p className="mx-auto max-w-2xl text-base md:text-lg leading-relaxed text-neutral-600">
+          <p className="mx-auto max-w-xl sm:max-w-2xl text-base sm:text-lg leading-relaxed text-neutral-600">
             Integrated smart technology designed to improve comfort, security,
             and efficiency in modern homes and businesses.
           </p>
 
-          <div className="flex justify-center gap-4 pt-4">
+          {/* Buttons wrap naturally on small screens */}
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
             <Link to="/quote">
               <Button text="Request Quote" />
             </Link>
@@ -43,8 +44,8 @@ function Smart() {
         </section>
 
         {/* ================= OVERVIEW ================= */}
-        <section className="mx-auto max-w-3xl space-y-6">
-          <h2 className="text-2xl md:text-3xl font-semibold text-neutral-900">
+        <section className="mx-auto max-w-3xl space-y-4 sm:space-y-6">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">
             Intelligent systems built around your lifestyle
           </h2>
 
@@ -63,17 +64,19 @@ function Smart() {
         </section>
 
         {/* ================= IMAGE GALLERY ================= */}
-        <section aria-labelledby="gallery-heading" className="space-y-10">
+        <section aria-labelledby="gallery-heading" className="space-y-8 sm:space-y-10">
           <header className="text-center space-y-3">
-            <p className="text-sm uppercase tracking-wide text-neutral-500">
+            <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
               Gallery
             </p>
+
             <h2
               id="gallery-heading"
-              className="text-2xl md:text-3xl font-semibold text-neutral-900"
+              className="text-2xl sm:text-3xl font-semibold text-neutral-900"
             >
               Smart systems in action
             </h2>
+
             <p className="mx-auto max-w-prose text-neutral-600">
               A glimpse into the smart technology solutions we design and install.
             </p>
@@ -81,7 +84,7 @@ function Smart() {
 
           <div
             role="list"
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+            className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4"
           >
             {[img1, img2, img3, img4].map((image, index) => (
               <figure
@@ -89,19 +92,22 @@ function Smart() {
                 role="listitem"
                 className="overflow-hidden rounded-xl border border-neutral-200 shadow-sm"
               >
-                <img
-                  src={image}
-                  alt={`Smart system installation ${index + 1}`}
-                  className="h-64 w-full object-cover transition-transform duration-300 hover:scale-105"
-                />
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={image}
+                    alt={`Smart system installation ${index + 1}`}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-300 motion-safe:hover:scale-105"
+                  />
+                </div>
               </figure>
             ))}
           </div>
         </section>
 
         {/* ================= CTA ================= */}
-        <section className="mx-auto max-w-3xl text-center space-y-6">
-          <h2 className="text-2xl md:text-3xl font-semibold text-neutral-900">
+        <section className="mx-auto max-w-3xl text-center space-y-4 sm:space-y-6">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">
             Ready to upgrade your space?
           </h2>
 
@@ -110,7 +116,7 @@ function Smart() {
             needs.
           </p>
 
-          <div className="flex justify-center gap-4 pt-2">
+          <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Link to="/quote">
               <Button text="Get a quote" />
             </Link>

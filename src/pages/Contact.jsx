@@ -8,70 +8,108 @@ function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 space-y-16"
+      className="
+        mx-auto max-w-7xl
+        px-4 sm:px-6 lg:px-12
+        py-16 sm:py-20 lg:py-24
+        space-y-16
+      "
     >
-      {/* HEADER */}
-      <header className="mx-auto max-w-prose text-center space-y-4">
+      {/* ================= HEADER ================= */}
+      <header className="mx-auto max-w-xl text-center space-y-3">
         <h2
           id="contact-title"
-          className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900"
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900"
         >
           Contact
         </h2>
 
-        <p className="text-base leading-relaxed text-neutral-600">
+        <p className="text-sm sm:text-base lg:text-lg text-neutral-600">
           We’re ready to discuss your engineering &amp; construction needs.
         </p>
       </header>
 
-      {/* MAIN GRID */}
-      <div className="grid gap-12 md:grid-cols-2 items-start">
-        {/* CONTACT DETAILS */}
+      {/* ================= MAIN GRID ================= */}
+      <div className="grid gap-12 lg:grid-cols-2 items-start">
+        {/* ================= CONTACT DETAILS ================= */}
         <article className="space-y-6">
           {[
             {
-              icon: <FaRegEnvelopeOpen aria-hidden="true" />,
+              icon: <FaRegEnvelopeOpen />,
               title: 'Email',
-              value: 'info@liremaeng.com'
+              value: 'info@liremaeng.com',
+              href: 'mailto:info@liremaeng.com',
             },
             {
-              icon: <FaPhoneAlt aria-hidden="true" />,
+              icon: <FaPhoneAlt />,
               title: 'Phone',
-              value: '+27 123 456 789'
+              value: '+27 123 456 789',
+              href: 'tel:+27123456789',
             },
             {
-              icon: <FaAddressCard aria-hidden="true" />,
+              icon: <FaAddressCard />,
               title: 'Address',
-              value: 'Norkem Park North, Gauteng, South Africa'
-            }
+              value: 'Norkem Park North, Gauteng, South Africa',
+            },
           ].map((item) => (
             <div
               key={item.title}
-              className="flex items-start gap-4 rounded-xl border border-neutral-200 bg-white p-5 shadow-sm"
+              className="
+                flex items-start gap-4
+                rounded-2xl border border-neutral-200
+                bg-white
+                p-5 sm:p-6
+                shadow-sm
+              "
             >
-              <span className="text-xl text-neutral-700">
+              <span
+                aria-hidden="true"
+                className="mt-1 text-xl sm:text-2xl text-neutral-700"
+              >
                 {item.icon}
               </span>
 
               <div className="space-y-1">
-                <p className="font-semibold text-neutral-900">
+                <p className="text-sm sm:text-base font-semibold text-neutral-900">
                   {item.title}
                 </p>
-                <p className="text-sm leading-relaxed text-neutral-600">
-                  {item.value}
-                </p>
+
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    className="
+                      text-sm sm:text-base text-neutral-600
+                      hover:underline
+                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500
+                    "
+                  >
+                    {item.value}
+                  </a>
+                ) : (
+                  <p className="text-sm sm:text-base text-neutral-600 leading-relaxed">
+                    {item.value}
+                  </p>
+                )}
               </div>
             </div>
           ))}
         </article>
 
-        {/* CONTACT FORM */}
-        <article className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
+        {/* ================= CONTACT FORM ================= */}
+        <article
+          className="
+            rounded-2xl border border-neutral-200
+            bg-white
+            p-6 sm:p-8
+            shadow-sm
+          "
+        >
           <form
             aria-label="Contact form"
             className="space-y-4"
           >
-            <label className="sr-only" htmlFor="name">
+            {/* Name */}
+            <label htmlFor="name" className="sr-only">
               Your name
             </label>
             <input
@@ -79,10 +117,18 @@ function Contact() {
               type="text"
               name="name"
               placeholder="Your name"
-              className="w-full rounded-xl border border-neutral-300 p-3 text-sm focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2"
+              autoComplete="name"
+              className="
+                w-full rounded-xl border border-neutral-300
+                px-4 py-3 min-h-[44px]
+                text-sm sm:text-base
+                focus-visible:ring-2 focus-visible:ring-blue-500
+                focus-visible:ring-offset-2
+              "
             />
 
-            <label className="sr-only" htmlFor="email">
+            {/* Email */}
+            <label htmlFor="email" className="sr-only">
               Your email
             </label>
             <input
@@ -90,10 +136,18 @@ function Contact() {
               type="email"
               name="email"
               placeholder="Your email"
-              className="w-full rounded-xl border border-neutral-300 p-3 text-sm focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2"
+              autoComplete="email"
+              className="
+                w-full rounded-xl border border-neutral-300
+                px-4 py-3 min-h-[44px]
+                text-sm sm:text-base
+                focus-visible:ring-2 focus-visible:ring-blue-500
+                focus-visible:ring-offset-2
+              "
             />
 
-            <label className="sr-only" htmlFor="message">
+            {/* Message */}
+            <label htmlFor="message" className="sr-only">
               Your message
             </label>
             <textarea
@@ -101,27 +155,45 @@ function Contact() {
               name="message"
               placeholder="Your message"
               rows={5}
-              className="w-full resize-none rounded-xl border border-neutral-300 p-3 text-sm focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2"
+              className="
+                w-full resize-none rounded-xl
+                border border-neutral-300
+                px-4 py-3
+                text-sm sm:text-base
+                focus-visible:ring-2 focus-visible:ring-blue-500
+                focus-visible:ring-offset-2
+              "
             />
 
+            {/* Submit */}
             <Button
               text="Submit message"
               ariaLabel="Submit contact form"
-              className="w-full focus-visible:ring-2 focus-visible:ring-offset-2"
+              className="
+                w-full py-3 sm:py-4
+                text-sm sm:text-base
+                focus-visible:ring-2 focus-visible:ring-offset-2
+              "
             />
           </form>
         </article>
       </div>
 
-      {/* DECORATIVE IMAGE */}
+      {/* ================= DECORATIVE IMAGE ================= */}
       <figure
         aria-hidden="true"
-        className="flex justify-center"
+        className="flex justify-center lg:justify-end"
       >
         <img
           src={img}
           alt=""
-          className="w-full max-w-md rounded-xl border border-neutral-200 shadow-sm"
+          loading="lazy"
+          className="
+            w-full max-w-sm sm:max-w-md
+            rounded-2xl
+            border border-neutral-200
+            shadow-sm
+          "
         />
       </figure>
     </section>

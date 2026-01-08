@@ -1,30 +1,55 @@
 import { useState } from "react";
 import Footer from "./Footer";
-
 import { Header } from "../components";
 
 /* ---------------- Shared Layout Components ---------------- */
 
+/*
+  Mobile-first container:
+  - px-4 for phones
+  - px-6 for tablets
+  - px-8 for desktop
+*/
 function Container({ children }) {
-  return <div className="max-w-7xl mx-auto px-6">{children}</div>;
+  return (
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {children}
+    </div>
+  );
 }
 
+/*
+  Section spacing:
+  - tighter on mobile
+  - relaxed on larger screens
+*/
 function Section({ children, muted = false }) {
   return (
-    <section className={muted ? "bg-neutral-50 py-20" : "py-20"}>
+    <section
+      className={`${
+        muted ? "bg-neutral-50" : ""
+      } py-14 sm:py-20`}
+    >
       {children}
     </section>
   );
 }
 
+/*
+  Section header with responsive typography
+*/
 function SectionHeader({ title, description }) {
   return (
-    <div className="max-w-prose space-y-4">
-      <h2 className="text-3xl font-semibold text-neutral-900">{title}</h2>
+    <header className="max-w-prose space-y-3 sm:space-y-4">
+      <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">
+        {title}
+      </h2>
       {description && (
-        <p className="text-neutral-700 leading-relaxed">{description}</p>
+        <p className="text-sm sm:text-base text-neutral-700 leading-relaxed">
+          {description}
+        </p>
       )}
-    </div>
+    </header>
   );
 }
 
@@ -76,14 +101,14 @@ export default function HistoryPage() {
       <Header />
 
       <main id="main-content" className="bg-white">
-        {/* Page Header */}
+        {/* PAGE HEADER */}
         <header className="border-b border-neutral-200 bg-neutral-50">
           <Container>
-            <div className="py-20">
-              <h1 className="text-4xl font-bold text-neutral-900 sm:text-5xl">
+            <div className="py-14 sm:py-20">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900">
                 Our History & Company Profile
               </h1>
-              <p className="mt-6 max-w-prose text-lg text-neutral-600 leading-relaxed">
+              <p className="mt-4 sm:mt-6 max-w-prose text-base sm:text-lg text-neutral-600 leading-relaxed">
                 Discover the journey, values, and expertise behind LI Rema
                 Engineering & Construction (Pty) Ltd.
               </p>
@@ -91,11 +116,11 @@ export default function HistoryPage() {
           </Container>
         </header>
 
-        {/* Company Overview */}
+        {/* COMPANY OVERVIEW */}
         <Section>
           <Container>
             <SectionHeader title="Company Overview" />
-            <div className="mt-8 max-w-prose space-y-6 text-neutral-700 leading-relaxed">
+            <div className="mt-6 sm:mt-8 max-w-prose space-y-4 sm:space-y-6 text-sm sm:text-base text-neutral-700 leading-relaxed">
               <p>
                 LI REMA ENGINEERING AND CONSTRUCTION (Pty) Ltd is a proudly South
                 African company established on <strong>03 May 2024</strong>, with
@@ -110,11 +135,13 @@ export default function HistoryPage() {
           </Container>
         </Section>
 
-        {/* Timeline */}
+        {/* TIMELINE */}
         <Section muted>
           <Container>
             <SectionHeader title="Our Journey" />
-            <ol className="relative mt-12 space-y-12 border-l border-neutral-300">
+
+            {/* Timeline optimized for mobile readability */}
+            <ol className="relative mt-10 sm:mt-12 space-y-10 border-l border-neutral-300">
               {[
                 {
                   year: "2024",
@@ -133,10 +160,10 @@ export default function HistoryPage() {
                   <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-neutral-900 text-xs font-semibold text-white">
                     {item.year[0]}
                   </span>
-                  <h3 className="text-lg font-semibold text-neutral-900">
+                  <h3 className="text-base sm:text-lg font-semibold text-neutral-900">
                     {item.year}
                   </h3>
-                  <p className="mt-2 max-w-prose text-neutral-700 leading-relaxed">
+                  <p className="mt-1 sm:mt-2 max-w-prose text-sm sm:text-base text-neutral-700 leading-relaxed">
                     {item.text}
                   </p>
                 </li>
@@ -145,7 +172,7 @@ export default function HistoryPage() {
           </Container>
         </Section>
 
-        {/* Filterable Product Gallery */}
+        {/* FILTERABLE GALLERY */}
         <Section>
           <Container>
             <SectionHeader
@@ -153,13 +180,14 @@ export default function HistoryPage() {
               description="Specialized engineering and construction solutions designed for efficiency and sustainability."
             />
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            {/* Touch-friendly filter buttons */}
+            <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
               {["all", "hvac", "industrial", "maintenance", "construction"].map(
                 (cat) => (
                   <button
                     key={cat}
                     onClick={() => setFilter(cat)}
-                    className={`rounded-full border px-4 py-2 text-sm font-medium transition
+                    className={`min-h-[44px] rounded-full border px-4 py-2 text-sm font-medium transition
                       focus-visible:ring-2 focus-visible:ring-neutral-900
                       ${
                         filter === cat
@@ -173,18 +201,21 @@ export default function HistoryPage() {
               )}
             </div>
 
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {/* Responsive gallery grid */}
+            <div className="mt-10 sm:mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {filteredProducts.map((product) => (
                 <figure
                   key={product.id}
-                  className="group overflow-hidden rounded-xl border border-neutral-200 shadow-sm transition hover:shadow-md motion-safe:hover:-translate-y-1"
+                  className="group overflow-hidden rounded-xl border border-neutral-200 shadow-sm transition
+                             motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-md"
                 >
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.alt}
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="h-full w-full object-cover transition-transform duration-300
+                                 motion-safe:group-hover:scale-105"
                     />
                   </div>
                   <figcaption className="p-4 text-sm font-medium text-neutral-700">

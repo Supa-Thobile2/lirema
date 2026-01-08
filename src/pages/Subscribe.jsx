@@ -5,24 +5,24 @@ function Subscribe() {
   return (
     <section
       aria-labelledby="subscribe-heading"
-      className="bg-neutral-50  flex flex-col items-center mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24"
+      className="bg-neutral-50 flex flex-col items-center mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 space-y-6"
     >
       {/* Heading */}
       <header className="text-center space-y-2 max-w-xl">
         <h2
           id="subscribe-heading"
-          className="text-xl md:text-2xl font-bold text-neutral-900"
+          className="text-xl sm:text-2xl font-bold text-neutral-900"
         >
           Stay Informed: Engineering Insights
         </h2>
-        <p className="text-sm md:text-base text-neutral-700 leading-relaxed">
+        <p className="text-sm sm:text-base text-neutral-700 leading-relaxed">
           Receive the latest updates, technical innovations, and industry trends
           directly to your inbox.
         </p>
       </header>
 
       {/* Email Form */}
-      <form className="relative w-full max-w-md flex items-center">
+      <form className="w-full max-w-md flex flex-col sm:flex-row items-center gap-3">
         <label htmlFor="email" className="sr-only">
           Email address
         </label>
@@ -31,15 +31,14 @@ function Subscribe() {
           id="email"
           name="email"
           placeholder="Enter your email"
+          required
           className="
-            w-full rounded-full border border-neutral-300 px-4 py-2
+            flex-1 w-full rounded-full border border-neutral-300 px-4 py-2
             text-sm text-neutral-900 placeholder-neutral-400
-            focus:outline-none focus:ring-2 focus:ring-purple-300
+            focus:outline-none focus:ring-2 focus:ring-purple-400
           "
         />
-        <div className="absolute top-0 right-0 h-full flex items-center pr-1">
-          <Button text="Subscribe Now" />
-        </div>
+        <Button text="Subscribe Now" className="w-full sm:w-auto px-6 py-2" />
       </form>
 
       {/* Terms */}

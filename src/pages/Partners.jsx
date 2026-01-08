@@ -41,11 +41,19 @@ function Partners() {
     <>
       <Header />
 
-      <main className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-16 space-y-24">
+      {/* 
+        Mobile-first layout:
+        - px-4 on phones
+        - spacing scales up for larger screens
+      */}
+      <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 space-y-16 sm:space-y-24">
 
         {/* ================= HERO ================= */}
-        <section aria-labelledby="partners-heading" className="text-center space-y-6">
-          <p className="text-sm uppercase tracking-wide text-neutral-500">
+        <section
+          aria-labelledby="partners-heading"
+          className="text-center space-y-4 sm:space-y-6"
+        >
+          <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
             Partnerships
           </p>
 
@@ -56,7 +64,7 @@ function Partners() {
             Our Trusted Partners
           </h1>
 
-          <p className="mx-auto max-w-prose text-base md:text-lg leading-relaxed text-neutral-600">
+          <p className="mx-auto max-w-prose text-base sm:text-lg leading-relaxed text-neutral-600">
             We collaborate with industry-leading partners to deliver innovative,
             reliable, and scalable engineering solutions.
           </p>
@@ -65,41 +73,46 @@ function Partners() {
         {/* ================= PARTNERS GALLERY ================= */}
         <section
           aria-labelledby="partners-gallery-heading"
-          className="space-y-12"
+          className="space-y-8 sm:space-y-12"
         >
-          <h2
-            id="partners-gallery-heading"
-            className="sr-only"
-          >
+          <h2 id="partners-gallery-heading" className="sr-only">
             Partner gallery
           </h2>
 
+          {/* 
+            Grid behavior:
+            - 1 column (mobile)
+            - 2 columns (tablet)
+            - 4 columns (desktop)
+          */}
           <ul
             role="list"
-            className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
+            className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4"
           >
             {partners.map((partner) => (
               <li
                 key={partner.name}
                 role="listitem"
-                className="flex flex-col rounded-xl border border-neutral-200 bg-white shadow-sm transition hover:shadow-md"
+                className="flex flex-col rounded-xl border border-neutral-200 bg-white shadow-sm transition
+                           motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-md"
               >
                 {/* Image */}
                 <div className="aspect-[4/3] overflow-hidden rounded-t-xl">
                   <img
                     src={partner.image}
                     alt={`${partner.name} logo`}
+                    loading="lazy"
                     className="h-full w-full object-cover"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col space-y-3 p-5">
-                  <h3 className="text-lg font-semibold text-neutral-900">
+                <div className="flex flex-col space-y-2 p-4 sm:p-5">
+                  <h3 className="text-base sm:text-lg font-semibold text-neutral-900">
                     {partner.name}
                   </h3>
 
-                  <p className="text-sm leading-relaxed text-neutral-600">
+                  <p className="text-sm sm:text-base leading-relaxed text-neutral-600">
                     {partner.description}
                   </p>
                 </div>
@@ -109,17 +122,18 @@ function Partners() {
         </section>
 
         {/* ================= CTA ================= */}
-        <section className="text-center space-y-6">
+        <section className="text-center space-y-4 sm:space-y-6">
           <h2 className="text-2xl md:text-3xl font-semibold text-neutral-900">
             Interested in partnering with us?
           </h2>
 
-          <p className="mx-auto max-w-prose text-neutral-600">
+          <p className="mx-auto max-w-prose text-neutral-600 leading-relaxed">
             We’re always open to strategic partnerships that drive innovation
             and deliver exceptional value.
           </p>
 
-          <div className="flex justify-center gap-4">
+          {/* Buttons wrap cleanly on mobile */}
+          <div className="flex flex-wrap justify-center gap-4">
             <Button text="Become a partner" ariaLabel="Become a partner" />
             <Button text="Contact us" ariaLabel="Contact Li Rema Engineering" />
           </div>

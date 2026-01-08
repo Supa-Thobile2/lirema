@@ -8,132 +8,163 @@ function QuoteForm() {
     <>
       <Header />
 
-      {/* ================= HERO / PAGE HEADER ================= */}
-      <section
-        aria-labelledby="quote-heading"
-        className="container mx-auto p-8 text-center md:text-left space-y-6"
-      >
-        <p className="text-sm font-semibold text-gray-500 uppercase">Quote</p>
-        <h1
-          id="quote-heading"
-          className="text-2xl md:text-4xl font-bold tracking-tight text-neutral-900"
+      <main className="bg-white">
+        {/* ================= HERO / PAGE HEADER ================= */}
+        <section
+          aria-labelledby="quote-heading"
+          className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8"
         >
-          Request a Project Quote
-        </h1>
-        <p className="text-base leading-relaxed text-gray-700 max-w-xl mx-auto md:mx-0">
-          Fill out the form below to receive a detailed quote from our expert team for your engineering or construction project.
-        </p>
-      </section>
+          <div className="space-y-4 text-center md:text-left">
+            <p className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-gray-500">
+              Quote
+            </p>
 
-      {/* ================= QUICK CONTACT INFO ================= */}
-      <section className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {[
-          {
-            icon: <FaRegEnvelopeOpen aria-hidden="true" />,
-            title: "Email",
-            value: "quotes@liremaeng.com",
-            color: "text-blue-600",
-          },
-          {
-            icon: <FaPhoneAlt aria-hidden="true" />,
-            title: "Phone",
-            value: "+27 123 456 789",
-            color: "text-green-600",
-          },
-          {
-            icon: <FaBuilding aria-hidden="true" />,
-            title: "Office",
-            value: "Norkem Park North, Gauteng, South Africa",
-            color: "text-yellow-600",
-          },
-        ].map((info, idx) => (
-          <div
-            key={idx}
-            className="flex items-start gap-4 p-4 rounded-lg bg-white shadow hover:shadow-md transition-shadow"
-          >
-            <span className={`text-2xl ${info.color}`}>{info.icon}</span>
-            <div>
-              <p className="font-semibold text-gray-800">{info.title}</p>
-              <p className="text-sm text-gray-600 leading-relaxed">{info.value}</p>
-            </div>
+            <h1
+              id="quote-heading"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-neutral-900"
+            >
+              Request a Project Quote
+            </h1>
+
+            <p className="mx-auto max-w-xl text-base leading-relaxed text-gray-700 md:mx-0">
+              Fill out the form below to receive a detailed quote from our expert
+              team for your engineering or construction project.
+            </p>
           </div>
-        ))}
-      </section>
+        </section>
 
-      {/* ================= QUOTE FORM ================= */}
-      <section
-        id="quote-form"
-        className="bg-gray-50 py-16"
-        aria-labelledby="quote-form-heading"
-      >
-        <div className="container mx-auto px-6 md:max-w-3xl">
-          <h2
-            id="quote-form-heading"
-            className="text-xl md:text-2xl font-bold text-neutral-900 mb-6"
-          >
-            Quote Request Form
-          </h2>
-
-          <form className="bg-white p-8 rounded-xl shadow-lg space-y-4">
+        {/* ================= QUICK CONTACT INFO ================= */}
+        <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          {/* 
+            1 col (mobile) → 3 col (tablet+)
+            Cards are tap-friendly and readable
+          */}
+          <div className="grid gap-5 sm:gap-6 md:grid-cols-3">
             {[
-              { id: "name", type: "text", placeholder: "Your Name" },
-              { id: "email", type: "email", placeholder: "Your Email" },
-              { id: "company", type: "text", placeholder: "Company / Organization" },
-              { id: "phone", type: "tel", placeholder: "Phone Number" },
-            ].map((field) => (
-              <div key={field.id}>
-                <label
-                  htmlFor={field.id}
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  {field.placeholder}
-                </label>
-                <input
-                  id={field.id}
-                  type={field.type}
-                  required
-                  placeholder={field.placeholder}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+              {
+                icon: <FaRegEnvelopeOpen aria-hidden="true" />,
+                title: "Email",
+                value: "quotes@liremaeng.com",
+                color: "text-blue-600",
+              },
+              {
+                icon: <FaPhoneAlt aria-hidden="true" />,
+                title: "Phone",
+                value: "+27 123 456 789",
+                color: "text-green-600",
+              },
+              {
+                icon: <FaBuilding aria-hidden="true" />,
+                title: "Office",
+                value: "Norkem Park North, Gauteng, South Africa",
+                color: "text-yellow-600",
+              },
+            ].map((info, idx) => (
+              <div
+                key={idx}
+                className="flex items-start gap-4 rounded-xl bg-white p-5 shadow-sm transition
+                           motion-safe:hover:shadow-md"
+              >
+                <span className={`mt-1 text-2xl ${info.color}`}>
+                  {info.icon}
+                </span>
+
+                <div className="space-y-1">
+                  <p className="font-semibold text-gray-800">
+                    {info.title}
+                  </p>
+                  <p className="text-sm leading-relaxed text-gray-600">
+                    {info.value}
+                  </p>
+                </div>
               </div>
             ))}
+          </div>
+        </section>
 
-            <div>
-              <label
-                htmlFor="project-details"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Project Details
-              </label>
-              <textarea
-                id="project-details"
-                rows={6}
-                required
-                placeholder="Describe your project and requirements"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        {/* ================= QUOTE FORM ================= */}
+        <section
+          id="quote-form"
+          aria-labelledby="quote-form-heading"
+          className="bg-gray-50 py-14 sm:py-16"
+        >
+          <div className="mx-auto max-w-3xl px-4 sm:px-6">
+            <h2
+              id="quote-form-heading"
+              className="mb-6 text-xl sm:text-2xl font-bold text-neutral-900"
+            >
+              Quote Request Form
+            </h2>
+
+            <form
+              className="space-y-5 rounded-xl bg-white p-6 sm:p-8 shadow-lg"
+            >
+              {[
+                { id: "name", type: "text", label: "Your Name" },
+                { id: "email", type: "email", label: "Your Email" },
+                { id: "company", type: "text", label: "Company / Organization" },
+                { id: "phone", type: "tel", label: "Phone Number" },
+              ].map((field) => (
+                <div key={field.id} className="space-y-1">
+                  <label
+                    htmlFor={field.id}
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    {field.label}
+                  </label>
+
+                  <input
+                    id={field.id}
+                    type={field.type}
+                    required
+                    className="min-h-[44px] w-full rounded-lg border border-gray-300 px-3 py-2
+                               focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              ))}
+
+              <div className="space-y-1">
+                <label
+                  htmlFor="project-details"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Project Details
+                </label>
+
+                <textarea
+                  id="project-details"
+                  rows={5}
+                  required
+                  className="w-full rounded-lg border border-gray-300 px-3 py-2
+                             focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <fieldset className="flex items-start gap-2">
+                <input
+                  type="checkbox"
+                  id="terms"
+                  required
+                  className="mt-1 h-4 w-4 accent-blue-600"
+                />
+                <label
+                  htmlFor="terms"
+                  className="text-sm leading-relaxed text-gray-600"
+                >
+                  I agree to the terms and conditions
+                </label>
+              </fieldset>
+
+              {/* Full-width CTA for mobile confidence */}
+              <Button
+                text="Submit Quote Request"
+                ariaLabel="Submit project quote request"
+                className="w-full"
               />
-            </div>
-
-            <fieldset className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                id="terms"
-                required
-                className="accent-blue-600"
-              />
-              <label htmlFor="terms" className="text-sm text-gray-600">
-                I agree to the terms and conditions
-              </label>
-            </fieldset>
-
-            <Button
-              text="Submit Quote Request"
-              ariaLabel="Submit project quote request"
-              className="w-full mt-2"
-            />
-          </form>
-        </div>
-      </section>
+            </form>
+          </div>
+        </section>
+      </main>
 
       <Footer />
     </>

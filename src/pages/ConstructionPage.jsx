@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Header } from "../components";
-import Contact from "./Contact";
-import Footer from "./Footer";
 import Team from "./Team";
 import Quote from "./Quote";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 function ConstructionPage() {
   return (
@@ -11,7 +11,8 @@ function ConstructionPage() {
       <Header />
 
       <main className="mt-16 space-y-24">
-        {/* HERO SECTION */}
+
+        {/* ================= HERO SECTION ================= */}
         <section
           aria-labelledby="construction-hero-heading"
           className="container mx-auto px-4 md:px-12 lg:px-16"
@@ -37,13 +38,13 @@ function ConstructionPage() {
               aria-label="Primary actions"
               className="flex justify-center gap-4 pt-4"
             >
-              <Button text="Learn" />
-              <Button text="Contact" />
+              <Button text="Learn More" />
+              <Button text="Contact Us" />
             </nav>
           </header>
         </section>
 
-        {/* CONSTRUCTION EXPERTISE */}
+        {/* ================= CONSTRUCTION EXPERTISE ================= */}
         <section
           aria-labelledby="construction-expertise-heading"
           className="container mx-auto px-4 md:px-12 lg:px-16"
@@ -67,12 +68,12 @@ function ConstructionPage() {
           </header>
 
           <div className="mt-8 flex justify-center gap-4">
-            <Button text="Learn" />
-            <Button text="Learn" />
+            <Button text="Learn More" />
+            <Button text="View Projects" />
           </div>
         </section>
 
-        {/* FEATURE SECTION */}
+        {/* ================= FEATURE SECTION ================= */}
         <section
           aria-labelledby="construction-feature-heading"
           className="container mx-auto px-4 md:px-12 lg:px-16"
@@ -91,13 +92,13 @@ function ConstructionPage() {
             </p>
 
             <div className="flex justify-center gap-4">
-              <Button text="Learn" />
-              <Button text="Learn" />
+              <Button text="Learn More" />
+              <Button text="Our Approach" />
             </div>
           </div>
         </section>
 
-        {/* SIMPLE INFO BLOCK */}
+        {/* ================= SIMPLE INFO BLOCK ================= */}
         <section
           aria-labelledby="construction-summary-heading"
           className="container mx-auto px-4 md:px-12 lg:px-16"
@@ -116,6 +117,7 @@ function ConstructionPage() {
           </div>
         </section>
 
+        {/* ================= TEAM, QUOTE, CONTACT ================= */}
         <Team />
         <Quote />
         <Contact />
