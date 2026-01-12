@@ -21,7 +21,6 @@ function ContactPage() {
           className="
             mx-auto max-w-7xl
             p-4
-          
             space-y-4
             text-center md:text-left
           "
@@ -192,7 +191,86 @@ function ContactPage() {
             </article>
 
             {/* -------- CONTACT FORM -------- */}
+            <form
+              aria-labelledby="contact-form-heading"
+              className="
+                rounded-2xl bg-white
+                p-6 sm:p-8
+                shadow-lg
+                
+              "
+            >
+              <h2
+                id="contact-form-heading"
+                className="text-xl font-bold text-neutral-900"
+              >
+                Contact Form
+              </h2>
 
+              {[
+                { id: "name", type: "text", label: "Your Name" },
+                { id: "email", type: "email", label: "Your Email" },
+                { id: "subject", type: "text", label: "Subject" },
+              ].map((field) => (
+                <div key={field.id} className="space-y-1">
+                  <label
+                    htmlFor={field.id}
+                    className="text-sm font-medium text-neutral-700"
+                  >
+                    {field.label}
+                  </label>
+                  <input
+                    id={field.id}
+                    type={field.type}
+                    required
+                    className="
+                      w-full rounded-lg
+                      border border-neutral-300
+                      px-4 py-3
+                      text-sm sm:text-base
+                      focus-visible:ring-2
+                      focus-visible:ring-blue-500
+                      focus-visible:ring-offset-2
+                    "
+                  />
+                </div>
+              ))}
+
+              <div className="">
+                <label
+                  htmlFor="message"
+                  className="text-sm font-medium text-neutral-700"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={5}
+                  required
+                  className="
+                    w-full resize-none
+                    rounded-lg
+                    border border-neutral-300
+                    px-4 py-3
+                    text-sm sm:text-base
+                    focus-visible:ring-2
+                    focus-visible:ring-blue-500
+                    focus-visible:ring-offset-2
+                  "
+                />
+              </div>
+
+              <label className="flex items-start gap-2 text-sm text-neutral-600">
+                <input type="checkbox" required className="mt-1 accent-blue-600" />
+                I agree to the terms and conditions
+              </label>
+
+              <Button
+                text="Submit"
+                ariaLabel="Submit contact form"
+                className="w-full mt-2"
+              />
+            </form>
           </div>
         </section>
       </main>
@@ -204,7 +282,7 @@ function ContactPage() {
         rel="noopener noreferrer"
         aria-label="Chat with us on WhatsApp"
         className="
-          fixed bottom-4 right-4 sm:bottom-4 sm:right-4
+          fixed bottom-5 right-5 sm:bottom-6 sm:right-6
           z-50
           h-14 w-14 sm:h-16 sm:w-16
           rounded-full
