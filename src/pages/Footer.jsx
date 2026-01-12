@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer
       aria-labelledby="footer-heading"
-      className="w-full border-t border-neutral-200 bg-white"
+      className="w-full  bg-white space-y-2 p-4"
     >
       <h2 id="footer-heading" className="sr-only">
         Footer
@@ -17,12 +17,12 @@ function Footer() {
         className="
           mx-auto max-w-7xl
           px-4 sm:px-6 lg:px-12
-          py-16 sm:py-20 lg:py-24
-          space-y-10
+         
+          
         "
       >
         {/* ================= BRAND ================= */}
-        <header className="flex justify-center md:justify-start">
+        <header className="flex justify-start">
           <Link
             to="/"
             className="inline-flex items-center gap-3"
@@ -44,10 +44,11 @@ function Footer() {
             className="
               flex flex-col items-center gap-4
               md:flex-row md:items-center md:justify-between
+              space-y-2
             "
           >
             {/* Links */}
-            <li className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
+            <li className="flex flex-col md:flex-row gap-4 md:gap-8 items-center space-y-2">
               {[
                 { to: '/', label: 'Home' },
                 { to: '/services', label: 'Services' },
@@ -95,7 +96,7 @@ function Footer() {
             text-neutral-600
           "
         >
-          <p className="text-sm text-center md:text-left">
+          <p className="text-sm text-center md:text-left pt-8">
             © 2025{' '}
             <strong className="font-semibold text-neutral-900">
               Li Rema Construction
@@ -107,26 +108,26 @@ function Footer() {
             <Link
               to="/policy"
               className="
-                text-sm hover:text-neutral-800
+                text-md font-bold hover:text-neutral-800
                 focus-visible:outline-none
                 focus-visible:ring-2 focus-visible:ring-blue-500
                 focus-visible:ring-offset-2
                 rounded-md px-2 py-1
               "
             >
-              Privacy Policy
+              <p>Privacy Policy</p>
             </Link>
             <Link
               to="/terms"
               className="
-                text-sm hover:text-neutral-800
+                text-md font-bold hover:text-neutral-800
                 focus-visible:outline-none
                 focus-visible:ring-2 focus-visible:ring-blue-500
                 focus-visible:ring-offset-2
                 rounded-md px-2 py-1
               "
             >
-              Terms of Service
+              <p>Terms of Service</p>
             </Link>
           </div>
         </div>

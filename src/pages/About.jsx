@@ -8,36 +8,36 @@ const About = () => {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="bg-gradient-to-tr from-neutral-50 via-white to-neutral-100"
+      className="bg-gradient-to-tr from-neutral-50 via-white to-neutral-100
+                 py-12 sm:py-16 lg:py-20"
     >
-      {/* Responsive container with mobile-first padding */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-24">
-        {/* Stack on mobile, split layout on md+ */}
-        <div className="flex flex-col gap-12 md:flex-row md:items-center">
+      {/* Container with responsive horizontal padding */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+        {/* Mobile stack → split layout on md */}
+        <div className="flex flex-col md:flex-row md:items-center
+                        gap-10 sm:gap-12 md:gap-16">
 
           {/* ================= LEFT CONTENT ================= */}
-          <article className="w-full md:w-1/2 space-y-8">
+          <article className="w-full md:w-1/2 space-y-6">
+
             {/* Section label */}
-            <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500 sm:text-sm">
+            <p className="text-xs sm:text-sm font-semibold uppercase
+                          tracking-widest text-neutral-500">
               About
             </p>
 
             <header className="space-y-4">
-              {/* Responsive heading */}
               <h2
                 id="about-heading"
-                className="text-2xl font-bold tracking-tight leading-tight text-neutral-900
-                           sm:text-3xl
-                           lg:text-4xl"
+                className="text-2xl sm:text-3xl lg:text-4xl
+                           font-bold tracking-tight leading-tight
+                           text-neutral-900"
               >
                 Transforming engineering challenges into innovative solutions
               </h2>
 
-              {/* Responsive paragraph */}
-              <p
-                className="max-w-prose text-base leading-relaxed text-neutral-700
-                           sm:text-lg"
-              >
+              <p className="max-w-prose text-base sm:text-lg
+                            leading-relaxed text-neutral-700">
                 Li Rema Engineering and Construction delivers comprehensive
                 technical services with unmatched precision. We combine
                 engineering expertise with strategic innovation to solve complex
@@ -46,14 +46,13 @@ const About = () => {
             </header>
 
             {/* ================= THUMBNAILS ================= */}
-            {/* Touch-friendly spacing and focus states */}
             <ul
               role="list"
               aria-label="Engineering project samples"
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-4 pt-2"
             >
               {[...Array(4)].map((_, i) => (
-                <li key={i} role="listitem">
+                <li key={i}>
                   <img
                     src={img}
                     alt={`Engineering project sample ${i + 1}`}
@@ -62,6 +61,7 @@ const About = () => {
                                rounded-full object-cover shadow-sm
                                transition-transform duration-300
                                hover:scale-105
+                               focus-visible:outline-none
                                focus-visible:ring-2 focus-visible:ring-neutral-400
                                focus-visible:ring-offset-2"
                   />
@@ -70,7 +70,6 @@ const About = () => {
             </ul>
 
             {/* ================= ACTIONS ================= */}
-            {/* Buttons adapt spacing & size for touch */}
             <nav
               aria-label="About section actions"
               className="flex flex-wrap gap-4 pt-4"
@@ -94,13 +93,12 @@ const About = () => {
           </article>
 
           {/* ================= RIGHT IMAGE ================= */}
-          {/* Image scales gracefully and stays visually balanced */}
           <figure className="w-full md:w-1/2 flex justify-center">
             <img
               src={img}
               alt="Electrical powerlines representing engineering infrastructure"
               className="w-full max-w-md sm:max-w-lg lg:max-w-xl
-                         max-h-[420px]
+                         h-[300px] sm:h-[360px] lg:h-[420px]
                          rounded-xl object-cover shadow-lg"
             />
           </figure>

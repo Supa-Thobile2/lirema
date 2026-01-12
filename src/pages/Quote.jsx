@@ -7,7 +7,7 @@ const Quote = () => {
     <section
       id="quote"
       aria-labelledby="quote-heading"
-      className="bg-neutral-50"
+      className="bg-neutral-50 space-y-2"
     >
       {/* Mobile-first container */}
       <div
@@ -16,8 +16,8 @@ const Quote = () => {
                    flex flex-col gap-12 md:flex-row md:items-center"
       >
         {/* ================= TEXT CONTENT ================= */}
-        <article className="flex-1 space-y-6 text-center md:text-left">
-          <header className="space-y-3">
+        <article className="flex-1 text-center md:text-left">
+          <header className="space-y-4">
             {/* Responsive heading */}
             <h2
               id="quote-heading"
@@ -39,7 +39,7 @@ const Quote = () => {
           {/* Touch-friendly & centered on mobile */}
           <nav
             aria-label="Quote actions"
-            className="flex flex-wrap justify-center md:justify-start gap-4 pt-2"
+            className="flex justify-center md:justify-start gap-4 pt-4"
           >
             <Button
               text="Get a Quote"

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img from "../images/tech2.jpg";
+import img from "../images/logo.png";
 import { Button } from "../components";
 import { FaCompass, FaPhone } from "react-icons/fa";
 
@@ -12,17 +12,17 @@ const Hero = () => {
       className="relative overflow-hidden"
     >
       {/* Mobile-first container with responsive padding */}
-      <div className="container mx-auto px-4 py-10 sm:py-14 md:py-20">
+      <div className="container mx-auto ">
         {/* Stack on mobile, row layout from md and up */}
         <div className="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
 
           {/* ================= TEXT CONTENT ================= */}
-          <header className="w-full flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+          <header className="w-full flex flex-col items-center md:items-start text-center md:text-left space-y-4 p-2">
             {/* Responsive heading scale */}
             <h1
               id="hero-heading"
-              className="text-2xl font-bold tracking-tight leading-tight
-                         sm:text-3xl
+              className="text-md font-bold tracking-tight leading-tight
+                         
                          md:text-4xl
                          lg:text-5xl"
             >
@@ -32,7 +32,7 @@ const Hero = () => {
             {/* Responsive paragraph text for readability */}
             <p
               className="max-w-prose text-base leading-relaxed text-gray-700
-                         sm:text-lg
+                         sm:text-md
                          md:text-xl"
             >
               <strong className="font-semibold text-gray-900">
@@ -47,7 +47,7 @@ const Hero = () => {
             {/* Touch-friendly buttons with responsive spacing */}
             <nav
               aria-label="Primary actions"
-              className="flex flex-wrap justify-center md:justify-start gap-4 pt-4"
+              className="flex flex-wrap justify-center md:justify-start gap-4"
             >
               <Link to="/services">
                 <Button
@@ -77,7 +77,7 @@ const Hero = () => {
             <img
               src={img}
               alt="Construction engineering technology"
-              className="w-full max-w-md md:max-w-lg lg:max-w-xl
+              className="w-screen max-w-md md:max-w-lg lg:max-w-xl
                          rounded-xl shadow-lg
                          transition-transform duration-700 ease-out
                          hover:scale-[1.02]"

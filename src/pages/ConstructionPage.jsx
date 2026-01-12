@@ -10,14 +10,14 @@ function ConstructionPage() {
     <>
       <Header />
 
-      <main className="mt-16 space-y-24">
+      <main className="mt-16 ">
 
         {/* ================= HERO SECTION ================= */}
         <section
           aria-labelledby="construction-hero-heading"
           className="container mx-auto px-4 md:px-12 lg:px-16"
         >
-          <header className="max-w-3xl mx-auto text-center space-y-6">
+          <header className="max-w-3xl mx-auto text-center">
             <p className="inline-block rounded border px-4 py-1 text-sm font-semibold tracking-wide text-gray-700">
               Construction Solutions
             </p>
@@ -49,7 +49,7 @@ function ConstructionPage() {
           aria-labelledby="construction-expertise-heading"
           className="container mx-auto px-4 md:px-12 lg:px-16"
         >
-          <header className="max-w-3xl mx-auto text-center space-y-4">
+          <header className="max-w-3xl mx-auto text-center">
             <p className="text-sm font-medium tracking-wide text-gray-600">
               Construction
             </p>
@@ -78,7 +78,7 @@ function ConstructionPage() {
           aria-labelledby="construction-feature-heading"
           className="container mx-auto px-4 md:px-12 lg:px-16"
         >
-          <div className="max-w-3xl mx-auto text-center space-y-6">
+          <div className="max-w-3xl mx-auto text-center">
             <h2
               id="construction-feature-heading"
               className="text-xl md:text-2xl font-bold tracking-tight text-gray-900"
@@ -103,7 +103,7 @@ function ConstructionPage() {
           aria-labelledby="construction-summary-heading"
           className="container mx-auto px-4 md:px-12 lg:px-16"
         >
-          <div className="max-w-3xl mx-auto text-center space-y-3">
+          <div className="max-w-3xl mx-auto text-center">
             <p className="text-sm font-medium tracking-wide text-gray-600">
               Construction Solutions
             </p>

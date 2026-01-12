@@ -5,13 +5,13 @@ function Subscribe() {
   return (
     <section
       aria-labelledby="subscribe-heading"
-      className="bg-neutral-50 flex flex-col items-center mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24 space-y-6"
+      className="bg-neutral-50 flex flex-col items-center mx-auto max-w-7xl px-6 sm:px-8 lg:px-12  space-y-4 p-4"
     >
       {/* Heading */}
-      <header className="text-center space-y-2 max-w-xl">
+      <header className="text-center  max-w-xl space-y-2">
         <h2
           id="subscribe-heading"
-          className="text-xl sm:text-2xl font-bold text-neutral-900"
+          className="text-md sm:text-2xl font-bold text-neutral-900"
         >
           Stay Informed: Engineering Insights
         </h2>
@@ -38,7 +38,7 @@ function Subscribe() {
             focus:outline-none focus:ring-2 focus:ring-purple-400
           "
         />
-        <Button text="Subscribe Now" className="w-full sm:w-auto px-6 py-2" />
+        <Button text="Subscribe Now" className="w-full sm:w-auto px-6 " />
       </form>
 
       {/* Terms */}

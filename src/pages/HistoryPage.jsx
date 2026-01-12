@@ -12,7 +12,7 @@ import { Header } from "../components";
 */
 function Container({ children }) {
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl p-4">
       {children}
     </div>
   );
@@ -28,7 +28,7 @@ function Section({ children, muted = false }) {
     <section
       className={`${
         muted ? "bg-neutral-50" : ""
-      } py-14 sm:py-20`}
+      } p-4 space-y-2` }
     >
       {children}
     </section>
@@ -40,8 +40,8 @@ function Section({ children, muted = false }) {
 */
 function SectionHeader({ title, description }) {
   return (
-    <header className="max-w-prose space-y-3 sm:space-y-4">
-      <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">
+    <header className="max-w-prose">
+      <h2 className="text-md sm:text-3xl font-semibold text-neutral-900">
         {title}
       </h2>
       {description && (
@@ -102,10 +102,10 @@ export default function HistoryPage() {
 
       <main id="main-content" className="bg-white">
         {/* PAGE HEADER */}
-        <header className="border-b border-neutral-200 bg-neutral-50">
+        <header className=" bg-neutral-50">
           <Container>
-            <div className="py-14 sm:py-20">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900">
+            <div className="p-4 space-y-8">
+              <h1 className="text-md sm:text-4xl md:text-5xl font-bold text-neutral-900">
                 Our History & Company Profile
               </h1>
               <p className="mt-4 sm:mt-6 max-w-prose text-base sm:text-lg text-neutral-600 leading-relaxed">
@@ -120,8 +120,8 @@ export default function HistoryPage() {
         <Section>
           <Container>
             <SectionHeader title="Company Overview" />
-            <div className="mt-6 sm:mt-8 max-w-prose space-y-4 sm:space-y-6 text-sm sm:text-base text-neutral-700 leading-relaxed">
-              <p>
+            <div className="mt-6 sm:mt-8 max-w-prose  text-sm sm:text-base text-neutral-700 leading-relaxed p-4">
+              <p className='text-sm'>
                 LI REMA ENGINEERING AND CONSTRUCTION (Pty) Ltd is a proudly South
                 African company established on <strong>03 May 2024</strong>, with
                 its headquarters in <strong>Kempton Park, Gauteng</strong>.

@@ -56,7 +56,7 @@ function TermsAndConditions() {
   };
 
   return (
-    <main className="bg-gray-50 min-h-screen px-6 md:px-12 lg:px-16 py-16 space-y-12">
+    <main className="bg-gray-50 min-h-screen px-6 md:px-12 lg:px-16">
       {/* Header Bar */}
       <section className="flex justify-between items-center max-w-4xl mx-auto">
         <a
@@ -76,7 +76,7 @@ function TermsAndConditions() {
       </section>
 
       {/* Page Header */}
-      <section className="text-center max-w-3xl mx-auto space-y-4">
+      <section className="text-center max-w-3xl mx-auto">
         <p className="text-sm font-semibold text-gray-500 uppercase">Legal</p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
           Terms & Conditions

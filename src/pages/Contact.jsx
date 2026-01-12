@@ -10,16 +10,14 @@ function Contact() {
       aria-labelledby="contact-title"
       className="
         mx-auto max-w-7xl
-        px-4 sm:px-6 lg:px-12
-        py-16 sm:py-20 lg:py-24
-        space-y-16
+        px-4 sm:px-6  space-y-2
       "
     >
       {/* ================= HEADER ================= */}
-      <header className="mx-auto max-w-xl text-center space-y-3">
+      <header className="mx-auto max-w-xl text-center space-y-4">
         <h2
           id="contact-title"
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900"
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900 pt-4"
         >
           Contact
         </h2>

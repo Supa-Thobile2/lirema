@@ -71,18 +71,18 @@ function ServiceCard({ title, subtitle, description, image, buttons }) {
 /* ================= SERVICES PAGE ================= */
 function ServicesPage() {
   return (
-    <div className="min-h-screen bg-neutral-50">
+    <div className="min-h-screen bg-neutral-50 ">
       <Header />
 
       <main>
         {/* ================= HERO ================= */}
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 py-20 sm:py-24">
-          <div className="max-w-3xl space-y-6">
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 space-y-2 p-4">
+          <div className="max-w-3xl space-y-2">
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-neutral-500">
               Build
             </p>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900">
+            <h1 className="text-xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900">
               Engineering solutions that work
             </h1>
 
@@ -91,7 +91,7 @@ function ServicesPage() {
               disciplines with proven reliability and professional commitment.
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex gap-4 pt-4">
               <Link to="/services">
                 <Button text="Services" />
               </Link>
@@ -106,7 +106,7 @@ function ServicesPage() {
         {/* ================= SERVICES GRID ================= */}
         <section
           aria-labelledby="services-heading"
-          className="mx-auto max-w-7xl px-4 sm:px-6 py-16"
+          className="mx-auto max-w-7xl p-4 sm:p-6"
         >
           <h2 id="services-heading" className="sr-only">
             Services
@@ -174,7 +174,7 @@ function ServicesPage() {
         </section>
 
         {/* ================= SHARED SECTIONS ================= */}
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 py-20 space-y-20">
+        <section className="mx-auto max-w-7xl p-4 sm:p-6">
           <Team />
           <Contact />
         </section>

@@ -15,17 +15,17 @@ function ElectricalSolutions() {
         padding starts smaller for phones, scales up
         space-y is reduced on mobile to avoid over-scrolling
       */}
-      <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 space-y-24 sm:space-y-32">
+      <main className="mx-auto max-w-7xl">
 
         {/* HERO SECTION */}
-        <section className="text-center space-y-6 sm:space-y-8">
-          <header className="space-y-2 sm:space-y-3">
+        <section className="text-center p-4 space-y-4">
+          <header className="space-y-4">
             <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
               Electrify
             </p>
 
             {/* Responsive typography scales smoothly */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900">
+            <h1 className="text-md sm:text-4xl md:text-5xl font-bold text-neutral-900">
               Electrical services refined
             </h1>
 
@@ -40,19 +40,19 @@ function ElectricalSolutions() {
             Buttons wrap naturally on small screens
             padding handled inside Button for 44px tap targets
           */}
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex justify-center gap-4">
             <Button text="Explore electrical services" ariaLabel="Explore electrical services" />
             <Button text="Learn more about our expertise" ariaLabel="Learn more about our expertise" />
           </div>
         </section>
 
         {/* SERVICES OVERVIEW */}
-        <section className="space-y-10 sm:space-y-12">
-          <header className="text-center space-y-3">
+        <section className="p-4">
+          <header className="text-center space-y-4">
             <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
               Services
             </p>
-            <h2 className="text-2xl md:text-3xl font-semibold text-neutral-900">
+            <h2 className="text-md md:text-3xl font-semibold text-neutral-900">
               Comprehensive electrical solutions
             </h2>
             <p className="mx-auto max-w-prose leading-relaxed text-neutral-600">
@@ -85,7 +85,7 @@ function ElectricalSolutions() {
                 role="listitem"
                 className="rounded-xl border border-neutral-200 p-5 sm:p-6 space-y-3 shadow-sm"
               >
-                <h3 className="text-lg font-semibold text-neutral-900">
+                <h3 className="text-md font-semibold text-neutral-900">
                   {item.title}
                 </h3>
                 <p className="text-sm sm:text-base leading-relaxed text-neutral-600">
@@ -97,8 +97,8 @@ function ElectricalSolutions() {
         </section>
 
         {/* EXPERTISE */}
-        <section className="mx-auto max-w-3xl space-y-6 sm:space-y-8">
-          <header className="space-y-2 sm:space-y-3">
+        <section className="mx-auto max-w-3xl p-4 space-y-4">
+          <header className="space-y-4">
             <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
               Expertise
             </p>
@@ -111,21 +111,21 @@ function ElectricalSolutions() {
           </header>
 
           {/* Increased line-height improves mobile readability */}
-          <ul className="list-disc list-inside space-y-2 text-sm sm:text-base leading-relaxed text-neutral-600">
+          <ul className="list-disc list-inside text-sm sm:text-base leading-relaxed text-neutral-600">
             <li>Advanced safety protocols</li>
             <li>Certified technicians</li>
             <li>Comprehensive risk management</li>
           </ul>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex gap-4">
             <Button text="Learn more about HT switching" ariaLabel="Learn more about HT switching" />
             <Button text="Contact our electrical team" ariaLabel="Contact our electrical team" />
           </div>
         </section>
 
         {/* SOLAR / RENEWABLE */}
-        <section className="mx-auto max-w-3xl space-y-6 sm:space-y-8">
-          <header className="space-y-2 sm:space-y-3">
+        <section className="mx-auto max-w-3xl p-4 space-y-4">
+          <header className="space-y-4">
             <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
               Sustainable energy
             </p>
@@ -138,25 +138,25 @@ function ElectricalSolutions() {
             </p>
           </header>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex  gap-4">
             <Button text="Install solar systems" ariaLabel="Install solar systems" />
             <Button text="Discuss renewable options" ariaLabel="Discuss renewable options" />
           </div>
         </section>
 
         {/* SECURITY / CCTV */}
-        <section className="space-y-10 sm:space-y-12">
+        <section className="space-y-4 p-4">
           {/* 
             Stacks on mobile
             Side-by-side from md upward
           */}
           <div className="grid gap-10 md:grid-cols-2 items-start">
-            <div className="space-y-6">
-              <header className="space-y-2 sm:space-y-3">
+            <div className="space-y-4">
+              <header className="space-y-4">
                 <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
                   CCTV & Security
                 </p>
-                <h2 className="text-2xl md:text-3xl font-semibold text-neutral-900">
+                <h2 className="text-md md:text-3xl font-semibold text-neutral-900">
                   Advanced security monitoring
                 </h2>
                 <p className="leading-relaxed text-neutral-600">
@@ -164,7 +164,7 @@ function ElectricalSolutions() {
                 </p>
               </header>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex  gap-4">
                 <Button text="Protect your property" ariaLabel="Protect your property" />
                 <Button text="Consult a security expert" ariaLabel="Consult a security expert" />
               </div>
@@ -174,7 +174,7 @@ function ElectricalSolutions() {
               1 col on phones
               2 col on small tablets+
             */}
-            <div className="grid gap-5 sm:grid-cols-2" role="list">
+            <div className="grid gap-5 sm:grid-cols-2 space-y-2" role="list">
               {[
                 'Access Control Systems',
                 'Remote Management',
@@ -184,7 +184,7 @@ function ElectricalSolutions() {
                 <article
                   key={service}
                   role="listitem"
-                  className="rounded-xl border border-neutral-200 p-5 sm:p-6 space-y-3 shadow-sm"
+                  className="rounded-xl border border-neutral-200 p-5 sm:p-6  shadow-sm space-y-4"
                 >
                   <h3 className="font-semibold text-neutral-900">
                     {service}

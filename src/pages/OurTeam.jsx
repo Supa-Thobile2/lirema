@@ -66,18 +66,18 @@ function OurTeam() {
           aria-labelledby="team-heading"
           className="
             mx-auto max-w-7xl
-            px-4 sm:px-6 lg:px-12
-            py-16 sm:py-20
+            
+           
           "
         >
-          <header className="mx-auto max-w-3xl text-center space-y-4">
+          <header className="mx-auto max-w-3xl text-center space-y-4 p-4">
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-neutral-500">
               Our Team
             </p>
 
             <h1
               id="team-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-900"
+              className="text-md sm:text-3xl lg:text-4xl font-bold text-neutral-900"
             >
               Meet the Experts Driving Our Success
             </h1>
@@ -89,7 +89,7 @@ function OurTeam() {
             </p>
           </header>
 
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 p-4">
             {teamMembers.map((member) => (
               <article
                 key={member.id}
@@ -114,7 +114,7 @@ function OurTeam() {
                   "
                 />
 
-                <h3 className="mt-4 text-lg font-semibold text-neutral-900">
+                <h3 className="mt-4 text-md font-semibold text-neutral-900">
                   {member.name}
                 </h3>
 
@@ -136,18 +136,17 @@ function OurTeam() {
           className="
             bg-white
             mx-auto max-w-7xl
-            px-4 sm:px-6 lg:px-12
-            py-16 sm:py-20
+            p-4 space-y-4
           "
         >
-          <header className="mx-auto max-w-3xl text-center space-y-4">
+          <header className="mx-auto max-w-3xl text-center space-y-2 p-4">
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-neutral-500">
               Partners
             </p>
 
             <h2
               id="partners-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-900"
+              className="text-md sm:text-3xl lg:text-4xl font-bold text-neutral-900"
             >
               Our Trusted Partners
             </h2>
@@ -158,7 +157,7 @@ function OurTeam() {
             </p>
           </header>
 
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {partners.map((partner) => (
               <article
                 key={partner.id}
@@ -178,7 +177,7 @@ function OurTeam() {
                   className="h-48 w-full object-cover"
                 />
 
-                <div className="p-5 space-y-2">
+                <div className="p-5 ">
                   <h3 className="text-lg font-semibold text-neutral-900">
                     {partner.name}
                   </h3>

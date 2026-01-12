@@ -11,28 +11,29 @@ function AboutPage() {
       <Header />
 
       <main>
+
         {/* ================= HERO ================= */}
         <section
           aria-labelledby="about-title"
-          className="
-            text-center
-            px-4 sm:px-6
-            py-20 sm:py-24 lg:py-32
-          "
+          className="px-4 sm:px-6
+                     py-12 sm:py-16 lg:py-20
+                     text-center"
         >
-          <div className="mx-auto max-w-3xl space-y-6">
+          <div className="mx-auto max-w-3xl space-y-4">
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-neutral-500">
               Our Story
             </p>
 
             <h1
               id="about-title"
-              className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-neutral-900"
+              className="text-3xl sm:text-4xl lg:text-6xl
+                         font-bold tracking-tight text-neutral-900"
             >
               About Us
             </h1>
 
-            <p className="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg
+                          text-neutral-600 leading-relaxed">
               Building engineering solutions that transform infrastructure.
             </p>
 
@@ -40,7 +41,6 @@ function AboutPage() {
               <Link to="/about">
                 <Button text="Learn More" />
               </Link>
-
               <Link to="/contacts">
                 <Button text="Contact" />
               </Link>
@@ -49,12 +49,14 @@ function AboutPage() {
         </section>
 
         {/* ================= MISSION ================= */}
-        <section className="px-4 sm:px-6 py-16 sm:py-20 max-w-4xl mx-auto space-y-6">
+        <section className="p-4
+                            max-w-4xl mx-auto space-y-4">
           <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
             Our Mission
           </p>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-900">
+          <h2 className="text-md sm:text-3xl lg:text-4xl
+                         font-bold text-neutral-900">
             Engineering excellence through innovation and precision
           </h2>
 
@@ -66,13 +68,15 @@ function AboutPage() {
         </section>
 
         {/* ================= STRENGTHS ================= */}
-        <section className="px-4 sm:px-6 py-16 sm:py-20 max-w-6xl mx-auto space-y-8">
-          <header className="space-y-3">
+        <section className="p-4
+                            max-w-6xl mx-auto space-y-8">
+          <header className="space-y-4">
             <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
               Our Strengths
             </p>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-900">
+            <h2 className="text-md sm:text-3xl lg:text-4xl
+                           font-bold text-neutral-900">
               Why choose Li Rema?
             </h2>
 
@@ -85,19 +89,17 @@ function AboutPage() {
             {[1, 2, 3].map((card) => (
               <article
                 key={card}
-                className="
-                  flex flex-col justify-between
-                  rounded-2xl border border-neutral-200
-                  bg-white p-6
-                  shadow-sm
-                "
+                className="flex flex-col justify-between
+                           rounded-2xl border border-neutral-200
+                           bg-white p-6 sm:p-8
+                           shadow-sm"
               >
-                <div className="space-y-4">
+                <div className="space-y-2">
                   <p className="text-xs font-semibold text-neutral-500">
                     Expertise
                   </p>
 
-                  <h3 className="text-lg font-bold text-neutral-900">
+                  <h3 className="text-md font-bold text-neutral-900">
                     Proven technical mastery across engineering domains
                   </h3>
 
@@ -111,7 +113,8 @@ function AboutPage() {
                     <Button text="Learn More" />
                   </Link>
 
-                  <div className="h-24 rounded-md bg-gray-200 flex items-center justify-center">
+                  <div className="h-24 rounded-md bg-gray-200
+                                  flex items-center justify-center mt-4">
                     <span className="text-xs text-gray-500">Image</span>
                   </div>
                 </div>
@@ -121,12 +124,13 @@ function AboutPage() {
         </section>
 
         {/* ================= JOURNEY ================= */}
-        <section className="px-4 sm:px-6 py-16 sm:py-20 max-w-4xl mx-auto space-y-6">
+        <section className="p-4
+                            max-w-4xl mx-auto space-y-4">
           <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
             Our Journey
           </p>
 
-          <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900">
+          <h3 className="text-md sm:text-3xl font-bold text-neutral-900">
             Milestones of engineering excellence
           </h3>
 
@@ -139,7 +143,6 @@ function AboutPage() {
             <Link to="/history">
               <Button text="View History" />
             </Link>
-
             <Link to="/about">
               <Button text="Learn More" />
             </Link>
@@ -147,8 +150,9 @@ function AboutPage() {
         </section>
 
         {/* ================= PARTNERS ================= */}
-        <section className="px-4 sm:px-6 py-16 sm:py-20 max-w-4xl mx-auto space-y-6">
-          <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900">
+        <section className="p-4
+                            max-w-4xl mx-auto space-y-4">
+          <h3 className="text-md sm:text-3xl font-bold text-neutral-900">
             Our Trusted Partners
           </h3>
 
@@ -160,20 +164,21 @@ function AboutPage() {
             <Link to="/partners">
               <Button text="View Partners" />
             </Link>
-
             <Link to="/partners">
               <Button text="Learn More" />
             </Link>
           </div>
 
-          <div className="h-40 rounded-xl bg-gray-200 flex items-center justify-center">
+          <div className="h-40 rounded-xl bg-gray-200
+                          flex items-center justify-center border-2">
             <span className="text-xs text-gray-500">Partner Images</span>
           </div>
         </section>
 
         {/* ================= FINAL CTA ================= */}
-        <section className="px-4 sm:px-6 py-20 max-w-4xl mx-auto text-center space-y-6">
-          <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900">
+        <section className="p-4
+                            max-w-4xl mx-auto text-center space-y-4">
+          <h3 className="text-md sm:text-3xl font-bold text-neutral-900">
             Ready to build your next project?
           </h3>
 
@@ -185,7 +190,6 @@ function AboutPage() {
             <Link to="/contacts">
               <Button text="Contact" />
             </Link>
-
             <Link to="/quote">
               <Button text="Request Quote" />
             </Link>

@@ -46,12 +46,12 @@ function Partners() {
         - px-4 on phones
         - spacing scales up for larger screens
       */}
-      <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 space-y-16 sm:space-y-24">
+      <main className="mx-auto max-w-7xl">
 
         {/* ================= HERO ================= */}
         <section
           aria-labelledby="partners-heading"
-          className="text-center space-y-4 sm:space-y-6"
+          className="text-center p-4 space-y-4"
         >
           <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
             Partnerships
@@ -59,7 +59,7 @@ function Partners() {
 
           <h1
             id="partners-heading"
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900"
+            className="text-md sm:text-4xl md:text-5xl font-bold text-neutral-900"
           >
             Our Trusted Partners
           </h1>
@@ -73,7 +73,7 @@ function Partners() {
         {/* ================= PARTNERS GALLERY ================= */}
         <section
           aria-labelledby="partners-gallery-heading"
-          className="space-y-8 sm:space-y-12"
+          className="p-4"
         >
           <h2 id="partners-gallery-heading" className="sr-only">
             Partner gallery
@@ -87,7 +87,7 @@ function Partners() {
           */}
           <ul
             role="list"
-            className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4"
+            className="grid p-4 space-y-2 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4"
           >
             {partners.map((partner) => (
               <li
@@ -107,7 +107,7 @@ function Partners() {
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col space-y-2 p-4 sm:p-5">
+                <div className="flex flex-col  p-4 sm:p-5">
                   <h3 className="text-base sm:text-lg font-semibold text-neutral-900">
                     {partner.name}
                   </h3>
@@ -122,8 +122,8 @@ function Partners() {
         </section>
 
         {/* ================= CTA ================= */}
-        <section className="text-center space-y-4 sm:space-y-6">
-          <h2 className="text-2xl md:text-3xl font-semibold text-neutral-900">
+        <section className="text-center p-4 space-y-4">
+          <h2 className="text-md md:text-3xl font-semibold text-neutral-900">
             Interested in partnering with us?
           </h2>
 
@@ -133,7 +133,7 @@ function Partners() {
           </p>
 
           {/* Buttons wrap cleanly on mobile */}
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex  justify-center gap-4">
             <Button text="Become a partner" ariaLabel="Become a partner" />
             <Button text="Contact us" ariaLabel="Contact Li Rema Engineering" />
           </div>

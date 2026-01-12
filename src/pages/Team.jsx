@@ -49,10 +49,10 @@ function Team() {
   return (
     <section
       id="team"
-      className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 py-16 sm:py-20 lg:py-24"
+      className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12  space-y-2 p-4 "
     >
       {/* Section Header */}
-      <header className="mx-auto max-w-xl text-center space-y-3">
+      <header className="mx-auto max-w-xl text-center space-y-4">
         <p className="text-xs sm:text-sm uppercase tracking-widest text-neutral-500">
           Team
         </p>
@@ -80,7 +80,7 @@ function Team() {
               className="mb-4 h-24 w-24 sm:h-28 sm:w-28 rounded-full object-cover"
             />
 
-            <figcaption className="space-y-2">
+            <figcaption className="">
               <h3 className="text-base sm:text-lg font-semibold text-neutral-900">
                 {member.name}
               </h3>

@@ -7,10 +7,10 @@ const Services = () => {
     <section
       id="services"
       aria-labelledby="services-heading"
-      className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-24"
+      className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12  space-y-4"
     >
       {/* ================= SECTION HEADER ================= */}
-      <header className="max-w-3xl space-y-4">
+      <header className="max-w-3xl space-y-2">
         {/* Section label */}
         <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500 sm:text-sm">
           Services

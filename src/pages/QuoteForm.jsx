@@ -12,7 +12,7 @@ function QuoteForm() {
         {/* ================= HERO / PAGE HEADER ================= */}
         <section
           aria-labelledby="quote-heading"
-          className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8"
+          className="mx-auto max-w-7xl space-y-4 p-4"
         >
           <div className="space-y-4 text-center md:text-left">
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-gray-500">
@@ -21,7 +21,7 @@ function QuoteForm() {
 
             <h1
               id="quote-heading"
-              className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-neutral-900"
+              className="text-md sm:text-3xl md:text-4xl font-bold tracking-tight text-neutral-900"
             >
               Request a Project Quote
             </h1>
@@ -34,7 +34,7 @@ function QuoteForm() {
         </section>
 
         {/* ================= QUICK CONTACT INFO ================= */}
-        <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <section className="mx-auto max-w-7xl p-4">
           {/* 
             1 col (mobile) → 3 col (tablet+)
             Cards are tap-friendly and readable
@@ -69,7 +69,7 @@ function QuoteForm() {
                   {info.icon}
                 </span>
 
-                <div className="space-y-1">
+                <div className="">
                   <p className="font-semibold text-gray-800">
                     {info.title}
                   </p>
@@ -86,7 +86,7 @@ function QuoteForm() {
         <section
           id="quote-form"
           aria-labelledby="quote-form-heading"
-          className="bg-gray-50 py-14 sm:py-16"
+          className="bg-gray-50 p-4"
         >
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <h2

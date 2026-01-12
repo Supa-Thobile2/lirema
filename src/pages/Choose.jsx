@@ -6,8 +6,7 @@ const Choose = () => {
   return (
     <section
       aria-labelledby="choose-heading"
-      className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12
-                 py-12 sm:py-16 lg:py-24 space-y-14"
+      className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 space-y-2"
     >
       {/* ================= SECTION INTRO ================= */}
       <header className="mx-auto max-w-2xl text-center space-y-4">
@@ -90,7 +89,7 @@ const Choose = () => {
         >
           <div className="flex flex-col md:flex-row">
             {/* Text */}
-            <div className="flex flex-col justify-center space-y-3 p-5 sm:p-6 md:w-1/2">
+            <div className="flex flex-col justify-center p-5 sm:p-6 md:w-1/2">
               <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500">
                 Innovation
               </p>

@@ -89,7 +89,7 @@ function PrivacyPolicy() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 space-y-10">
+    <main className="min-h-screen bg-gray-50 px-4 sm:px-6 lg:px-8">
       {/* HEADER BAR */}
       <section className="mx-auto flex max-w-4xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <a
@@ -111,7 +111,7 @@ function PrivacyPolicy() {
       </section>
 
       {/* TITLE */}
-      <section className="mx-auto max-w-3xl text-center space-y-4">
+      <section className="mx-auto max-w-3xl text-center">
         <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
           Policy
         </p>
@@ -131,7 +131,7 @@ function PrivacyPolicy() {
       </section>
 
       {/* POLICY CONTENT */}
-      <section className="mx-auto max-w-3xl space-y-6 text-sm sm:text-base leading-relaxed text-gray-700">
+      <section className="mx-auto max-w-3xl text-sm sm:text-base leading-relaxed text-gray-700">
         {policySections.map((section) => (
           <article key={section.title} className="space-y-2">
             <h2 className="text-lg font-semibold text-gray-900">
