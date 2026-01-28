@@ -12,16 +12,16 @@ function QuoteForm() {
         {/* ================= HERO / PAGE HEADER ================= */}
         <section
           aria-labelledby="quote-heading"
-          className="mx-auto max-w-7xl space-y-4 p-4"
+          className="mx-auto max-w-7xl space-y-8 p-4"
         >
-          <div className="space-y-4 text-center md:text-left">
+          <div className="space-y-6 text-center md:text-left">
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-gray-500">
               Quote
             </p>
 
             <h1
               id="quote-heading"
-              className="text-md sm:text-3xl md:text-4xl font-bold tracking-tight text-neutral-900"
+              className="text-xl sm:text-3xl md:text-4xl font-bold tracking-tight text-neutral-900"
             >
               Request a Project Quote
             </h1>
@@ -86,7 +86,7 @@ function QuoteForm() {
         <section
           id="quote-form"
           aria-labelledby="quote-form-heading"
-          className="bg-gray-50 p-4"
+          className="bg-gray-50 p-8 space-y-8"
         >
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <h2

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import {  About, AboutPage, Civil, ConstructionPage, ContactPage, ElectricalSolutions, Home, HvacPage, QuoteForm, ServicesPage, Specialized, Smart, Partners, OurTeam, PrivacyPolicy, TermsAndConditions, HistoryPage } from '../src/pages'
+import {  About, AboutPage, Civil, ConstructionPage, ContactPage, ElectricalSolutions, Home, HvacPage, QuoteForm, ServicesPage, Specialized, Smart, Partners, OurTeam, PrivacyPolicy, TermsAndConditions, HistoryPage, Login, SignUp } from '../src/pages'
 
 
 
@@ -39,7 +39,8 @@ function App() {
 <Route path='/terms' element={<TermsAndConditions/>}/>
 <Route path='/terms' element={<TermsAndConditions/>}/>
 <Route path='/history' element={<HistoryPage/>}/>
-
+<Route path='/login' element={<Login/>}/>
+<Route path='/sign' element={<SignUp/>}/>
 </Routes>
 </BrowserRouter>
 

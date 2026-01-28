@@ -6,7 +6,7 @@ const Choose = () => {
   return (
     <section
       aria-labelledby="choose-heading"
-      className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 space-y-2"
+      className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 space-y-8"
     >
       {/* ================= SECTION INTRO ================= */}
       <header className="mx-auto max-w-2xl text-center space-y-4">
@@ -30,7 +30,7 @@ const Choose = () => {
 
       {/* ================= CARDS GRID ================= */}
       {/* Stacks on mobile, splits on md+ */}
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-8 md:grid-cols-2 md:gap-2">
         {/* -------- LEFT COLUMN -------- */}
         <div className="space-y-6">
           {/* Card 1 */}
@@ -39,7 +39,7 @@ const Choose = () => {
                        p-5 sm:p-6
                        shadow-sm transition
                        hover:shadow-md
-                       focus-within:ring-2 focus-within:ring-neutral-300"
+                       focus-within:ring-2 focus-within:ring-neutral-300 md:space-y-4"
           >
             <h3 className="text-base font-semibold text-neutral-900 sm:text-lg">
               Technical Expertise
@@ -63,7 +63,7 @@ const Choose = () => {
                        p-5 sm:p-6
                        shadow-sm transition
                        hover:shadow-md
-                       focus-within:ring-2 focus-within:ring-neutral-300"
+                       focus-within:ring-2 focus-within:ring-neutral-300 md:space-y-4"
           >
             <h3 className="text-base font-semibold text-neutral-900 sm:text-lg">
               Quality Assurance
@@ -85,16 +85,16 @@ const Choose = () => {
         {/* -------- RIGHT FEATURE CARD -------- */}
         <article
           className="overflow-hidden rounded-xl border border-neutral-200 bg-white
-                     shadow-sm transition hover:shadow-md"
+                     shadow-sm transition hover:shadow-md md:space-y-4"
         >
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row space-y-2">
             {/* Text */}
-            <div className="flex flex-col justify-center p-5 sm:p-6 md:w-1/2">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500">
+            <div className="space-y-4 flex flex-col justify-center p-5 sm:p-6 md:w-1/2">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500 space-y-4">
                 Innovation
               </p>
 
-              <h3 className="text-base font-semibold text-neutral-900 sm:text-lg">
+              <h3 className="text-lg md:text-md font-semibold text-neutral-900 sm:text-lg">
                 Cutting-edge technological solutions for complex challenges
               </h3>
 
@@ -105,11 +105,11 @@ const Choose = () => {
             </div>
 
             {/* Image */}
-            <div className="h-52 sm:h-60 md:h-auto md:w-1/2 overflow-hidden">
+            <div className="h-100 md:w-1/2 overflow-hidden">
               <img
                 src={img}
                 alt="Engineering innovation and advanced technology"
-                className="h-full w-full object-cover
+                className="h-full w-full object-fit
                            transition-transform duration-700
                            motion-safe:hover:scale-105"
               />

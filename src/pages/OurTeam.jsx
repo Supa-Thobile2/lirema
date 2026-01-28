@@ -66,11 +66,11 @@ function OurTeam() {
           aria-labelledby="team-heading"
           className="
             mx-auto max-w-7xl
-            
+            p-8 space-y-8
            
           "
         >
-          <header className="mx-auto max-w-3xl text-center space-y-4 p-4">
+          <header className="mx-auto max-w-3xl text-center space-y-4 p-4 md:p-24 md:space-y-8">
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-neutral-500">
               Our Team
             </p>
@@ -136,17 +136,17 @@ function OurTeam() {
           className="
             bg-white
             mx-auto max-w-7xl
-            p-4 space-y-4
+            p-8 space-y-8
           "
         >
-          <header className="mx-auto max-w-3xl text-center space-y-2 p-4">
+          <header className="mx-auto max-w-3xl text-center space-y-6 p-4">
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-neutral-500">
               Partners
             </p>
 
             <h2
               id="partners-heading"
-              className="text-md sm:text-3xl lg:text-4xl font-bold text-neutral-900"
+              className="text-xl sm:text-3xl lg:text-4xl font-bold text-neutral-900"
             >
               Our Trusted Partners
             </h2>
@@ -177,7 +177,7 @@ function OurTeam() {
                   className="h-48 w-full object-cover"
                 />
 
-                <div className="p-5 ">
+                <div className="p-5 space-y-4 ">
                   <h3 className="text-lg font-semibold text-neutral-900">
                     {partner.name}
                   </h3>

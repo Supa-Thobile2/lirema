@@ -8,10 +8,10 @@ function Subscribe() {
       className="bg-neutral-50 flex flex-col items-center mx-auto max-w-7xl px-6 sm:px-8 lg:px-12  space-y-4 p-4"
     >
       {/* Heading */}
-      <header className="text-center  max-w-xl space-y-2">
+      <header className="text-center  max-w-xl space-y-2 md:space-y-4">
         <h2
           id="subscribe-heading"
-          className="text-md sm:text-2xl font-bold text-neutral-900"
+          className="text-md md:text-2xl font-bold text-neutral-900"
         >
           Stay Informed: Engineering Insights
         </h2>

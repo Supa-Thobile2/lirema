@@ -51,7 +51,7 @@ function Partners() {
         {/* ================= HERO ================= */}
         <section
           aria-labelledby="partners-heading"
-          className="text-center p-4 space-y-4"
+          className="text-center p-8 space-y-8"
         >
           <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
             Partnerships
@@ -59,7 +59,7 @@ function Partners() {
 
           <h1
             id="partners-heading"
-            className="text-md sm:text-4xl md:text-5xl font-bold text-neutral-900"
+            className="text-lg sm:text-4xl md:text-5xl font-bold text-neutral-900"
           >
             Our Trusted Partners
           </h1>
@@ -107,8 +107,8 @@ function Partners() {
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col  p-4 sm:p-5">
-                  <h3 className="text-base sm:text-lg font-semibold text-neutral-900">
+                <div className="flex flex-col  p-4 space-y-2 sm:p-5">
+                  <h3 className="text-md sm:text-lg font-semibold text-neutral-900">
                     {partner.name}
                   </h3>
 
@@ -122,8 +122,8 @@ function Partners() {
         </section>
 
         {/* ================= CTA ================= */}
-        <section className="text-center p-4 space-y-4">
-          <h2 className="text-md md:text-3xl font-semibold text-neutral-900">
+        <section className="text-center p-8 space-y-8">
+          <h2 className="text-lg md:text-3xl font-semibold text-neutral-900">
             Interested in partnering with us?
           </h2>
 

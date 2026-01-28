@@ -28,3 +28,8 @@ export { default as AboutPage } from './AboutPage'
    export { default as PrivacyPolicy } from './PrivacyPolicy'
     export { default as TermsAndConditions } from './TermsAndConditions'
 export { default as HistoryPage } from './HistoryPage'
+
+
+
+export { default as  Login } from './Login'
+export { default as SignUp } from './SignUp'

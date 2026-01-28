@@ -13,13 +13,13 @@ function Specialized() {
       <main className="mx-auto max-w-7xl">
         
         {/* ================= HERO ================= */}
-        <section className="text-center p-4 space-y-4">
-          <header className="space-y-4">
+        <section className="text-center p-8 space-y-8">
+          <header className="space-y-6">
             <p className="inline-block rounded-full border border-neutral-200 px-4 py-1 text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
               Build
             </p>
 
-            <h1 className="text-md sm:text-4xl md:text-5xl font-bold text-neutral-900">
+            <h1 className="text-xl sm:text-4xl md:text-5xl font-bold text-neutral-900">
               Specialized construction expertise
             </h1>
 
@@ -31,20 +31,20 @@ function Specialized() {
           </header>
 
           <div className="flex  justify-center gap-4 pt-2">
-            <Button text="Explore construction services" />
-            <Button text="Contact our specialists" />
+            <Button text="Explore" />
+            <Button text="Contact" />
           </div>
         </section>
 
         {/* ================= FOUNDATIONS ================= */}
-        <section className="grid gap-10 md:grid-cols-2 md:gap-12 items-center p-4">
+        <section className="grid gap-10 md:grid-cols-2 md:gap-12 items-center p-8 space-y-8">
           <div className="space-y-2">
             <header className="space-y-4">
               <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
                 Foundations
               </p>
 
-              <h2 className="text-md sm:text-3xl font-semibold text-neutral-900">
+              <h2 className="text-xl sm:text-3xl font-semibold text-neutral-900">
                 Structural engineering solutions
               </h2>
 
@@ -56,8 +56,8 @@ function Specialized() {
             </header>
 
             <div className="flex  gap-4">
-              <Button text="Learn about foundations" />
-              <Button text="View foundation projects" />
+              <Button text="Learn" />
+              <Button text="Work" />
             </div>
           </div>
 
@@ -68,27 +68,27 @@ function Specialized() {
         </section>
 
         {/* ================= INFRASTRUCTURE ================= */}
-        <section className="grid gap-10 md:grid-cols-2 md:gap-12 items-center p-4">
-          <div className="space-y-4">
+        <section className="grid gap-10 md:grid-cols-2 md:gap-12 items-center p-8 space-y-8">
+          <div className="space-y-8">
             <header className="space-y-2">
               <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
                 Infrastructure
               </p>
 
-              <h2 className="text-md sm:text-3xl font-semibold text-neutral-900">
+              <h2 className="text-lg sm:text-3xl font-semibold text-neutral-900">
                 Advanced construction techniques
               </h2>
             </header>
 
-            <ul className="list-disc list-inside text-neutral-600">
+            <ul className="list-disc list-inside text-neutral-600 space-y-4">
               <li>Complex network development</li>
               <li>Integrated urban solutions</li>
               <li>Sustainable construction strategies</li>
             </ul>
 
             <div className="flex gap-4">
-              <Button text="Explore infrastructure services" />
-              <Button text="View technical details" />
+              <Button text="Explore" />
+              <Button text="View" />
             </div>
           </div>
 
@@ -98,9 +98,9 @@ function Specialized() {
         </section>
 
         {/* ================= CUSTOM ENGINEERING ================= */}
-        <section className="mx-auto max-w-3xl text-center p-4">
+        <section className="mx-auto max-w-3xl text-center p-8 space-y-8">
           <header className="space-y-4">
-            <h2 className="text-md sm:text-3xl font-semibold text-neutral-900">
+            <h2 className="text-lg sm:text-3xl font-semibold text-neutral-900">
               Custom engineering solutions
             </h2>
 
@@ -112,8 +112,8 @@ function Specialized() {
           </header>
 
           <div className="flex justify-center gap-4 pt-2">
-            <Button text="Discover our solutions" />
-            <Button text="Learn about our approach" />
+            <Button text="Discover" />
+            <Button text="Learn" />
           </div>
         </section>
 

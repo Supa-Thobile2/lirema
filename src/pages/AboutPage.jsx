@@ -15,18 +15,17 @@ function AboutPage() {
         {/* ================= HERO ================= */}
         <section
           aria-labelledby="about-title"
-          className="px-4 sm:px-6
-                     py-12 sm:py-16 lg:py-20
+          className="p-8 space-y-8 md:p-12 lg:p-20
                      text-center"
         >
-          <div className="mx-auto max-w-3xl space-y-4">
+          <div className="mx-auto max-w-3xl space-y-4 md:space-y-8">
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-neutral-500">
               Our Story
             </p>
 
             <h1
               id="about-title"
-              className="text-3xl sm:text-4xl lg:text-6xl
+              className="text-3xl md:text-4xl lg:text-6xl
                          font-bold tracking-tight text-neutral-900"
             >
               About Us
@@ -49,13 +48,13 @@ function AboutPage() {
         </section>
 
         {/* ================= MISSION ================= */}
-        <section className="p-4
-                            max-w-4xl mx-auto space-y-4">
+        <section className="p-8
+                            max-w-4xl mx-auto space-y-8 md:p-12">
           <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
             Our Mission
           </p>
 
-          <h2 className="text-md sm:text-3xl lg:text-4xl
+          <h2 className="text-lg sm:text-3xl lg:text-4xl
                          font-bold text-neutral-900">
             Engineering excellence through innovation and precision
           </h2>
@@ -68,14 +67,14 @@ function AboutPage() {
         </section>
 
         {/* ================= STRENGTHS ================= */}
-        <section className="p-4
+        <section className="p-8
                             max-w-6xl mx-auto space-y-8">
-          <header className="space-y-4">
+          <header className="space-y-4 md:space-y-8">
             <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
               Our Strengths
             </p>
 
-            <h2 className="text-md sm:text-3xl lg:text-4xl
+            <h2 className="text-xl sm:text-3xl lg:text-4xl
                            font-bold text-neutral-900">
               Why choose Li Rema?
             </h2>
@@ -94,12 +93,12 @@ function AboutPage() {
                            bg-white p-6 sm:p-8
                            shadow-sm"
               >
-                <div className="space-y-2">
+                <div className="space-y-4 p-8">
                   <p className="text-xs font-semibold text-neutral-500">
                     Expertise
                   </p>
 
-                  <h3 className="text-md font-bold text-neutral-900">
+                  <h3 className="text-lg font-bold text-neutral-900">
                     Proven technical mastery across engineering domains
                   </h3>
 
@@ -110,7 +109,7 @@ function AboutPage() {
 
                 <div className="mt-6 space-y-4">
                   <Link to="/history">
-                    <Button text="Learn More" />
+                    <Button text="Learn" />
                   </Link>
 
                   <div className="h-24 rounded-md bg-gray-200
@@ -124,13 +123,13 @@ function AboutPage() {
         </section>
 
         {/* ================= JOURNEY ================= */}
-        <section className="p-4
-                            max-w-4xl mx-auto space-y-4">
+        <section className="p-8
+                            max-w-4xl mx-auto space-y-8 md:p-12">
           <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
             Our Journey
           </p>
 
-          <h3 className="text-md sm:text-3xl font-bold text-neutral-900">
+          <h3 className="text-lg sm:text-3xl font-bold text-neutral-900">
             Milestones of engineering excellence
           </h3>
 
@@ -150,9 +149,9 @@ function AboutPage() {
         </section>
 
         {/* ================= PARTNERS ================= */}
-        <section className="p-4
-                            max-w-4xl mx-auto space-y-4">
-          <h3 className="text-md sm:text-3xl font-bold text-neutral-900">
+        <section className="p-8
+                            max-w-4xl mx-auto space-y-8 md:p-12">
+          <h3 className="text-lg sm:text-3xl font-bold text-neutral-900">
             Our Trusted Partners
           </h3>
 
@@ -176,8 +175,8 @@ function AboutPage() {
         </section>
 
         {/* ================= FINAL CTA ================= */}
-        <section className="p-4
-                            max-w-4xl mx-auto text-center space-y-4">
+        <section className="p-8
+                            max-w-4xl mx-auto text-center space-y-4 md:p-8">
           <h3 className="text-md sm:text-3xl font-bold text-neutral-900">
             Ready to build your next project?
           </h3>

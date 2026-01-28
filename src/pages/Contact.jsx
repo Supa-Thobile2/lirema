@@ -10,14 +10,14 @@ function Contact() {
       aria-labelledby="contact-title"
       className="
         mx-auto max-w-7xl
-        px-4 sm:px-6  space-y-2
+        p-8  space-y-8
       "
     >
       {/* ================= HEADER ================= */}
-      <header className="mx-auto max-w-xl text-center space-y-4">
+      <header className="mx-auto max-w-xl text-center space-y-6">
         <h2
           id="contact-title"
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900 pt-4"
+          className="text-4xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900 pt-4"
         >
           Contact
         </h2>
@@ -30,7 +30,7 @@ function Contact() {
       {/* ================= MAIN GRID ================= */}
       <div className="grid gap-12 lg:grid-cols-2 items-start">
         {/* ================= CONTACT DETAILS ================= */}
-        <article className="space-y-6">
+        <article className="space-y-2">
           {[
             {
               icon: <FaRegEnvelopeOpen />,

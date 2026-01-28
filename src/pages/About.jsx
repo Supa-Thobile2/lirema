@@ -9,10 +9,10 @@ const About = () => {
       id="about"
       aria-labelledby="about-heading"
       className="bg-gradient-to-tr from-neutral-50 via-white to-neutral-100
-                 py-12 sm:py-16 lg:py-20"
+                 "
     >
       {/* Container with responsive horizontal padding */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+      <div className="mx-auto max-w-7xl p-8 md:p-2 lg:p-12">
         {/* Mobile stack → split layout on md */}
         <div className="flex flex-col md:flex-row md:items-center
                         gap-10 sm:gap-12 md:gap-16">
@@ -29,7 +29,7 @@ const About = () => {
             <header className="space-y-4">
               <h2
                 id="about-heading"
-                className="text-2xl sm:text-3xl lg:text-4xl
+                className="text-2xl md:text-xl lg:text-4xl
                            font-bold tracking-tight leading-tight
                            text-neutral-900"
               >

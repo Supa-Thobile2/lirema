@@ -25,13 +25,25 @@ function ServiceCard({ title, subtitle, description, image, buttons }) {
       "
     >
       <div className="space-y-4">
+         {image && (
+        <img
+          src={image}
+          alt={title}
+          loading="lazy"
+          className="
+            mt-6 h-44 sm:h-48
+            w-full rounded-xl
+            object-cover
+          "
+        />
+      )}
         {subtitle && (
           <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500">
             {subtitle}
           </p>
         )}
 
-        <h3 className="text-lg sm:text-xl font-bold text-neutral-900">
+        <h3 className="text-md sm:text-xl font-bold text-neutral-900">
           {title}
         </h3>
 
@@ -52,18 +64,7 @@ function ServiceCard({ title, subtitle, description, image, buttons }) {
         )}
       </div>
 
-      {image && (
-        <img
-          src={image}
-          alt={title}
-          loading="lazy"
-          className="
-            mt-6 h-44 sm:h-48
-            w-full rounded-xl
-            object-cover
-          "
-        />
-      )}
+     
     </article>
   )
 }
@@ -76,13 +77,13 @@ function ServicesPage() {
 
       <main>
         {/* ================= HERO ================= */}
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 space-y-2 p-4">
-          <div className="max-w-3xl space-y-2">
+        <section className="mx-auto max-w-7xl space-y-8 p-8 md:p-20 ">
+          <div className="max-w-3xl space-y-6 md:space-y-12">
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-neutral-500">
               Build
             </p>
 
-            <h1 className="text-xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900">
               Engineering solutions that work
             </h1>
 
@@ -106,7 +107,7 @@ function ServicesPage() {
         {/* ================= SERVICES GRID ================= */}
         <section
           aria-labelledby="services-heading"
-          className="mx-auto max-w-7xl p-4 sm:p-6"
+          className="mx-auto max-w-7xl p-4 md:p-2"
         >
           <h2 id="services-heading" className="sr-only">
             Services

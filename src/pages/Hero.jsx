@@ -14,17 +14,17 @@ const Hero = () => {
       {/* Mobile-first container with responsive padding */}
       <div className="container mx-auto ">
         {/* Stack on mobile, row layout from md and up */}
-        <div className="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16 p-4">
 
           {/* ================= TEXT CONTENT ================= */}
-          <header className="w-full flex flex-col items-center md:items-start text-center md:text-left space-y-4 p-2">
+          <header className="w-full flex flex-col items-center md:items-start text-center md:text-left space-y-4">
             {/* Responsive heading scale */}
             <h1
               id="hero-heading"
               className="text-md font-bold tracking-tight leading-tight
                          
-                         md:text-4xl
-                         lg:text-5xl"
+                         md:text-2xl
+                         lg:text-lg"
             >
               Engineering Solutions That Build Tomorrow
             </h1>
@@ -80,7 +80,7 @@ const Hero = () => {
               className="w-screen max-w-md md:max-w-lg lg:max-w-xl
                          rounded-xl shadow-lg
                          transition-transform duration-700 ease-out
-                         hover:scale-[1.02]"
+                         hover:scale-[1.02] object-fit"
             />
           </div>
 

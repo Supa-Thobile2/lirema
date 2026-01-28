@@ -7,7 +7,7 @@ const Quote = () => {
     <section
       id="quote"
       aria-labelledby="quote-heading"
-      className="bg-neutral-50 space-y-2"
+      className="bg-neutral-50 space-y-8 p-4"
     >
       {/* Mobile-first container */}
       <div
@@ -17,7 +17,7 @@ const Quote = () => {
       >
         {/* ================= TEXT CONTENT ================= */}
         <article className="flex-1 text-center md:text-left">
-          <header className="space-y-4">
+          <header className="space-y-4 md:space-y-8">
             {/* Responsive heading */}
             <h2
               id="quote-heading"

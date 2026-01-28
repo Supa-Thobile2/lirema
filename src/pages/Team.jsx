@@ -12,7 +12,7 @@ const teamMembers = [
       'Visionary leader with decades of experience in engineering and management',
     image: img,
     email: 'litaba@company.com',
-    phone: '+1234567890',
+    phone: '0839672545',
     linkedin: 'https://www.linkedin.com/in/litababetsatsi',
   },
   {
@@ -49,15 +49,15 @@ function Team() {
   return (
     <section
       id="team"
-      className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12  space-y-2 p-4 "
+      className="mx-auto max-w-7xl lg:px-12  space-y-8 p-8 "
     >
       {/* Section Header */}
-      <header className="mx-auto max-w-xl text-center space-y-4">
+      <header className="mx-auto max-w-xl text-center space-y-4 p-8">
         <p className="text-xs sm:text-sm uppercase tracking-widest text-neutral-500">
           Team
         </p>
 
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-neutral-900">
+        <h2 className="text-4xl sm:text-3xl lg:text-4xl font-semibold text-neutral-900">
           Our Team
         </h2>
 
@@ -80,8 +80,8 @@ function Team() {
               className="mb-4 h-24 w-24 sm:h-28 sm:w-28 rounded-full object-cover"
             />
 
-            <figcaption className="">
-              <h3 className="text-base sm:text-lg font-semibold text-neutral-900">
+            <figcaption className="space-y-2">
+              <h3 className="text-xl sm:text-lg font-semibold text-neutral-900">
                 {member.name}
               </h3>
               <p className="text-sm sm:text-base font-medium text-neutral-600">

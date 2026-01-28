@@ -20,9 +20,10 @@ function ContactPage() {
           aria-labelledby="contact-heading"
           className="
             mx-auto max-w-7xl
-            p-4
-            space-y-4
+            p-8
+            space-y-8
             text-center md:text-left
+            md:p-20 md:space-y-12
           "
         >
           <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-neutral-500">
@@ -32,12 +33,12 @@ function ContactPage() {
           <h1
             id="contact-heading"
             className="
-              text-md sm:text-3xl lg:text-4xl
+              text-lg sm:text-3xl lg:text-4xl
               font-bold tracking-tight
               text-neutral-900
             "
           >
-            Contact Li Rema Engineering & Construction
+            Li Rema Engineering & Construction
           </h1>
 
           <p
@@ -118,7 +119,7 @@ function ContactPage() {
         <section
           id="contact"
           aria-labelledby="contact-section-heading"
-          className="bg-neutral-50 p-4"
+          className="bg-neutral-50 p-2 space-y-4 md:p-6"
         >
           <div
             className="
@@ -131,7 +132,7 @@ function ContactPage() {
             {/* -------- CONTACT DETAILS -------- */}
             <article
               aria-labelledby="contact-info-heading"
-              className="space-y-6"
+              className="space-y-6 md:space-y-12"
             >
               <h2
                 id="contact-info-heading"
@@ -197,6 +198,7 @@ function ContactPage() {
                 rounded-2xl bg-white
                 p-6 sm:p-8
                 shadow-lg
+                space-y-2
                 
               "
             >
@@ -212,10 +214,10 @@ function ContactPage() {
                 { id: "email", type: "email", label: "Your Email" },
                 { id: "subject", type: "text", label: "Subject" },
               ].map((field) => (
-                <div key={field.id} className="space-y-1">
+                <div key={field.id} className="space-y-2">
                   <label
                     htmlFor={field.id}
-                    className="text-sm font-medium text-neutral-700"
+                    className="text-sm font-medium text-neutral-700 pb-4"
                   >
                     {field.label}
                   </label>

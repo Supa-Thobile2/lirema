@@ -18,13 +18,13 @@ function HvacPage() {
       <main className="mx-auto max-w-7xl ">
 
         {/* HERO */}
-        <section className="text-center p-4 space-y-4">
+        <section className="text-center p-8 space-y-8">
           <header className="space-y-4">
             <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
               Comfort
             </p>
 
-            <h1 className="text-md sm:text-4xl md:text-5xl font-bold text-neutral-900">
+            <h1 className="text-xl sm:text-4xl md:text-5xl font-bold text-neutral-900">
               Precision HVAC solutions
             </h1>
 
@@ -37,20 +37,20 @@ function HvacPage() {
 
           {/* Buttons wrap on mobile, centered on all devices */}
           <div className="flex justify-center gap-4">
-            <Button text="Explore HVAC services" />
-            <Button text="Contact our HVAC team" />
+            <Button text="Work" />
+            <Button text="Contact" />
           </div>
         </section>
 
         {/* INSTALLATION */}
-        <section className="grid gap-10 md:gap-12 md:grid-cols-2 items-center p-4">
-          <div className="space-y-4">
-            <header className="space-y-2 sm:space-y-3">
+        <section className="grid gap-10 md:gap-12 md:grid-cols-2 items-center p-8 space-y-8">
+          <div className="space-y-8">
+            <header className="space-y-4 sm:space-y-3">
               <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
                 Install
               </p>
 
-              <h2 className="text-md md:text-3xl font-semibold text-neutral-900">
+              <h2 className="text-xl md:text-3xl font-semibold text-neutral-900">
                 Professional HVAC installation for optimal comfort
               </h2>
 
@@ -60,15 +60,15 @@ function HvacPage() {
               </p>
             </header>
 
-            <ul className="list-disc list-inside space-y-2 text-sm sm:text-base text-neutral-600 leading-relaxed">
+            <ul className="list-disc list-inside space-y-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
               <li>Custom systems matched to your requirements</li>
               <li>Energy-efficient solutions to reduce operational costs</li>
               <li>Advanced temperature control technologies</li>
             </ul>
 
             <div className="flex gap-4">
-              <Button text="Consult an HVAC expert" />
-              <Button text="View installation details" />
+              <Button text="Consult" />
+              <Button text="View" />
             </div>
           </div>
 
@@ -84,14 +84,14 @@ function HvacPage() {
         </section>
 
         {/* MAINTENANCE */}
-        <section className="grid gap-10 md:gap-12 md:grid-cols-2 items-center p-4">
-          <div className="space-y-4">
-            <header className="space-y-2 sm:space-y-3">
+        <section className="grid gap-10 md:gap-12 md:grid-cols-2 items-center p-8 space-y-8">
+          <div className="space-y-8">
+            <header className="space-y-4 sm:space-y-3">
               <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
                 Maintain
               </p>
 
-              <h2 className="text-md md:text-3xl font-semibold text-neutral-900">
+              <h2 className="text-xl md:text-3xl font-semibold text-neutral-900">
                 Comprehensive HVAC maintenance for long-term performance
               </h2>
 
@@ -101,15 +101,15 @@ function HvacPage() {
               </p>
             </header>
 
-            <ul className="list-disc list-inside space-y-2 text-sm sm:text-base text-neutral-600 leading-relaxed">
+            <ul className="list-disc list-inside space-y-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
               <li>Scheduled preventative maintenance programs</li>
               <li>Detailed diagnostics and performance tracking</li>
               <li>Fast response times with expert technical advice</li>
             </ul>
 
             <div className="flex  gap-4">
-              <Button text="Schedule maintenance" />
-              <Button text="Learn about maintenance plans" />
+              <Button text="Schedule" />
+              <Button text="Learn" />
             </div>
           </div>
 
@@ -124,13 +124,13 @@ function HvacPage() {
         </section>
 
         {/* REPAIR */}
-        <section className="p-4 space-y-4">
-          <header className="text-center space-y-2 sm:space-y-3">
+        <section className="p-8 space-y-8">
+          <header className="text-center space-y-4 sm:space-y-3">
             <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
               Repair
             </p>
 
-            <h2 className="text-md md:text-3xl font-semibold text-neutral-900">
+            <h2 className="text-xl md:text-3xl font-semibold text-neutral-900">
               Swift HVAC repair services
             </h2>
 
@@ -149,8 +149,8 @@ function HvacPage() {
               />
             </div>
 
-            <div className="space-y-4">
-              <h3 className="text-md font-semibold text-neutral-900">
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold text-neutral-900">
                 Expert troubleshooting and resolution
               </h3>
 
@@ -160,8 +160,8 @@ function HvacPage() {
               </p>
 
               <div className="flex gap-4">
-                <Button text="Request HVAC repair" />
-                <Button text="Contact repair specialists" />
+                <Button text="Repair" />
+                <Button text="Contact" />
               </div>
             </div>
           </div>
@@ -173,8 +173,8 @@ function HvacPage() {
             Video placeholder
           </div>
 
-          <div className="p-4 space-y-4">
-            <h2 className="text-md sm:text-xl font-semibold text-neutral-900">
+          <div className="p-8 space-y-8">
+            <h2 className="text-lg sm:text-xl font-semibold text-neutral-900">
               Li Rema Engineering & Construction transforms HVAC systems
             </h2>
 
@@ -193,13 +193,13 @@ function HvacPage() {
         </section>
 
         {/* CTA */}
-        <section className="text-center p-4 space-y-2">
+        <section className="text-center p-8 space-y-8">
           <header className="space-y-4">
             <p className="text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
               HVAC
             </p>
 
-            <h2 className="text-md md:text-3xl font-semibold text-neutral-900">
+            <h2 className="text-xl md:text-3xl font-semibold text-neutral-900">
               Ready to optimize your climate control?
             </h2>
 
@@ -210,8 +210,8 @@ function HvacPage() {
           </header>
 
           <div className="flex  justify-center gap-4">
-            <Button text="Request an HVAC quote" />
-            <Button text="Contact our team" />
+            <Button text="Quote" />
+            <Button text="Contact" />
           </div>
         </section>
 
